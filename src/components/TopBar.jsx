@@ -102,15 +102,8 @@ export default function TopBar({ onOpenModal }) {
           color: var(--color-sky);
         }
         @media (max-width: 768px) {
-          .top-bar-inner {
-            justify-content: center;
-            text-align: center;
-          }
-          .hide-mobile {
-            display: none;
-          }
-          .top-bar-msg {
-            font-size: 0.775rem;
+          .top-bar {
+            display: none !important;
           }
         }
       `}</style>

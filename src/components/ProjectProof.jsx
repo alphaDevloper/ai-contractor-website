@@ -61,11 +61,16 @@ export default function ProjectProof({ onOpenModal }) {
             <img src={curr.after} alt="Completed roof replacement" className="roofs-img" />
             <span className="roofs-tag tag-after">AFTER: NEW ROOF</span>
 
-            {/* Before Image (Clipped) */}
-            <div className="roofs-before-clipper" style={{ width: `${sliderPos}%` }}>
-              <img src={curr.before} alt="Hail damaged roof" className="roofs-img roofs-img-before" />
+            {/* Before Image (Clipped via responsive clipPath - no fixed min-width) */}
+            <img 
+              src={curr.before} 
+              alt="Hail damaged roof" 
+              className="roofs-img roofs-img-before" 
+              style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
+            />
+            {sliderPos > 14 && (
               <span className="roofs-tag tag-before">BEFORE: HAIL DAMAGE</span>
-            </div>
+            )}
 
             {/* Slider Handle */}
             <div className="roofs-handle-bar" style={{ left: `${sliderPos}%` }}>
@@ -139,18 +144,9 @@ export default function ProjectProof({ onOpenModal }) {
           object-fit: cover;
           display: block;
         }
-        .roofs-before-clipper {
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          overflow: hidden;
-          z-index: 2;
-        }
         .roofs-img-before {
-          width: 100%;
-          min-width: 980px;
-          max-width: none;
+          z-index: 2;
+          pointer-events: none;
         }
         .roofs-handle-bar {
           position: absolute;
