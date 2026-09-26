@@ -19,7 +19,7 @@ export default function Hero({ onOpenModal }) {
   };
 
   return (
-    <section className="hero-section">
+    <section id="home" className="hero-section">
       {/* Background Graphic & Backdrop */}
       <div className="hero-bg-wrapper">
         <img 

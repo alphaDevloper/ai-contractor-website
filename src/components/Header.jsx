@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Menu, X, ChevronRight } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Header({ onOpenModal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,35 +18,105 @@ export default function Header({ onOpenModal }) {
 
   const closeMenu = () => setMobileMenuOpen(false);
 
+  const handleSectionClick = (e, sectionId) => {
+    closeMenu();
+    if (location.pathname !== '/') {
+      navigate(`/#${sectionId}`);
+    } else {
+      e.preventDefault();
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        window.history.pushState(null, '', `#${sectionId}`);
+      }
+    }
+  };
+
+  const handleHomeClick = (e) => {
+    closeMenu();
+    if (location.pathname !== '/') {
+      navigate('/');
+    } else {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.history.pushState(null, '', '/');
+    }
+  };
+
+  const isHomeActive = location.pathname === '/' && !location.hash;
+  const isAboutActive = location.pathname === '/about';
+
   return (
     <header className={`site-header ${scrolled ? 'header-scrolled' : ''}`}>
       <div className="container-wide header-inner">
         
         {/* Brand Logo */}
-        <a href="#" className="brand-logo" onClick={closeMenu}>
-          <div className="brand-icon-box">
-            <svg viewBox="0 0 40 40" fill="none" className="brand-logo-svg">
-              <path d="M20 4L4 16H9V34H31V16H36L20 4Z" fill="#1677C8" />
-              <path d="M20 9L9 17.5V31H16V22H24V31H31V17.5L20 9Z" fill="#55B8F5" />
-              <path d="M20 2L3 15L5.5 18L20 7L34.5 18L37 15L20 2Z" fill="#102A43" />
-              <circle cx="20" cy="15" r="2.5" fill="#EA580C" />
-            </svg>
-          </div>
-          <div className="brand-title-box">
-            <span className="brand-main">AeroDome</span>
-            <span className="brand-sub">ROOFING &bull; CALGARY</span>
-          </div>
-        </a>
+        <Link to="/" className="brand-logo" onClick={handleHomeClick}>
+          <img 
+            src="/aerodome-logo.png" 
+            alt="AeroDome Roofing Calgary" 
+            className="brand-logo-img" 
+          />
+        </Link>
 
         {/* Desktop Links */}
         <nav className="header-nav">
-          <a href="#services" className="nav-item">Services</a>
-          <a href="#owner" className="nav-item">About Marcus</a>
-          <a href="#proof" className="nav-item">Our Work</a>
-          <a href="#reviews" className="nav-item">Reviews</a>
-          <a href="#process" className="nav-item">Process</a>
-          <a href="#service-areas" className="nav-item">Service Areas</a>
-          <a href="#faq" className="nav-item">FAQ</a>
+          <Link 
+            to="/" 
+            className={`nav-item ${isHomeActive ? 'nav-item-active' : ''}`} 
+            onClick={handleHomeClick}
+          >
+            Home
+          </Link>
+          <Link 
+            to="/about" 
+            className={`nav-item ${isAboutActive ? 'nav-item-active' : ''}`} 
+            onClick={closeMenu}
+          >
+            About
+          </Link>
+          <a 
+            href="/#services" 
+            className="nav-item" 
+            onClick={(e) => handleSectionClick(e, 'services')}
+          >
+            Services
+          </a>
+          <a 
+            href="/#proof" 
+            className="nav-item" 
+            onClick={(e) => handleSectionClick(e, 'proof')}
+          >
+            Our Work
+          </a>
+          <a 
+            href="/#reviews" 
+            className="nav-item" 
+            onClick={(e) => handleSectionClick(e, 'reviews')}
+          >
+            Reviews
+          </a>
+          <a 
+            href="/#process" 
+            className="nav-item" 
+            onClick={(e) => handleSectionClick(e, 'process')}
+          >
+            Process
+          </a>
+          <a 
+            href="/#service-areas" 
+            className="nav-item" 
+            onClick={(e) => handleSectionClick(e, 'service-areas')}
+          >
+            Service Areas
+          </a>
+          <a 
+            href="/#faq" 
+            className="nav-item" 
+            onClick={(e) => handleSectionClick(e, 'faq')}
+          >
+            FAQ
+          </a>
         </nav>
 
         {/* Right Actions: Phone + Orange CTA */}
@@ -78,14 +151,27 @@ export default function Header({ onOpenModal }) {
       {mobileMenuOpen && (
         <div className="mobile-drawer-pane">
           <div className="mobile-nav-links">
-            <a href="#services" onClick={closeMenu}>Services</a>
-            <a href="#owner" onClick={closeMenu}>About Marcus</a>
-            <a href="#proof" onClick={closeMenu}>Our Work</a>
-            <a href="#reviews" onClick={closeMenu}>5.0 Google Reviews</a>
-            <a href="#process" onClick={closeMenu}>How It Works</a>
-            <a href="#special-offers" onClick={closeMenu}>Special Offers</a>
-            <a href="#service-areas" onClick={closeMenu}>Service Areas</a>
-            <a href="#faq" onClick={closeMenu}>FAQ</a>
+            <Link 
+              to="/" 
+              className={isHomeActive ? 'mobile-nav-active' : ''}
+              onClick={handleHomeClick}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/about" 
+              className={isAboutActive ? 'mobile-nav-active' : ''}
+              onClick={closeMenu}
+            >
+              About
+            </Link>
+            <a href="/#services" onClick={(e) => handleSectionClick(e, 'services')}>Services</a>
+            <a href="/#proof" onClick={(e) => handleSectionClick(e, 'proof')}>Our Work</a>
+            <a href="/#reviews" onClick={(e) => handleSectionClick(e, 'reviews')}>5.0 Google Reviews</a>
+            <a href="/#process" onClick={(e) => handleSectionClick(e, 'process')}>How It Works</a>
+            <a href="/#special-offers" onClick={(e) => handleSectionClick(e, 'special-offers')}>Special Offers</a>
+            <a href="/#service-areas" onClick={(e) => handleSectionClick(e, 'service-areas')}>Service Areas</a>
+            <a href="/#faq" onClick={(e) => handleSectionClick(e, 'faq')}>FAQ</a>
           </div>
 
           <div className="mobile-drawer-actions">
@@ -127,39 +213,19 @@ export default function Header({ onOpenModal }) {
         .brand-logo {
           display: flex;
           align-items: center;
-          gap: 10px;
+          text-decoration: none;
         }
-        .brand-icon-box {
-          width: 40px;
-          height: 40px;
-        }
-        .brand-logo-svg {
-          width: 100%;
-          height: 100%;
-        }
-        .brand-title-box {
-          display: flex;
-          flex-direction: column;
-        }
-        .brand-main {
-          font-family: var(--font-heading);
-          font-size: 1.6rem;
-          color: var(--color-navy);
-          line-height: 0.95;
-          letter-spacing: 0.02em;
-        }
-        .brand-sub {
-          font-family: var(--font-body);
-          font-size: 0.65rem;
-          font-weight: 800;
-          letter-spacing: 0.14em;
-          color: var(--color-accent);
-          margin-top: 2px;
+        .brand-logo-img {
+          height: 48px;
+          width: auto;
+          max-width: 190px;
+          object-fit: contain;
+          display: block;
         }
         .header-nav {
           display: flex;
           align-items: center;
-          gap: 22px;
+          gap: 18px;
         }
         .nav-item {
           font-size: 0.9rem;
@@ -169,6 +235,15 @@ export default function Header({ onOpenModal }) {
         }
         .nav-item:hover {
           color: var(--color-accent);
+        }
+        .nav-item-active {
+          color: var(--color-accent) !important;
+          border-bottom: 2px solid var(--color-accent);
+          padding-bottom: 2px;
+        }
+        .mobile-nav-active {
+          color: var(--color-accent) !important;
+          font-weight: 800 !important;
         }
         .header-right-actions {
           display: flex;
@@ -201,7 +276,15 @@ export default function Header({ onOpenModal }) {
           padding: 6px;
         }
 
-        @media (max-width: 1050px) {
+        @media (max-width: 1220px) {
+          .header-nav {
+            gap: 12px;
+          }
+          .nav-item {
+            font-size: 0.85rem;
+          }
+        }
+        @media (max-width: 1080px) {
           .header-nav {
             display: none;
           }

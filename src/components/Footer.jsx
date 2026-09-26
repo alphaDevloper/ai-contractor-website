@@ -1,7 +1,24 @@
 import React from 'react';
 import { Phone, Mail, MapPin, ChevronRight } from 'lucide-react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 export default function Footer({ onOpenModal }) {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleSectionNav = (e, sectionId) => {
+    if (location.pathname !== '/') {
+      navigate(`/#${sectionId}`);
+    } else {
+      e.preventDefault();
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        window.history.pushState(null, '', `#${sectionId}`);
+      }
+    }
+  };
+
   return (
     <footer className="reference-footer">
       <div className="container-wide">
@@ -10,16 +27,13 @@ export default function Footer({ onOpenModal }) {
           {/* Col 1: Brand & Bio */}
           <div className="footer-brand-col">
             <div className="footer-brand-header">
-              <svg viewBox="0 0 40 40" fill="none" className="footer-logo-svg">
-                <path d="M20 4L4 16H9V34H31V16H36L20 4Z" fill="#1677C8" />
-                <path d="M20 9L9 17.5V31H16V22H24V31H31V17.5L20 9Z" fill="#55B8F5" />
-                <path d="M20 2L3 15L5.5 18L20 7L34.5 18L37 15L20 2Z" fill="#FFFFFF" />
-                <circle cx="20" cy="15" r="2.5" fill="#EA580C" />
-              </svg>
-              <div className="footer-brand-title">
-                <span className="footer-title-main">AERODOME</span>
-                <span className="footer-title-sub">ROOFING &bull; CALGARY</span>
-              </div>
+              <Link to="/" className="footer-logo-link">
+                <img 
+                  src="/aerodome-logo.png" 
+                  alt="AeroDome Roofing Calgary" 
+                  className="footer-brand-logo-img" 
+                />
+              </Link>
             </div>
 
             <p className="footer-brand-text">
@@ -31,14 +45,14 @@ export default function Footer({ onOpenModal }) {
           <div className="footer-col">
             <h4 className="footer-heading">SERVICES</h4>
             <ul className="footer-list">
-              <li><a href="#services">Roof Replacement</a></li>
-              <li><a href="#services">Roof Repair & Leaks</a></li>
-              <li><a href="#services">Storm & Hail Damage</a></li>
-              <li><a href="#services">Seamless Gutters</a></li>
-              <li><a href="#services">Siding & Flashing</a></li>
-              <li><a href="#services">Commercial Roofing</a></li>
-              <li><a href="#services">Skylights</a></li>
-              <li><a href="#services">Flat Roofing</a></li>
+              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Roof Replacement</a></li>
+              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Roof Repair & Leaks</a></li>
+              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Storm & Hail Damage</a></li>
+              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Seamless Gutters</a></li>
+              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Siding & Flashing</a></li>
+              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Commercial Roofing</a></li>
+              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Skylights</a></li>
+              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Flat Roofing</a></li>
             </ul>
           </div>
 
@@ -46,15 +60,15 @@ export default function Footer({ onOpenModal }) {
           <div className="footer-col">
             <h4 className="footer-heading">SERVICE AREAS</h4>
             <ul className="footer-list">
-              <li><a href="#service-areas">Calgary NW</a></li>
-              <li><a href="#service-areas">Calgary SW</a></li>
-              <li><a href="#service-areas">Calgary SE</a></li>
-              <li><a href="#service-areas">Calgary NE</a></li>
-              <li><a href="#service-areas">Airdrie</a></li>
-              <li><a href="#service-areas">Cochrane</a></li>
-              <li><a href="#service-areas">Chestermere</a></li>
-              <li><a href="#service-areas">Okotoks</a></li>
-              <li><a href="#service-areas">Strathmore</a></li>
+              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Calgary NW</a></li>
+              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Calgary SW</a></li>
+              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Calgary SE</a></li>
+              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Calgary NE</a></li>
+              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Airdrie</a></li>
+              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Cochrane</a></li>
+              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Chestermere</a></li>
+              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Okotoks</a></li>
+              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Strathmore</a></li>
             </ul>
           </div>
 
@@ -62,13 +76,14 @@ export default function Footer({ onOpenModal }) {
           <div className="footer-col">
             <h4 className="footer-heading">COMPANY</h4>
             <ul className="footer-list">
-              <li><a href="#owner">About Marcus & Team</a></li>
-              <li><a href="#proof">Our Work (Before & After)</a></li>
-              <li><a href="#reviews">5.0 Google Reviews</a></li>
-              <li><a href="#process">Four Steps, No Surprises</a></li>
-              <li><a href="#special-offers">Free Inspections, Always</a></li>
-              <li><a href="#resources">Roofing Tips & Cost Guide</a></li>
-              <li><a href="#faq">Frequently Asked Questions</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About AeroDome</Link></li>
+              <li><a href="/#proof" onClick={(e) => handleSectionNav(e, 'proof')}>Our Work (Before & After)</a></li>
+              <li><a href="/#reviews" onClick={(e) => handleSectionNav(e, 'reviews')}>5.0 Google Reviews</a></li>
+              <li><a href="/#process" onClick={(e) => handleSectionNav(e, 'process')}>Four Steps, No Surprises</a></li>
+              <li><a href="/#special-offers" onClick={(e) => handleSectionNav(e, 'special-offers')}>Free Inspections, Always</a></li>
+              <li><a href="/#resources" onClick={(e) => handleSectionNav(e, 'resources')}>Roofing Tips & Cost Guide</a></li>
+              <li><a href="/#faq" onClick={(e) => handleSectionNav(e, 'faq')}>Frequently Asked Questions</a></li>
             </ul>
           </div>
 
@@ -132,32 +147,25 @@ export default function Footer({ onOpenModal }) {
           margin-bottom: 50px;
         }
         .footer-brand-header {
-          display: flex;
-          align-items: center;
-          gap: 10px;
           margin-bottom: 16px;
         }
-        .footer-logo-svg {
-          width: 38px;
-          height: 38px;
+        .footer-logo-link {
+          display: inline-block;
+          background: #FFFFFF;
+          padding: 8px 14px;
+          border-radius: var(--radius-xs);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          transition: transform var(--transition-fast);
         }
-        .footer-brand-title {
-          display: flex;
-          flex-direction: column;
+        .footer-logo-link:hover {
+          transform: translateY(-2px);
         }
-        .footer-title-main {
-          font-family: var(--font-heading);
-          font-size: 1.6rem;
-          color: #FFFFFF;
-          line-height: 0.95;
-          letter-spacing: 0.04em;
-        }
-        .footer-title-sub {
-          font-size: 0.65rem;
-          font-weight: 800;
-          letter-spacing: 0.14em;
-          color: var(--color-accent);
-          margin-top: 2px;
+        .footer-brand-logo-img {
+          height: 48px;
+          width: auto;
+          max-width: 190px;
+          object-fit: contain;
+          display: block;
         }
         .footer-brand-text {
           font-size: 0.825rem;
