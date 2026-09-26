@@ -1,0 +1,363 @@
+@import './styles/tokens.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-canvas);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  padding-bottom: 72px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+/* Condensed Athletic Headings (Reference Style) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-navy);
+  font-weight: 400; /* Bebas Neue is bold by default */
+  line-height: 1.02;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  letter-spacing: 0.02em;
+}
+
+h3 {
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  letter-spacing: 0.02em;
+}
+
+p {
+  color: var(--color-text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container-wide {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-padding {
+  padding-top: clamp(50px, 7vw, 85px);
+  padding-bottom: clamp(50px, 7vw, 85px);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px auto;
+}
+
+/* Eyebrows in Reference Style */
+.eyebrow-red {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-accent);
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.eyebrow-red::before {
+  content: "—";
+  margin-right: 4px;
+}
+
+.eyebrow-red::after {
+  content: "—";
+  margin-left: 4px;
+}
+
+.section-title {
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+/* Signature Contractor Orange Action Button */
+.btn-orange {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--color-accent-gradient);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-orange);
+  transition: all var(--transition-fast);
+  line-height: 1;
+}
+
+.btn-orange:hover {
+  background: linear-gradient(180deg, #EA580C 0%, #C2410C 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(234, 88, 12, 0.5);
+}
+
+.btn-orange-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-accent);
+  transition: all var(--transition-fast);
+  line-height: 1;
+}
+
+.btn-orange-outline:hover {
+  background: var(--color-accent);
+  color: #FFFFFF;
+}
+
+/* Lead Capture Card on Reference Sites */
+.lead-card-dark {
+  background: rgba(16, 42, 67, 0.94);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  box-shadow: var(--shadow-xl);
+}
+
+.lead-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  color: #FFFFFF;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.lead-card-sub {
+  font-size: 0.8125rem;
+  color: var(--color-sky-light);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-label-white {
+  display: block;
+  font-size: 0.775rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #E2E8F0;
+  margin-bottom: 5px;
+}
+
+.form-control-dark {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-xs);
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.form-control-dark:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-sky);
+  box-shadow: 0 0 0 2px rgba(85, 184, 245, 0.25);
+}
+
+.form-control-dark::placeholder {
+  color: #94A3B8;
+}
+
+.form-control-dark option {
+  background: var(--color-navy);
+  color: #FFFFFF;
+}
+
+/* Service Button Grid (User Specific Feature) */
+.service-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  text-align: left;
+  width: 100%;
+}
+
+.service-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: #FFFBF7;
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.12);
+}
+
+.service-btn-icon {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: color var(--transition-fast);
+}
+
+.service-btn:hover .service-btn-icon {
+  color: var(--color-accent);
+}
+
+/* Running Marquee Ticker */
+.ticker-ribbon {
+  background: #FFF3EB;
+  border-top: 1px solid #FFE4D6;
+  border-bottom: 1px solid #FFE4D6;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  position: relative;
+  z-index: 5;
+}
+
+.ticker-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 36px;
+  animation: tickerScroll 24s linear infinite;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  color: var(--color-navy);
+  text-transform: uppercase;
+}
+
+.ticker-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.ticker-truck-icon {
+  color: var(--color-accent);
+}
+
+@keyframes tickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(16, 42, 67, 0.8);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}

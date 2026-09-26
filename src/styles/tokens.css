@@ -1,0 +1,62 @@
+:root {
+  /* Architectural Contractor Palette */
+  --bg-canvas: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-dark-card: rgba(16, 42, 67, 0.92);
+  
+  --color-sky: #55B8F5;
+  --color-sky-light: #E0F2FE;
+  
+  --color-primary: #1677C8;
+  --color-primary-dark: #0D4E87;
+  
+  --color-navy: #102A43;
+  --color-navy-deep: #081726;
+  --color-navy-border: #244C73;
+  
+  --color-text-primary: #172B3A;
+  --color-text-secondary: #486581;
+  --color-text-muted: #627D98;
+  --color-text-white: #FFFFFF;
+  
+  --color-soft-blue: #F0F7FC;
+  --color-soft-blue-border: #BAE6FD;
+  
+  /* Contractor Warm Orange Action Accent (From Reference) */
+  --color-accent: #EA580C;
+  --color-accent-hover: #C2410C;
+  --color-accent-gradient: linear-gradient(180deg, #F97316 0%, #EA580C 100%);
+  --color-accent-soft: #FFEDD5;
+  
+  --color-success: #10B981;
+  --color-border: #E2E8F0;
+  --color-border-subtle: #F1F5F9;
+
+  /* Typography: Condensed Athletic Headline + Clean Body */
+  --font-heading: 'Bebas Neue', 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(16, 42, 67, 0.08);
+  --shadow-lg: 0 10px 25px rgba(16, 42, 67, 0.12);
+  --shadow-xl: 0 20px 40px rgba(16, 42, 67, 0.18);
+  --shadow-orange: 0 4px 14px rgba(234, 88, 12, 0.4);
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-wide: 1280px;
+  --header-height: 76px;
+}
