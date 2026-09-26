@@ -45,14 +45,13 @@ export default function Footer({ onOpenModal }) {
           <div className="footer-col">
             <h4 className="footer-heading">SERVICES</h4>
             <ul className="footer-list">
-              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Roof Replacement</a></li>
-              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Roof Repair & Leaks</a></li>
-              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Storm & Hail Damage</a></li>
-              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Seamless Gutters</a></li>
-              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Siding & Flashing</a></li>
-              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Commercial Roofing</a></li>
-              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Skylights</a></li>
-              <li><a href="/#services" onClick={(e) => handleSectionNav(e, 'services')}>Flat Roofing</a></li>
+              <li><Link to="/services#residential-roofing">Roof Replacement</Link></li>
+              <li><Link to="/services#storm-damage">Hail Damage Restoration</Link></li>
+              <li><Link to="/services#siding">James Hardie Siding</Link></li>
+              <li><Link to="/services#gutters">Seamless Gutters</Link></li>
+              <li><Link to="/services#concrete">Concrete Patios & Driveways</Link></li>
+              <li><Link to="/services#commercial-roofing">Commercial Flat Roofing</Link></li>
+              <li><Link to="/services">All Services Overview</Link></li>
             </ul>
           </div>
 
@@ -78,6 +77,7 @@ export default function Footer({ onOpenModal }) {
             <ul className="footer-list">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About AeroDome</Link></li>
+              <li><Link to="/services">Services Overview</Link></li>
               <li><a href="/#proof" onClick={(e) => handleSectionNav(e, 'proof')}>Our Work (Before & After)</a></li>
               <li><a href="/#reviews" onClick={(e) => handleSectionNav(e, 'reviews')}>5.0 Google Reviews</a></li>
               <li><a href="/#process" onClick={(e) => handleSectionNav(e, 'process')}>Four Steps, No Surprises</a></li>

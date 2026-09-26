@@ -8,6 +8,7 @@ import LeadModal from './components/LeadModal';
 import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
 import AboutPage from './components/AboutPage';
+import ServicesPage from './pages/ServicesPage';
 
 export default function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -37,6 +38,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage onOpenModal={handleOpenModal} />} />
           <Route path="/about" element={<AboutPage onOpenModal={handleOpenModal} />} />
+          <Route path="/services" element={<ServicesPage onOpenModal={handleOpenModal} />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
