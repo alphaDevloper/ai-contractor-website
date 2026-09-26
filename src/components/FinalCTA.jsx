@@ -26,12 +26,11 @@ export default function FinalCTA({ onOpenModal }) {
           {/* Left Column: Brand + Heading + Direct Phone */}
           <div className="final-cta-text-col">
             <div className="final-cta-brand">
-              <svg viewBox="0 0 40 40" fill="none" className="final-brand-svg">
-                <path d="M20 4L4 16H9V34H31V16H36L20 4Z" fill="#1677C8" />
-                <path d="M20 9L9 17.5V31H16V22H24V31H31V17.5L20 9Z" fill="#55B8F5" />
-                <path d="M20 2L3 15L5.5 18L20 7L34.5 18L37 15L20 2Z" fill="#102A43" />
-                <circle cx="20" cy="15" r="2.5" fill="#EA580C" />
-              </svg>
+              <img 
+                src="/aerodome-logo.png" 
+                alt="AeroDome Roofing" 
+                className="final-brand-logo-img" 
+              />
             </div>
 
             <div className="eyebrow-red">
@@ -169,13 +168,16 @@ export default function FinalCTA({ onOpenModal }) {
           align-items: center;
         }
         .final-cta-brand {
-          width: 48px;
-          height: 48px;
-          margin-bottom: 12px;
+          display: flex;
+          align-items: center;
+          margin-bottom: 14px;
         }
-        .final-brand-svg {
-          width: 100%;
-          height: 100%;
+        .final-brand-logo-img {
+          height: 48px;
+          width: auto;
+          max-width: 190px;
+          object-fit: contain;
+          display: block;
         }
         .final-cta-heading {
           font-size: clamp(2.4rem, 4.5vw, 3.8rem);

@@ -34,12 +34,11 @@ export default function FAQ({ onOpenModal }) {
         {/* Header with Top Logo Icon */}
         <div className="section-header">
           <div className="faq-top-brand-icon">
-            <svg viewBox="0 0 40 40" fill="none" className="faq-svg">
-              <path d="M20 4L4 16H9V34H31V16H36L20 4Z" fill="#1677C8" />
-              <path d="M20 9L9 17.5V31H16V22H24V31H31V17.5L20 9Z" fill="#55B8F5" />
-              <path d="M20 2L3 15L5.5 18L20 7L34.5 18L37 15L20 2Z" fill="#102A43" />
-              <circle cx="20" cy="15" r="2.5" fill="#EA580C" />
-            </svg>
+            <img 
+              src="/aerodome-logo.png" 
+              alt="AeroDome Roofing" 
+              className="faq-brand-logo-img" 
+            />
           </div>
 
           <div className="eyebrow-red">
@@ -86,13 +85,17 @@ export default function FAQ({ onOpenModal }) {
           background-color: #FFFFFF;
         }
         .faq-top-brand-icon {
-          width: 44px;
-          height: 44px;
-          margin: 0 auto 10px auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto 14px auto;
         }
-        .faq-svg {
-          width: 100%;
-          height: 100%;
+        .faq-brand-logo-img {
+          height: 48px;
+          width: auto;
+          max-width: 200px;
+          object-fit: contain;
+          display: block;
         }
         .faq-accordion-box {
           max-width: 820px;

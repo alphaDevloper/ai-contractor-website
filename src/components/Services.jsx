@@ -38,14 +38,13 @@ export default function Services({ onOpenModal }) {
           {/* Right Column: Logo + Headline + Interactive Service Buttons Grid */}
           <div className="services-content-col">
             
-            {/* Small Brand Mark */}
+            {/* Brand Logo */}
             <div className="services-brand-icon">
-              <svg viewBox="0 0 40 40" fill="none" className="services-svg">
-                <path d="M20 4L4 16H9V34H31V16H36L20 4Z" fill="#1677C8" />
-                <path d="M20 9L9 17.5V31H16V22H24V31H31V17.5L20 9Z" fill="#55B8F5" />
-                <path d="M20 2L3 15L5.5 18L20 7L34.5 18L37 15L20 2Z" fill="#102A43" />
-                <circle cx="20" cy="15" r="2.5" fill="#EA580C" />
-              </svg>
+              <img 
+                src="/aerodome-logo.png" 
+                alt="AeroDome Roofing" 
+                className="services-brand-logo-img" 
+              />
             </div>
 
             <div className="eyebrow-red">
@@ -129,13 +128,16 @@ export default function Services({ onOpenModal }) {
           flex-direction: column;
         }
         .services-brand-icon {
-          width: 44px;
-          height: 44px;
-          margin-bottom: 12px;
+          display: flex;
+          align-items: center;
+          margin-bottom: 14px;
         }
-        .services-svg {
-          width: 100%;
-          height: 100%;
+        .services-brand-logo-img {
+          height: 48px;
+          width: auto;
+          max-width: 190px;
+          object-fit: contain;
+          display: block;
         }
         .services-heading {
           font-size: clamp(2.3rem, 4vw, 3.4rem);
