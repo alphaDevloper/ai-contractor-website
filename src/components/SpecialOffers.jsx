@@ -47,58 +47,7 @@ export default function SpecialOffers({ onOpenModal }) {
 
       </div>
 
-      <style>{`
-        .offers-clean-section {
-          background-color: #FFFFFF;
-        }
-        .center-offer-card {
-          max-width: 820px;
-          margin: 0 auto;
-          background: #FFFFFF;
-          border: 1.5px solid var(--color-border);
-          border-radius: var(--radius-md);
-          padding: 40px 48px;
-          text-align: center;
-          box-shadow: var(--shadow-md);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .center-offer-icon-box {
-          width: 60px;
-          height: 60px;
-          background: var(--color-navy);
-          color: var(--color-accent);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: var(--radius-xs);
-          margin-bottom: 18px;
-        }
-        .center-offer-heading {
-          font-size: clamp(1.6rem, 3vw, 2.2rem);
-          color: var(--color-navy);
-          margin-bottom: 14px;
-          line-height: 1.1;
-        }
-        .center-offer-body {
-          font-size: 0.95rem;
-          line-height: 1.65;
-          color: var(--color-text-secondary);
-          max-width: 680px;
-          margin-bottom: 24px;
-        }
-        .center-offer-btn-wrap {
-          display: flex;
-          justify-content: center;
-        }
-
-        @media (max-width: 640px) {
-          .center-offer-card {
-            padding: 30px 20px;
-          }
-        }
-      `}</style>
+      
     </section>
   );
 }

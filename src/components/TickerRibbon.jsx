@@ -27,23 +27,6 @@ export default function TickerRibbon({ dark = false }) {
           </div>
         ))}
       </div>
-
-      <style>{`
-        .ticker-dark {
-          background: #081726 !important;
-          border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-        }
-        .ticker-dark .ticker-item {
-          color: #E2E8F0 !important;
-        }
-        .ticker-dark .ticker-dot {
-          background: var(--color-sky) !important;
-        }
-        .ticker-dark .ticker-truck-icon {
-          color: var(--color-sky) !important;
-        }
-      `}</style>
     </div>
   );
 }

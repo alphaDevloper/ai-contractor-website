@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -9,6 +9,12 @@ import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
 import AboutPage from './components/AboutPage';
 import ServicesPage from './pages/ServicesPage';
+import ServiceDetailPage from './pages/ServiceDetailPage';
+
+function ServiceDetailWrapper({ onOpenModal }) {
+  const { serviceId } = useParams();
+  return <ServiceDetailPage key={serviceId} onOpenModal={onOpenModal} />;
+}
 
 export default function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -39,6 +45,7 @@ export default function App() {
           <Route path="/" element={<HomePage onOpenModal={handleOpenModal} />} />
           <Route path="/about" element={<AboutPage onOpenModal={handleOpenModal} />} />
           <Route path="/services" element={<ServicesPage onOpenModal={handleOpenModal} />} />
+          <Route path="/services/:serviceId" element={<ServiceDetailWrapper onOpenModal={handleOpenModal} />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

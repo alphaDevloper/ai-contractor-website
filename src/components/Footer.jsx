@@ -45,12 +45,13 @@ export default function Footer({ onOpenModal }) {
           <div className="footer-col">
             <h4 className="footer-heading">SERVICES</h4>
             <ul className="footer-list">
-              <li><Link to="/services#residential-roofing">Roof Replacement</Link></li>
-              <li><Link to="/services#storm-damage">Hail Damage Restoration</Link></li>
-              <li><Link to="/services#siding">James Hardie Siding</Link></li>
-              <li><Link to="/services#gutters">Seamless Gutters</Link></li>
-              <li><Link to="/services#concrete">Concrete Patios & Driveways</Link></li>
-              <li><Link to="/services#commercial-roofing">Commercial Flat Roofing</Link></li>
+              <li><Link to="/services/residential-roofing">Roof Replacement</Link></li>
+              <li><Link to="/services/windows">Window Replacement</Link></li>
+              <li><Link to="/services/storm-damage">Hail Damage Restoration</Link></li>
+              <li><Link to="/services/siding">James Hardie Siding</Link></li>
+              <li><Link to="/services/gutters">Seamless Gutters</Link></li>
+              <li><Link to="/services/concrete">Concrete Patios & Driveways</Link></li>
+              <li><Link to="/services/commercial-roofing">Commercial Flat Roofing</Link></li>
               <li><Link to="/services">All Services Overview</Link></li>
             </ul>
           </div>
@@ -132,126 +133,7 @@ export default function Footer({ onOpenModal }) {
         </div>
       </div>
 
-      <style>{`
-        .reference-footer {
-          background-color: var(--color-navy-deep);
-          color: #94A3B8;
-          font-size: 0.85rem;
-          padding: 60px 0 24px 0;
-          border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .footer-columns-grid {
-          display: grid;
-          grid-template-columns: 1.4fr 0.9fr 0.9fr 0.9fr 1.2fr;
-          gap: 36px;
-          margin-bottom: 50px;
-        }
-        .footer-brand-header {
-          margin-bottom: 16px;
-        }
-        .footer-logo-link {
-          display: inline-block;
-          background: #FFFFFF;
-          padding: 8px 14px;
-          border-radius: var(--radius-xs);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-          transition: transform var(--transition-fast);
-        }
-        .footer-logo-link:hover {
-          transform: translateY(-2px);
-        }
-        .footer-brand-logo-img {
-          height: 48px;
-          width: auto;
-          max-width: 190px;
-          object-fit: contain;
-          display: block;
-        }
-        .footer-brand-text {
-          font-size: 0.825rem;
-          line-height: 1.6;
-          color: #CBD5E1;
-        }
-        .footer-heading {
-          font-family: var(--font-heading);
-          font-size: 1.15rem;
-          color: #FFFFFF;
-          letter-spacing: 0.05em;
-          margin-bottom: 16px;
-        }
-        .footer-list {
-          list-style: none;
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-        }
-        .footer-list a {
-          color: #94A3B8;
-          font-size: 0.825rem;
-          transition: color var(--transition-fast);
-        }
-        .footer-list a:hover {
-          color: #FFFFFF;
-        }
-        .footer-contact-details {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          margin-bottom: 18px;
-        }
-        .footer-contact-row {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          color: #E2E8F0;
-          font-size: 0.85rem;
-        }
-        .contact-icon {
-          color: var(--color-accent);
-          flex-shrink: 0;
-        }
-        .footer-cta-btn {
-          width: 100%;
-          padding: 12px;
-          font-size: 1.05rem;
-        }
-        .footer-bottom-strip {
-          border-top: 1px solid rgba(255, 255, 255, 0.08);
-          padding-top: 24px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          font-size: 0.775rem;
-          color: #64748B;
-          flex-wrap: wrap;
-          gap: 12px;
-        }
-        .footer-legal-links {
-          display: flex;
-          gap: 10px;
-        }
-        .footer-legal-links a {
-          color: #94A3B8;
-        }
-        .footer-legal-links a:hover {
-          color: #FFFFFF;
-        }
-
-        @media (max-width: 1024px) {
-          .footer-columns-grid {
-            grid-template-columns: 1fr 1fr 1fr;
-          }
-        }
-        @media (max-width: 700px) {
-          .footer-columns-grid {
-            grid-template-columns: 1fr;
-          }
-          .footer-bottom-strip {
-            flex-direction: column;
-            text-align: center;
-          }
-        }
-      `}</style>
+      
     </footer>
   );
 }
