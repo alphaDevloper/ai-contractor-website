@@ -70,6 +70,7 @@ export default function Header({ onOpenModal }) {
   const isHomeActive = location.pathname === '/' && !location.hash;
   const isAboutActive = location.pathname === '/about';
   const isServicesActive = location.pathname.startsWith('/services');
+  const isGalleryActive = location.pathname === '/gallery' || location.pathname === '/our-work';
 
   return (
     <header className={`site-header ${scrolled ? 'header-scrolled' : ''}`}>
@@ -167,13 +168,13 @@ export default function Header({ onOpenModal }) {
             )}
           </div>
 
-          <a 
-            href="/#proof" 
-            className="nav-item" 
-            onClick={(e) => handleSectionClick(e, 'proof')}
+          <Link 
+            to="/gallery" 
+            className={`nav-item ${isGalleryActive ? 'nav-item-active' : ''}`}
+            onClick={closeMenu}
           >
-            Our Work
-          </a>
+            Gallery
+          </Link>
           <a 
             href="/#reviews" 
             className="nav-item" 
@@ -295,7 +296,13 @@ export default function Header({ onOpenModal }) {
               )}
             </div>
 
-            <a href="/#proof" onClick={(e) => handleSectionClick(e, 'proof')}>Our Work</a>
+            <Link 
+              to="/gallery" 
+              className={isGalleryActive ? 'mobile-nav-active' : ''}
+              onClick={closeMenu}
+            >
+              Gallery / Our Work
+            </Link>
             <a href="/#reviews" onClick={(e) => handleSectionClick(e, 'reviews')}>5.0 Google Reviews</a>
             <a href="/#process" onClick={(e) => handleSectionClick(e, 'process')}>How It Works</a>
             <a href="/#special-offers" onClick={(e) => handleSectionClick(e, 'special-offers')}>Special Offers</a>

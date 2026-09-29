@@ -10,6 +10,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './components/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
+import GalleryPage from './pages/GalleryPage';
 
 function ServiceDetailWrapper({ onOpenModal }) {
   const { serviceId } = useParams();
@@ -46,6 +47,8 @@ export default function App() {
           <Route path="/about" element={<AboutPage onOpenModal={handleOpenModal} />} />
           <Route path="/services" element={<ServicesPage onOpenModal={handleOpenModal} />} />
           <Route path="/services/:serviceId" element={<ServiceDetailWrapper onOpenModal={handleOpenModal} />} />
+          <Route path="/gallery" element={<GalleryPage onOpenModal={handleOpenModal} />} />
+          <Route path="/our-work" element={<GalleryPage onOpenModal={handleOpenModal} />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

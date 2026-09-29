@@ -79,7 +79,7 @@ export default function Footer({ onOpenModal }) {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About AeroDome</Link></li>
               <li><Link to="/services">Services Overview</Link></li>
-              <li><a href="/#proof" onClick={(e) => handleSectionNav(e, 'proof')}>Our Work (Before & After)</a></li>
+              <li><Link to="/gallery">Our Completed Projects Gallery</Link></li>
               <li><a href="/#reviews" onClick={(e) => handleSectionNav(e, 'reviews')}>5.0 Google Reviews</a></li>
               <li><a href="/#process" onClick={(e) => handleSectionNav(e, 'process')}>Four Steps, No Surprises</a></li>
               <li><a href="/#special-offers" onClick={(e) => handleSectionNav(e, 'special-offers')}>Free Inspections, Always</a></li>
