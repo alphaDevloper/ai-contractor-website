@@ -11,10 +11,17 @@ import AboutPage from './components/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import GalleryPage from './pages/GalleryPage';
+import ServiceAreasPage from './pages/ServiceAreasPage';
+import ServiceAreaDetailPage from './pages/ServiceAreaDetailPage';
 
 function ServiceDetailWrapper({ onOpenModal }) {
   const { serviceId } = useParams();
   return <ServiceDetailPage key={serviceId} onOpenModal={onOpenModal} />;
+}
+
+function ServiceAreaDetailWrapper({ onOpenModal }) {
+  const { areaSlug } = useParams();
+  return <ServiceAreaDetailPage key={areaSlug} onOpenModal={onOpenModal} />;
 }
 
 export default function App() {
@@ -49,6 +56,8 @@ export default function App() {
           <Route path="/services/:serviceId" element={<ServiceDetailWrapper onOpenModal={handleOpenModal} />} />
           <Route path="/gallery" element={<GalleryPage onOpenModal={handleOpenModal} />} />
           <Route path="/our-work" element={<GalleryPage onOpenModal={handleOpenModal} />} />
+          <Route path="/service-areas" element={<ServiceAreasPage onOpenModal={handleOpenModal} />} />
+          <Route path="/service-areas/:areaSlug" element={<ServiceAreaDetailWrapper onOpenModal={handleOpenModal} />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

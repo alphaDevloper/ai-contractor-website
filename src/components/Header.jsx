@@ -2,15 +2,19 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Phone, Menu, X, ChevronRight, ChevronDown } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { servicesShowcase } from '../data/servicesData';
+import { serviceAreaDropdownList } from '../data/serviceAreasData';
 
 export default function Header({ onOpenModal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [areasDropdownOpen, setAreasDropdownOpen] = useState(false);
+  const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
+  const areasDropdownRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,26 +24,31 @@ export default function Header({ onOpenModal }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close dropdown on outside click
+  // Close dropdowns on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setServicesDropdownOpen(false);
+      }
+      if (areasDropdownRef.current && !areasDropdownRef.current.contains(event.target)) {
+        setAreasDropdownOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Close dropdown when route changes
+  // Close dropdowns when route changes
   useEffect(() => {
     setServicesDropdownOpen(false);
+    setAreasDropdownOpen(false);
     setMobileMenuOpen(false);
   }, [location.pathname]);
 
   const closeMenu = () => {
     setMobileMenuOpen(false);
     setServicesDropdownOpen(false);
+    setAreasDropdownOpen(false);
   };
 
   const handleSectionClick = (e, sectionId) => {
@@ -71,6 +80,7 @@ export default function Header({ onOpenModal }) {
   const isAboutActive = location.pathname === '/about';
   const isServicesActive = location.pathname.startsWith('/services');
   const isGalleryActive = location.pathname === '/gallery' || location.pathname === '/our-work';
+  const isServiceAreasActive = location.pathname.startsWith('/service-areas');
 
   return (
     <header className={`site-header ${scrolled ? 'header-scrolled' : ''}`}>
@@ -189,13 +199,70 @@ export default function Header({ onOpenModal }) {
           >
             Process
           </a>
-          <a 
-            href="/#service-areas" 
-            className="nav-item" 
-            onClick={(e) => handleSectionClick(e, 'service-areas')}
+          {/* Service Areas Nav Dropdown Item */}
+          <div 
+            className="nav-dropdown-wrapper"
+            ref={areasDropdownRef}
+            onMouseEnter={() => setAreasDropdownOpen(true)}
+            onMouseLeave={() => setAreasDropdownOpen(false)}
           >
-            Service Areas
-          </a>
+            <div className="nav-dropdown-trigger">
+              <Link 
+                to="/service-areas" 
+                className={`nav-item ${isServiceAreasActive ? 'nav-item-active' : ''}`}
+                onClick={closeMenu}
+              >
+                Service Areas
+              </Link>
+              <button 
+                type="button" 
+                className={`dropdown-caret-btn ${areasDropdownOpen ? 'dropdown-caret-active' : ''}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setAreasDropdownOpen(!areasDropdownOpen);
+                }}
+                aria-label="Toggle Service Areas Menu"
+                aria-expanded={areasDropdownOpen}
+              >
+                <ChevronDown size={14} className={`dropdown-caret-icon ${areasDropdownOpen ? 'caret-flipped' : ''}`} />
+              </button>
+            </div>
+
+            {/* Desktop Dropdown Popover */}
+            {areasDropdownOpen && (
+              <div className="services-dropdown-popover areas-dropdown-popover">
+                <div className="dropdown-popover-header">
+                  <span>OUR SERVICE AREAS</span>
+                </div>
+                <div className="dropdown-links-list">
+                  {serviceAreaDropdownList.map((area) => (
+                    <Link
+                      key={area.slug}
+                      to={`/service-areas/${area.slug}`}
+                      className="dropdown-service-item"
+                      onClick={closeMenu}
+                    >
+                      <div className="dropdown-item-texts">
+                        <span className="dropdown-item-title">{area.name}</span>
+                        <span className="dropdown-item-sub">{area.region}</span>
+                      </div>
+                      <ChevronRight size={14} className="dropdown-item-arrow" />
+                    </Link>
+                  ))}
+                </div>
+                <div className="dropdown-popover-footer">
+                  <Link 
+                    to="/service-areas" 
+                    className="dropdown-all-link"
+                    onClick={closeMenu}
+                  >
+                    <span>View All Service Areas</span>
+                    <ChevronRight size={14} />
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
           <a 
             href="/#faq" 
             className="nav-item" 
@@ -306,7 +373,49 @@ export default function Header({ onOpenModal }) {
             <a href="/#reviews" onClick={(e) => handleSectionClick(e, 'reviews')}>5.0 Google Reviews</a>
             <a href="/#process" onClick={(e) => handleSectionClick(e, 'process')}>How It Works</a>
             <a href="/#special-offers" onClick={(e) => handleSectionClick(e, 'special-offers')}>Special Offers</a>
-            <a href="/#service-areas" onClick={(e) => handleSectionClick(e, 'service-areas')}>Service Areas</a>
+            {/* Mobile Service Areas Accordion */}
+            <div className="mobile-nav-group">
+              <div className="mobile-nav-group-trigger">
+                <Link 
+                  to="/service-areas" 
+                  className={isServiceAreasActive ? 'mobile-nav-active' : ''}
+                  onClick={closeMenu}
+                >
+                  Service Areas
+                </Link>
+                <button 
+                  type="button" 
+                  className="mobile-expand-btn"
+                  onClick={() => setMobileAreasOpen(!mobileAreasOpen)}
+                  aria-label="Toggle Service Areas Submenu"
+                >
+                  <ChevronDown size={18} className={`mobile-caret ${mobileAreasOpen ? 'mobile-caret-open' : ''}`} />
+                </button>
+              </div>
+
+              {mobileAreasOpen && (
+                <div className="mobile-services-submenu">
+                  {serviceAreaDropdownList.map((area) => (
+                    <Link 
+                      key={area.slug} 
+                      to={`/service-areas/${area.slug}`} 
+                      className="mobile-service-sublink" 
+                      onClick={closeMenu}
+                    >
+                      <span>{area.name}</span>
+                      <ChevronRight size={14} />
+                    </Link>
+                  ))}
+                  <Link 
+                    to="/service-areas" 
+                    className="mobile-service-all-link" 
+                    onClick={closeMenu}
+                  >
+                    View All Service Areas &rarr;
+                  </Link>
+                </div>
+              )}
+            </div>
             <a href="/#faq" onClick={(e) => handleSectionClick(e, 'faq')}>FAQ</a>
           </div>
 
