@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import MobileStickyBar from './components/MobileStickyBar';
 import LeadModal from './components/LeadModal';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import Navigation from './Navigation';
 
 export default function App() {
@@ -41,6 +42,9 @@ export default function App() {
 
       {/* Mobile Fixed Bottom Bar */}
       <MobileStickyBar onOpenModal={handleOpenModal} />
+
+      {/* Themed Floating Scroll to Top Button */}
+      <ScrollToTopButton />
 
       {/* Quick Estimate Modal */}
       <LeadModal 
