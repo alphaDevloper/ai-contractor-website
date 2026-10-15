@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Phone, Menu, X, ChevronRight, ChevronDown } from 'lucide-react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Phone, Menu, X, ChevronRight, ChevronDown, Compass } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import { servicesShowcase } from '../data/servicesData';
 import { serviceAreaDropdownList } from '../data/serviceAreasData';
 
@@ -12,7 +12,6 @@ export default function Header({ onOpenModal }) {
   const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
   const dropdownRef = useRef(null);
   const areasDropdownRef = useRef(null);
 
@@ -38,12 +37,12 @@ export default function Header({ onOpenModal }) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Close dropdowns when route changes
+  // Close dropdowns and mobile menu when route or hash changes
   useEffect(() => {
     setServicesDropdownOpen(false);
     setAreasDropdownOpen(false);
     setMobileMenuOpen(false);
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
 
   const closeMenu = () => {
     setMobileMenuOpen(false);
@@ -53,41 +52,43 @@ export default function Header({ onOpenModal }) {
 
   const handleSectionClick = (e, sectionId) => {
     closeMenu();
-    if (location.pathname !== '/') {
-      navigate(`/#${sectionId}`);
-    } else {
+    if (location.pathname === '/') {
       e.preventDefault();
       const el = document.getElementById(sectionId);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
-        window.history.pushState(null, '', `#${sectionId}`);
       }
     }
   };
 
   const handleHomeClick = (e) => {
     closeMenu();
-    if (location.pathname !== '/') {
-      navigate('/');
-    } else {
+    if (location.pathname === '/') {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      window.history.pushState(null, '', '/');
     }
   };
 
   const isHomeActive = location.pathname === '/' && !location.hash;
-  const isAboutActive = location.pathname === '/about';
+  const isAboutActive = location.pathname === '/about' || location.pathname === '/about-us';
   const isServicesActive = location.pathname.startsWith('/services');
-  const isGalleryActive = location.pathname === '/gallery' || location.pathname === '/our-work';
+  const isGalleryActive = 
+    location.pathname === '/gallery' || 
+    location.pathname === '/our-work' || 
+    location.pathname === '/portfolio' || 
+    location.pathname === '/case-studies';
   const isServiceAreasActive = location.pathname.startsWith('/service-areas');
+  const isNavigationActive = 
+    location.pathname === '/navigation' || 
+    location.pathname === '/nav' || 
+    location.pathname === '/sitemap';
 
   return (
     <header className={`site-header ${scrolled ? 'header-scrolled' : ''}`}>
       <div className="container-wide header-inner">
         
         {/* Brand Logo */}
-        <Link to="/" className="brand-logo" onClick={handleHomeClick}>
+        <Link to="/" className="brand-logo" onClick={handleHomeClick} aria-label="AeroDome Roofing Home">
           <img 
             src="/aerodome-logo.png" 
             alt="AeroDome Roofing Calgary" 
@@ -96,7 +97,7 @@ export default function Header({ onOpenModal }) {
         </Link>
 
         {/* Desktop Links */}
-        <nav className="header-nav">
+        <nav className="header-nav" aria-label="Main Navigation">
           <Link 
             to="/" 
             className={`nav-item ${isHomeActive ? 'nav-item-active' : ''}`} 
@@ -185,20 +186,7 @@ export default function Header({ onOpenModal }) {
           >
             Gallery
           </Link>
-          <a 
-            href="/#reviews" 
-            className="nav-item" 
-            onClick={(e) => handleSectionClick(e, 'reviews')}
-          >
-            Reviews
-          </a>
-          <a 
-            href="/#process" 
-            className="nav-item" 
-            onClick={(e) => handleSectionClick(e, 'process')}
-          >
-            Process
-          </a>
+
           {/* Service Areas Nav Dropdown Item */}
           <div 
             className="nav-dropdown-wrapper"
@@ -263,13 +251,40 @@ export default function Header({ onOpenModal }) {
               </div>
             )}
           </div>
-          <a 
-            href="/#faq" 
+
+          {/* Navigation Directory Page Link */}
+          <Link 
+            to="/navigation" 
+            className={`nav-item ${isNavigationActive ? 'nav-item-active' : ''}`}
+            onClick={closeMenu}
+            title="Complete Site Directory & All Routes"
+          >
+            Navigation
+          </Link>
+
+          <Link 
+            to="/#reviews" 
+            className="nav-item" 
+            onClick={(e) => handleSectionClick(e, 'reviews')}
+          >
+            Reviews
+          </Link>
+
+          <Link 
+            to="/#process" 
+            className="nav-item" 
+            onClick={(e) => handleSectionClick(e, 'process')}
+          >
+            Process
+          </Link>
+
+          <Link 
+            to="/#faq" 
             className="nav-item" 
             onClick={(e) => handleSectionClick(e, 'faq')}
           >
             FAQ
-          </a>
+          </Link>
         </nav>
 
         {/* Right Actions: Phone + Orange CTA */}
@@ -370,12 +385,10 @@ export default function Header({ onOpenModal }) {
             >
               Gallery / Our Work
             </Link>
-            <a href="/#reviews" onClick={(e) => handleSectionClick(e, 'reviews')}>5.0 Google Reviews</a>
-            <a href="/#process" onClick={(e) => handleSectionClick(e, 'process')}>How It Works</a>
-            <a href="/#special-offers" onClick={(e) => handleSectionClick(e, 'special-offers')}>Special Offers</a>
+
             {/* Mobile Service Areas Accordion */}
-            <div className="mobile-nav-group">
-              <div className="mobile-nav-group-trigger">
+            <div className="mobile-services-accordion">
+              <div className="mobile-services-row">
                 <Link 
                   to="/service-areas" 
                   className={isServiceAreasActive ? 'mobile-nav-active' : ''}
@@ -385,7 +398,7 @@ export default function Header({ onOpenModal }) {
                 </Link>
                 <button 
                   type="button" 
-                  className="mobile-expand-btn"
+                  className="mobile-services-arrow-btn"
                   onClick={() => setMobileAreasOpen(!mobileAreasOpen)}
                   aria-label="Toggle Service Areas Submenu"
                 >
@@ -416,7 +429,21 @@ export default function Header({ onOpenModal }) {
                 </div>
               )}
             </div>
-            <a href="/#faq" onClick={(e) => handleSectionClick(e, 'faq')}>FAQ</a>
+
+            {/* Mobile Navigation Directory Link */}
+            <Link 
+              to="/navigation" 
+              className={isNavigationActive ? 'mobile-nav-active' : ''}
+              onClick={closeMenu}
+              style={{ color: 'var(--color-accent)', fontWeight: '800' }}
+            >
+              Site Navigation (All Routes) &rarr;
+            </Link>
+
+            <Link to="/#reviews" onClick={(e) => handleSectionClick(e, 'reviews')}>5.0 Google Reviews</Link>
+            <Link to="/#process" onClick={(e) => handleSectionClick(e, 'process')}>How It Works</Link>
+            <Link to="/#special-offers" onClick={(e) => handleSectionClick(e, 'special-offers')}>Special Offers</Link>
+            <Link to="/#faq" onClick={(e) => handleSectionClick(e, 'faq')}>FAQ</Link>
           </div>
 
           <div className="mobile-drawer-actions">
@@ -436,8 +463,6 @@ export default function Header({ onOpenModal }) {
           </div>
         </div>
       )}
-
-      
     </header>
   );
 }

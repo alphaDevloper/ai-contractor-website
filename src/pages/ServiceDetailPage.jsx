@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { 
   Sparkles, 
@@ -21,8 +21,8 @@ export default function ServiceDetailPage({ onOpenModal }) {
   const { serviceId } = useParams();
   const navigate = useNavigate();
 
-  // Load dynamic service data
-  const service = getServiceDetail(serviceId);
+  // Load dynamic service data safely memoized
+  const service = useMemo(() => getServiceDetail(serviceId), [serviceId]);
 
   // Scroll to top when serviceId changes
   useEffect(() => {
@@ -48,7 +48,7 @@ export default function ServiceDetailPage({ onOpenModal }) {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  // Update selected service in form when service changes
+  // Update selected service in form when serviceId changes
   useEffect(() => {
     if (service) {
       setFormData(prev => ({
@@ -57,7 +57,7 @@ export default function ServiceDetailPage({ onOpenModal }) {
       }));
       setSubmitted(false);
     }
-  }, [service]);
+  }, [serviceId]);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();

@@ -1,20 +1,15 @@
 import React from 'react';
-import { Phone, Mail, MapPin, ChevronRight } from 'lucide-react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Phone, Mail, MapPin, ChevronRight, Compass } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Footer({ onOpenModal }) {
-  const navigate = useNavigate();
   const location = useLocation();
 
-  const handleSectionNav = (e, sectionId) => {
-    if (location.pathname !== '/') {
-      navigate(`/#${sectionId}`);
-    } else {
-      e.preventDefault();
+  const handleSectionClick = (sectionId) => {
+    if (location.pathname === '/') {
       const el = document.getElementById(sectionId);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
-        window.history.pushState(null, '', `#${sectionId}`);
       }
     }
   };
@@ -27,7 +22,7 @@ export default function Footer({ onOpenModal }) {
           {/* Col 1: Brand & Bio */}
           <div className="footer-brand-col">
             <div className="footer-brand-header">
-              <Link to="/" className="footer-logo-link">
+              <Link to="/" className="footer-logo-link" aria-label="AeroDome Roofing Home">
                 <img 
                   src="/aerodome-logo.png" 
                   alt="AeroDome Roofing Calgary" 
@@ -60,31 +55,33 @@ export default function Footer({ onOpenModal }) {
           <div className="footer-col">
             <h4 className="footer-heading">SERVICE AREAS</h4>
             <ul className="footer-list">
-              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Calgary NW</a></li>
-              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Calgary SW</a></li>
-              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Calgary SE</a></li>
-              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Calgary NE</a></li>
-              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Airdrie</a></li>
-              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Cochrane</a></li>
-              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Chestermere</a></li>
-              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Okotoks</a></li>
-              <li><a href="/#service-areas" onClick={(e) => handleSectionNav(e, 'service-areas')}>Strathmore</a></li>
+              <li><Link to="/service-areas/calgary-nw">Calgary NW</Link></li>
+              <li><Link to="/service-areas/calgary-sw">Calgary SW</Link></li>
+              <li><Link to="/service-areas/calgary-se">Calgary SE</Link></li>
+              <li><Link to="/service-areas/calgary-ne">Calgary NE</Link></li>
+              <li><Link to="/service-areas/airdrie">Airdrie</Link></li>
+              <li><Link to="/service-areas/cochrane">Cochrane</Link></li>
+              <li><Link to="/service-areas/chestermere">Chestermere</Link></li>
+              <li><Link to="/service-areas/okotoks">Okotoks</Link></li>
+              <li><Link to="/service-areas/strathmore">Strathmore</Link></li>
+              <li><Link to="/service-areas" style={{ fontWeight: '700', color: 'var(--color-accent)' }}>All Service Areas &rarr;</Link></li>
             </ul>
           </div>
 
           {/* Col 4: Company */}
           <div className="footer-col">
-            <h4 className="footer-heading">COMPANY</h4>
+            <h4 className="footer-heading">COMPANY & NAV</h4>
             <ul className="footer-list">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About AeroDome</Link></li>
               <li><Link to="/services">Services Overview</Link></li>
               <li><Link to="/gallery">Our Completed Projects Gallery</Link></li>
-              <li><a href="/#reviews" onClick={(e) => handleSectionNav(e, 'reviews')}>5.0 Google Reviews</a></li>
-              <li><a href="/#process" onClick={(e) => handleSectionNav(e, 'process')}>Four Steps, No Surprises</a></li>
-              <li><a href="/#special-offers" onClick={(e) => handleSectionNav(e, 'special-offers')}>Free Inspections, Always</a></li>
-              <li><a href="/#resources" onClick={(e) => handleSectionNav(e, 'resources')}>Roofing Tips & Cost Guide</a></li>
-              <li><a href="/#faq" onClick={(e) => handleSectionNav(e, 'faq')}>Frequently Asked Questions</a></li>
+              <li><Link to="/navigation" style={{ fontWeight: '700', color: 'var(--color-accent)' }}>Site Navigation (All Routes)</Link></li>
+              <li><Link to="/#reviews" onClick={() => handleSectionClick('reviews')}>5.0 Google Reviews</Link></li>
+              <li><Link to="/#process" onClick={() => handleSectionClick('process')}>Four Steps, No Surprises</Link></li>
+              <li><Link to="/#special-offers" onClick={() => handleSectionClick('special-offers')}>Free Inspections, Always</Link></li>
+              <li><Link to="/#resources" onClick={() => handleSectionClick('resources')}>Roofing Tips & Cost Guide</Link></li>
+              <li><Link to="/#faq" onClick={() => handleSectionClick('faq')}>Frequently Asked Questions</Link></li>
             </ul>
           </div>
 
@@ -124,16 +121,16 @@ export default function Footer({ onOpenModal }) {
             &copy; 2011–{new Date().getFullYear()} AeroDome Roofing Inc. All rights reserved. Registered Alberta Business &bull; COR™ Safety Certified.
           </div>
           <div className="footer-legal-links">
-            <a href="#privacy">Privacy Policy</a>
+            <Link to="/navigation">Site Directory</Link>
             <span>&bull;</span>
-            <a href="#terms">Terms of Service</a>
+            <Link to="/#privacy" onClick={() => handleSectionClick('privacy')}>Privacy Policy</Link>
             <span>&bull;</span>
-            <a href="#warranty">10-Year Warranty Terms</a>
+            <Link to="/#terms" onClick={() => handleSectionClick('terms')}>Terms of Service</Link>
+            <span>&bull;</span>
+            <Link to="/#warranty" onClick={() => handleSectionClick('warranty')}>10-Year Warranty Terms</Link>
           </div>
         </div>
       </div>
-
-      
     </footer>
   );
 }
