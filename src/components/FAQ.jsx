@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Plus, X } from 'lucide-react';
+import Logo from '../../public/aerodome-logo.webp'
 
 export default function FAQ({ onOpenModal }) {
   const [openIdx, setOpenIdx] = useState(0);
@@ -35,7 +36,7 @@ export default function FAQ({ onOpenModal }) {
         <div className="section-header">
           <div className="faq-top-brand-icon">
             <img 
-              src="/aerodome-logo.png" 
+              src={Logo} 
               alt="AeroDome Roofing" 
               className="faq-brand-logo-img" 
             />

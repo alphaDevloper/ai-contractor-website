@@ -1,5 +1,7 @@
 import React from 'react';
 import { Home, Hammer, Zap, Droplets, Layers, Building2, Sun, Search, FileText, ShieldCheck, ChevronRight } from 'lucide-react';
+import ServiceBg from "../assets/after_roof.jpg";
+import Logo from "../../public/aerodome-logo.webp";
 
 export default function Services({ onOpenModal }) {
   const serviceButtons = [
@@ -25,7 +27,7 @@ export default function Services({ onOpenModal }) {
           <div className="services-photo-col">
             <div className="services-img-wrapper">
               <img 
-                src="/images/after_roof.jpg" 
+                src={ServiceBg}
                 alt="AeroDome completed residential architectural shingle roof in Calgary" 
                 className="services-large-photo"
               />
@@ -41,7 +43,7 @@ export default function Services({ onOpenModal }) {
             {/* Brand Logo */}
             <div className="services-brand-icon">
               <img 
-                src="/aerodome-logo.png" 
+                src={Logo} 
                 alt="AeroDome Roofing" 
                 className="services-brand-logo-img" 
               />

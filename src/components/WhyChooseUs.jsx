@@ -1,5 +1,7 @@
 import React from 'react';
 import { ShieldCheck, Users, Zap, DollarSign, Camera, CheckCircle2 } from 'lucide-react';
+import Crew from "../assets/service_crew.jpg";
+
 
 export default function WhyChooseUs({ onOpenModal }) {
   const points = [
@@ -51,7 +53,7 @@ export default function WhyChooseUs({ onOpenModal }) {
           <div className="neighborhood-photo-col">
             <div className="neighborhood-img-frame">
               <img 
-                src="/images/service_crew.jpg" 
+                src={Crew} 
                 alt="AeroDome certified roofing crew on Calgary home roof" 
                 className="neighborhood-img"
               />

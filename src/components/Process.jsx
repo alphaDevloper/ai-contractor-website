@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import Roof from "../assets/after_roof.jpg";
 
 export default function Process({ onOpenModal }) {
   const steps = [
@@ -35,7 +36,7 @@ export default function Process({ onOpenModal }) {
           <div className="process-photo-col">
             <div className="process-img-frame">
               <img 
-                src="/images/after_roof.jpg" 
+                src={Roof} 
                 alt="AeroDome residential roofing installation process in Calgary" 
                 className="process-photo-img"
               />

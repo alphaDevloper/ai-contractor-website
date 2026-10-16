@@ -1,22 +1,25 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import Hero from "../assets/hero_roofing.jpg";
+import HailBefore from "../assets/before_hail.jpg";
+import Roof from "../assets/after_roof.jpg";
 
 export default function Resources({ onOpenModal }) {
   const tips = [
     {
-      img: "/images/hero_roofing.jpg",
+      img: Hero,
       tag: "COST & PLANNING",
       title: "HOW MUCH DOES A ROOF REPLACEMENT COST IN CALGARY?",
       desc: "An unvarnished breakdown of architectural shingle costs in Alberta: square footage calculations, pitch multipliers, tear-off fees, and ice barrier requirements."
     },
     {
-      img: "/images/before_hail.jpg",
+      img: HailBefore,
       tag: "HAIL & STORM",
       title: "HOW TO SPOT HIDDEN HAIL DAMAGE BEFORE WINTER COMES",
       desc: "Why golf-ball hail causes invisible fractures beneath the fiberglass matting that only leak months later during Calgary's Chinook freeze-thaw cycles."
     },
     {
-      img: "/images/after_roof.jpg",
+      img: Roof,
       tag: "MATERIALS",
       title: "CLASS 4 IMPACT SHINGLES: ARE THEY WORTH THE UPGRADE IN ALBERTA?",
       desc: "Evaluating the UL 2218 impact test, insurance premium discounts across Canadian carriers, and long-term resale value for Calgary homeowners."

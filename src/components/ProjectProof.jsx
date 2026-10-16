@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, ArrowLeftRight, CheckCircle2 } from 'lucide-react';
+import HailBefore from "../assets/before_hail.jpg";
+import Roof from "../assets/after_roof.jpg";
+import Gutter from "../assets/service_gutters.jpg";
 
 export default function ProjectProof({ onOpenModal }) {
   const [sliderPos, setSliderPos] = useState(50);
@@ -10,15 +13,15 @@ export default function ProjectProof({ onOpenModal }) {
       title: "Class 4 Hail Restoration & Re-Roof",
       location: "Aspen Woods, Calgary SW",
       shingle: "GAF Timberline HDZ® Charcoal Slate",
-      before: "/images/before_hail.jpg",
-      after: "/images/after_roof.jpg"
+      before: HailBefore,
+      after: Roof,
     },
     {
       title: "Storm Wind Damage & Gutter System",
       location: "Bayside, Airdrie",
       shingle: "IKO Dynasty® Class 4 Impact",
-      before: "/images/before_hail.jpg",
-      after: "/images/service_gutters.jpg"
+      before: HailBefore,
+      after: Gutter,
     }
   ];
 

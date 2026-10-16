@@ -1,5 +1,6 @@
 import React from 'react';
 import { Award, ShieldCheck, ChevronRight } from 'lucide-react';
+import OwnerImg from "../assets/owner_marcus.jpg"
 
 export default function OwnerStory({ onOpenModal }) {
   return (
@@ -40,7 +41,7 @@ export default function OwnerStory({ onOpenModal }) {
           <div className="owner-photo-col">
             <div className="owner-photo-wrapper">
               <img 
-                src="/images/owner_marcus.jpg" 
+                src={OwnerImg} 
                 alt="Marcus Delgray, founder of AeroDome Roofing Calgary" 
                 className="owner-photo-img"
               />

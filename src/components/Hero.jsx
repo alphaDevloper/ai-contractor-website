@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Star, CheckCircle, ChevronRight, ShieldCheck, Zap } from 'lucide-react';
+import Herobg from "../assets/hero_roofing.jpg"
 
 export default function Hero({ onOpenModal }) {
   const [formData, setFormData] = useState({
@@ -23,7 +24,7 @@ export default function Hero({ onOpenModal }) {
       {/* Background Graphic & Backdrop */}
       <div className="hero-bg-wrapper">
         <img 
-          src="/images/hero_roofing.jpg" 
+          src={Herobg} 
           alt="AeroDome Roofing contractor truck and residential home in Calgary" 
           className="hero-bg-img"
         />

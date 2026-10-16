@@ -3,6 +3,7 @@ import { Phone, Menu, X, ChevronRight, ChevronDown, Compass } from 'lucide-react
 import { Link, useLocation } from 'react-router-dom';
 import { servicesShowcase } from '../data/servicesData';
 import { serviceAreaDropdownList } from '../data/serviceAreasData';
+import logo from "../../public/aerodome-logo.webp"
 
 export default function Header({ onOpenModal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -90,7 +91,7 @@ export default function Header({ onOpenModal }) {
         {/* Brand Logo */}
         <Link to="/" className="brand-logo" onClick={handleHomeClick} aria-label="AeroDome Roofing Home">
           <img 
-            src="/aerodome-logo.png" 
+            src={logo} 
             alt="AeroDome Roofing Calgary" 
             className="brand-logo-img" 
           />

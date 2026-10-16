@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, ChevronRight, CheckCircle, ShieldCheck } from 'lucide-react';
+import Logo from "../../public/aerodome-logo.webp";
 
 export default function FinalCTA({ onOpenModal }) {
   const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ export default function FinalCTA({ onOpenModal }) {
           <div className="final-cta-text-col">
             <div className="final-cta-brand">
               <img 
-                src="/aerodome-logo.png" 
+                src={Logo} 
                 alt="AeroDome Roofing" 
                 className="final-brand-logo-img" 
               />
