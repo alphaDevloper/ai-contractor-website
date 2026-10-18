@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Star, CheckCircle, ChevronRight, ShieldCheck, Zap } from 'lucide-react';
-import Herobg from "../assets/hero_roofing.jpg"
+import Herobg from "../assets/hero-bg.webp"
 
 export default function Hero({ onOpenModal }) {
   const [formData, setFormData] = useState({

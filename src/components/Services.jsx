@@ -1,7 +1,7 @@
 import React from 'react';
 import { Home, Hammer, Zap, Droplets, Layers, Building2, Sun, Search, FileText, ShieldCheck, ChevronRight } from 'lucide-react';
 import ServiceBg from "../assets/after_roof.jpg";
-import Logo from "../../public/aerodome-logo.webp";
+import Logo from "../../public/aerodome-logo.png";
 
 export default function Services({ onOpenModal }) {
   const serviceButtons = [

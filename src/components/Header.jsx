@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Phone, Menu, X, ChevronRight, ChevronDown, Compass } from 'lucide-react';
+import { Phone, Menu, X, ChevronRight, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { servicesShowcase } from '../data/servicesData';
 import { serviceAreaDropdownList } from '../data/serviceAreasData';
-import logo from "../../public/aerodome-logo.webp"
+import logo from "../../public/aerodome-logo.png"
 
 export default function Header({ onOpenModal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -79,10 +79,7 @@ export default function Header({ onOpenModal }) {
     location.pathname === '/portfolio' || 
     location.pathname === '/case-studies';
   const isServiceAreasActive = location.pathname.startsWith('/service-areas');
-  const isNavigationActive = 
-    location.pathname === '/navigation' || 
-    location.pathname === '/nav' || 
-    location.pathname === '/sitemap';
+  const isBlogActive = location.pathname.startsWith('/blog');
 
   return (
     <header className={`site-header ${scrolled ? 'header-scrolled' : ''}`}>
@@ -253,38 +250,12 @@ export default function Header({ onOpenModal }) {
             )}
           </div>
 
-          {/* Navigation Directory Page Link */}
           <Link 
-            to="/navigation" 
-            className={`nav-item ${isNavigationActive ? 'nav-item-active' : ''}`}
+            to="/blog" 
+            className={`nav-item ${isBlogActive ? 'nav-item-active' : ''}`}
             onClick={closeMenu}
-            title="Complete Site Directory & All Routes"
           >
-            Navigation
-          </Link>
-
-          <Link 
-            to="/#reviews" 
-            className="nav-item" 
-            onClick={(e) => handleSectionClick(e, 'reviews')}
-          >
-            Reviews
-          </Link>
-
-          <Link 
-            to="/#process" 
-            className="nav-item" 
-            onClick={(e) => handleSectionClick(e, 'process')}
-          >
-            Process
-          </Link>
-
-          <Link 
-            to="/#faq" 
-            className="nav-item" 
-            onClick={(e) => handleSectionClick(e, 'faq')}
-          >
-            FAQ
+            Blog
           </Link>
         </nav>
 
@@ -431,20 +402,14 @@ export default function Header({ onOpenModal }) {
               )}
             </div>
 
-            {/* Mobile Navigation Directory Link */}
             <Link 
-              to="/navigation" 
-              className={isNavigationActive ? 'mobile-nav-active' : ''}
+              to="/blog" 
+              className={isBlogActive ? 'mobile-nav-active' : ''}
               onClick={closeMenu}
-              style={{ color: 'var(--color-accent)', fontWeight: '800' }}
             >
-              Site Navigation (All Routes) &rarr;
+              Blog
             </Link>
-
-            <Link to="/#reviews" onClick={(e) => handleSectionClick(e, 'reviews')}>5.0 Google Reviews</Link>
-            <Link to="/#process" onClick={(e) => handleSectionClick(e, 'process')}>How It Works</Link>
             <Link to="/#special-offers" onClick={(e) => handleSectionClick(e, 'special-offers')}>Special Offers</Link>
-            <Link to="/#faq" onClick={(e) => handleSectionClick(e, 'faq')}>FAQ</Link>
           </div>
 
           <div className="mobile-drawer-actions">

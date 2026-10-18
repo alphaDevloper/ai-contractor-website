@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, ChevronRight, CheckCircle, ShieldCheck } from 'lucide-react';
-import Logo from "../../public/aerodome-logo.webp";
+import Logo from "../../public/aerodome-logo.png";
 
 export default function FinalCTA({ onOpenModal }) {
   const [formData, setFormData] = useState({

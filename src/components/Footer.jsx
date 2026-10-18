@@ -76,6 +76,7 @@ export default function Footer({ onOpenModal }) {
               <li><Link to="/about">About AeroDome</Link></li>
               <li><Link to="/services">Services Overview</Link></li>
               <li><Link to="/gallery">Our Completed Projects Gallery</Link></li>
+              <li><Link to="/blog">Roofing Knowledge &amp; Blog</Link></li>
               <li><Link to="/navigation" style={{ fontWeight: '700', color: 'var(--color-accent)' }}>Site Navigation (All Routes)</Link></li>
               <li><Link to="/#reviews" onClick={() => handleSectionClick('reviews')}>5.0 Google Reviews</Link></li>
               <li><Link to="/#process" onClick={() => handleSectionClick('process')}>Four Steps, No Surprises</Link></li>

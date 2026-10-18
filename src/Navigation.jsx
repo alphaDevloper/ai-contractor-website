@@ -8,6 +8,8 @@ import GalleryPage from './pages/GalleryPage';
 import ServiceAreasPage from './pages/ServiceAreasPage';
 import ServiceAreaDetailPage from './pages/ServiceAreaDetailPage';
 import NavigationPage from './pages/NavigationPage';
+import BlogPage from './pages/BlogPage';
+import BlogDetailPage from './pages/BlogDetailPage';
 
 function ServiceDetailWrapper({ onOpenModal }) {
   const { serviceId } = useParams();
@@ -17,6 +19,11 @@ function ServiceDetailWrapper({ onOpenModal }) {
 function ServiceAreaDetailWrapper({ onOpenModal }) {
   const { areaSlug } = useParams();
   return <ServiceAreaDetailPage key={areaSlug} onOpenModal={onOpenModal} />;
+}
+
+function BlogDetailWrapper({ onOpenModal }) {
+  const { slug } = useParams();
+  return <BlogDetailPage key={slug} onOpenModal={onOpenModal} />;
 }
 
 export default function Navigation({ onOpenModal }) {
@@ -48,10 +55,15 @@ export default function Navigation({ onOpenModal }) {
       <Route path="/nav" element={<NavigationPage onOpenModal={onOpenModal} />} />
       <Route path="/sitemap" element={<NavigationPage onOpenModal={onOpenModal} />} />
 
-      {/* Direct Aliases for Financing, Blog, Contact */}
+      {/* Blog Listing & Dynamic Article Details */}
+      <Route path="/blog" element={<BlogPage onOpenModal={onOpenModal} />} />
+      <Route path="/blogs" element={<BlogPage onOpenModal={onOpenModal} />} />
+      <Route path="/blog/:slug" element={<BlogDetailWrapper onOpenModal={onOpenModal} />} />
+      <Route path="/blogs/:slug" element={<BlogDetailWrapper onOpenModal={onOpenModal} />} />
+
+      {/* Direct Aliases for Financing, Resources, Contact */}
       <Route path="/financing" element={<Navigate to="/#financing" replace />} />
-      <Route path="/blog" element={<Navigate to="/#blog" replace />} />
-      <Route path="/resources" element={<Navigate to="/#resources" replace />} />
+      <Route path="/resources" element={<Navigate to="/blog" replace />} />
       <Route path="/contact" element={<Navigate to="/#contact" replace />} />
       <Route path="/contact-us" element={<Navigate to="/#contact" replace />} />
 
