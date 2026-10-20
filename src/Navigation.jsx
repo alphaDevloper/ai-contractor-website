@@ -10,6 +10,7 @@ import ServiceAreaDetailPage from './pages/ServiceAreaDetailPage';
 import NavigationPage from './pages/NavigationPage';
 import BlogPage from './pages/BlogPage';
 import BlogDetailPage from './pages/BlogDetailPage';
+import ContactPage from './pages/ContactPage';
 
 function ServiceDetailWrapper({ onOpenModal }) {
   const { serviceId } = useParams();
@@ -61,11 +62,11 @@ export default function Navigation({ onOpenModal }) {
       <Route path="/blog/:slug" element={<BlogDetailWrapper onOpenModal={onOpenModal} />} />
       <Route path="/blogs/:slug" element={<BlogDetailWrapper onOpenModal={onOpenModal} />} />
 
-      {/* Direct Aliases for Financing, Resources, Contact */}
+      {/* Direct Aliases for Financing, Resources */}
       <Route path="/financing" element={<Navigate to="/#financing" replace />} />
       <Route path="/resources" element={<Navigate to="/blog" replace />} />
-      <Route path="/contact" element={<Navigate to="/#contact" replace />} />
-      <Route path="/contact-us" element={<Navigate to="/#contact" replace />} />
+      <Route path="/contact" element={<ContactPage onOpenModal={onOpenModal} />} />
+      <Route path="/contact-us" element={<ContactPage onOpenModal={onOpenModal} />} />
 
       {/* Catch-all Fallback */}
       <Route path="*" element={<Navigate to="/" replace />} />

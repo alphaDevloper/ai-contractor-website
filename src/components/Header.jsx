@@ -80,6 +80,7 @@ export default function Header({ onOpenModal }) {
     location.pathname === '/case-studies';
   const isServiceAreasActive = location.pathname.startsWith('/service-areas');
   const isBlogActive = location.pathname.startsWith('/blog');
+  const isContactActive = location.pathname === '/contact' || location.pathname === '/contact-us';
 
   return (
     <header className={`site-header ${scrolled ? 'header-scrolled' : ''}`}>
@@ -257,6 +258,14 @@ export default function Header({ onOpenModal }) {
           >
             Blog
           </Link>
+
+          <Link 
+            to="/contact" 
+            className={`nav-item ${isContactActive ? 'nav-item-active' : ''}`}
+            onClick={closeMenu}
+          >
+            Contact
+          </Link>
         </nav>
 
         {/* Right Actions: Phone + Orange CTA */}
@@ -408,6 +417,13 @@ export default function Header({ onOpenModal }) {
               onClick={closeMenu}
             >
               Blog
+            </Link>
+            <Link 
+              to="/contact" 
+              className={isContactActive ? 'mobile-nav-active' : ''}
+              onClick={closeMenu}
+            >
+              Contact
             </Link>
             <Link to="/#special-offers" onClick={(e) => handleSectionClick(e, 'special-offers')}>Special Offers</Link>
           </div>
