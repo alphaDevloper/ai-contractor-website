@@ -4854,7 +4854,7 @@ img {
   text-transform: uppercase;
 }
 .eyebrow-gold {
-  color: #FBBF24;
+  color: var(--color-accent);
   font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 700;
@@ -6177,11 +6177,11 @@ img {
   color: rgba(255, 255, 255, 0.4);
 }
 .blog-breadcrumb-current {
-  color: #FBBF24;
+  color: var(--color-accent);
 }
 .blog-hero-eyebrow {
   display: inline-block;
-  color: #FBBF24;
+  color: var(--color-accent);
   font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 700;
