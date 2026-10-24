@@ -7555,6 +7555,17 @@ img {
   align-items: center;
 }
 
+.about-founder-grid .owner-photo-wrapper {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+@media (max-width: 992px) {
+  .about-founder-grid .owner-photo-wrapper {
+    margin: 0 auto;
+  }
+}
+
 .about-founder-heading {
   font-family: var(--font-heading);
   font-size: clamp(2.4rem, 4.6vw, 3.8rem);
@@ -7600,19 +7611,15 @@ img {
 
 .about-founder-img-wrap {
   position: relative;
-  max-width: 480px;
+  max-width: 440px;
   margin-left: auto;
 }
 
 .about-founder-img {
   width: 100%;
-  max-height: 440px;
-  border-radius: var(--radius-md);
-  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.12);
-  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
   display: block;
-  object-fit: cover;
-  object-position: top center;
 }
 
 .about-founder-floating-badge {
@@ -8053,7 +8060,8 @@ img {
   .about-logos-grid {
     gap: 24px;
   }
-  .about-founder-floating-badge {
+  .about-founder-floating-badge,
+  .owner-floating-badge {
     bottom: -15px;
     left: 10px;
     padding: 10px 14px;

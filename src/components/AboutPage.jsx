@@ -14,7 +14,7 @@ import {
   Check
 } from 'lucide-react';
 import heroHouseImg from '../assets/about_residential_home.jpg';
-import founderImg from '../assets/owner_marcus.jpg';
+import founderImg from '../assets/owner.webp';
 import logoImg from '../../public/aerodome-logo.png';
 
 /* ==========================================================================
@@ -260,15 +260,21 @@ export default function AboutPage({ onOpenModal }) {
               </div>
             </div>
 
-            {/* Right Photo */}
-            <div className="about-origin-img-wrap">
+            {/* Right: Marcus Photo with Floating Dark Badge (Matching Home Page Style) */}
+            <div className="owner-photo-wrapper">
               <img 
                 src={founderImg} 
-                alt="Matt Lodgers, Founder of Cloud Nine Roofing" 
-                className="about-origin-img" 
+                alt="Marcus Delgray, founder of AeroDome Roofing Calgary" 
+                className="owner-photo-img" 
               />
-              <div className="about-origin-tag">
-                MATT LODGERS
+              
+              {/* Overlapping Dark Badge on Bottom-Left (Exact Home Page Style) */}
+              <div className="owner-floating-badge">
+                <span className="owner-badge-years">14+</span>
+                <div className="owner-badge-text">
+                  <strong>YEARS IN BUSINESS</strong>
+                  <span>FOUNDED 2011</span>
+                </div>
               </div>
             </div>
 
@@ -284,7 +290,25 @@ export default function AboutPage({ onOpenModal }) {
           
           <div className="about-founder-grid">
             
-            {/* Left Content */}
+            {/* Left: Marcus Photo with Floating Dark Badge (Matching Home Page Style) */}
+            <div className="owner-photo-wrapper">
+              <img 
+                src={founderImg} 
+                alt="Marcus Delgray, founder of AeroDome Roofing Calgary" 
+                className="owner-photo-img" 
+              />
+              
+              {/* Overlapping Dark Badge on Bottom-Left (Exact Home Page Style) */}
+              <div className="owner-floating-badge">
+                <span className="owner-badge-years">14+</span>
+                <div className="owner-badge-text">
+                  <strong>YEARS IN BUSINESS</strong>
+                  <span>FOUNDED 2011</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Founder Content */}
             <div>
               <div className="about-exact-eyebrow">MEET THE FOUNDER</div>
               <h2 className="about-founder-heading">
@@ -307,24 +331,6 @@ export default function AboutPage({ onOpenModal }) {
                 <span>LEARN MORE ABOUT US</span>
                 <ArrowRight size={16} />
               </button>
-            </div>
-
-            {/* Right Photo with Overlapping Badge */}
-            <div className="about-founder-img-wrap">
-              <img 
-                src={founderImg} 
-                alt="Matt Lodgers on-site with roofing team" 
-                className="about-founder-img" 
-              />
-              
-              <div className="about-founder-floating-badge">
-                <div className="about-floating-num">2</div>
-                <div className="about-floating-info">
-                  <span className="about-floating-years">YEARS LEADING</span>
-                  <span className="about-floating-name">MATT LODGERS</span>
-                  <span className="about-floating-role">Founder</span>
-                </div>
-              </div>
             </div>
 
           </div>

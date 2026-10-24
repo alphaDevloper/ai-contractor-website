@@ -1,6 +1,6 @@
 import React from 'react';
 import { Award, ShieldCheck, ChevronRight } from 'lucide-react';
-import OwnerImg from "../assets/owner_marcus.jpg"
+import OwnerImg from "../assets/owner.webp"
 
 export default function OwnerStory({ onOpenModal }) {
   return (
