@@ -17,7 +17,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import heroBg from '../assets/about_residential_home.jpg';
-import logoImg from '/aerodome-logo.png';
+import logoImg from '../assets/logo.png';
 
 /* ==========================================================================
    SCROLLING MARQUEE TICKER (MATCHING DESIGN)

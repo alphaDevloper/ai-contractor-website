@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import heroHouseImg from '../assets/about_residential_home.jpg';
 import founderImg from '../assets/owner.webp';
-import logoImg from '../../public/aerodome-logo.png';
+import logoImg from '../assets/logo.png';
 
 /* ==========================================================================
    PARTNER & CERTIFICATION BRAND LOGO SVGS (HIGH DEFINITION)

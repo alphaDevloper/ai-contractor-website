@@ -3,7 +3,7 @@ import { Phone, Menu, X, ChevronRight, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { servicesShowcase } from '../data/servicesData';
 import { serviceAreaDropdownList } from '../data/serviceAreasData';
-import logo from "../../public/aerodome-logo.png"
+import logo from '../assets/logo.png';
 
 export default function Header({ onOpenModal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

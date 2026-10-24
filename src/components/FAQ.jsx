@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Plus, X } from 'lucide-react';
-import Logo from '../../public/aerodome-logo.png'
+import Logo from '../assets/logo.png';
 
 export default function FAQ({ onOpenModal }) {
   const [openIdx, setOpenIdx] = useState(0);

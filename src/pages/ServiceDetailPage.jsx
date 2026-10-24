@@ -16,6 +16,7 @@ import {
   AlertCircle
 } from 'lucide-react';
 import { getServiceDetail, servicesShowcase } from '../data/servicesData';
+import logoImg from '../assets/logo.png';
 
 export default function ServiceDetailPage({ onOpenModal }) {
   const { serviceId } = useParams();
@@ -313,7 +314,7 @@ export default function ServiceDetailPage({ onOpenModal }) {
           {[...Array(12)].map((_, i) => (
             <div key={i} className="brand-marquee-unit">
               <img 
-                src="/aerodome-logo.png" 
+                src={logoImg} 
                 alt="AeroDome Logo" 
                 className="brand-marquee-logo" 
               />
@@ -371,7 +372,7 @@ export default function ServiceDetailPage({ onOpenModal }) {
             <div className="cta-brand-col">
               <div className="cta-logo-wrap">
                 <img 
-                  src="/aerodome-logo.png" 
+                  src={logoImg} 
                   alt="AeroDome Roofing Calgary" 
                   className="cta-brand-logo" 
                 />
@@ -510,7 +511,7 @@ export default function ServiceDetailPage({ onOpenModal }) {
           {[...Array(12)].map((_, i) => (
             <div key={i} className="brand-marquee-unit">
               <img 
-                src="/aerodome-logo.png" 
+                src={logoImg} 
                 alt="AeroDome Logo" 
                 className="brand-marquee-logo-light" 
               />

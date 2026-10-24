@@ -15,6 +15,7 @@ import {
 } from '../data/serviceAreasData';
 import { servicesShowcase } from '../data/servicesData';
 import TickerRibbon from '../components/TickerRibbon';
+import logoImg from '../assets/logo.png';
 
 export default function ServiceAreaDetailPage({ onOpenModal }) {
   const { areaSlug } = useParams();
@@ -297,7 +298,7 @@ export default function ServiceAreaDetailPage({ onOpenModal }) {
           <div className="section-header">
             <div className="faq-top-brand-icon">
               <img 
-                src="/aerodome-logo.png" 
+                src={logoImg} 
                 alt="AeroDome Roofing" 
                 className="faq-brand-logo-img" 
               />
@@ -354,7 +355,7 @@ export default function ServiceAreaDetailPage({ onOpenModal }) {
             <div className="cta-brand-col">
               <div className="cta-logo-wrap">
                 <img 
-                  src="/aerodome-logo.png" 
+                  src={logoImg} 
                   alt="AeroDome Roofing" 
                   className="cta-brand-logo" 
                 />

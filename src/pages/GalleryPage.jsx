@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Phone, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { galleryHero, galleryCategories, galleryProjects } from '../data/galleryData';
 import TickerRibbon from '../components/TickerRibbon';
+import logoImg from '../assets/logo.png';
 
 export default function GalleryPage({ onOpenModal }) {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -136,7 +137,7 @@ export default function GalleryPage({ onOpenModal }) {
             <div className="cta-brand-col">
               <div className="cta-logo-wrap">
                 <img 
-                  src="/aerodome-logo.png" 
+                  src={logoImg} 
                   alt="AeroDome Roofing Calgary" 
                   className="cta-brand-logo" 
                 />

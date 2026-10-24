@@ -23,6 +23,7 @@ import {
   servicesShowcase, 
   specialOffersSection 
 } from '../data/servicesData';
+import logoImg from '../assets/logo.png';
 
 export default function ServicesPage({ onOpenModal }) {
   const location = useLocation();
@@ -143,7 +144,7 @@ export default function ServicesPage({ onOpenModal }) {
             <div className="services-hub-content-col">
               <div className="services-hub-brand-logo">
                 <img 
-                  src="/aerodome-logo.png" 
+                  src={logoImg} 
                   alt="AeroDome Roofing" 
                   className="hub-logo-img" 
                 />
@@ -321,7 +322,7 @@ export default function ServicesPage({ onOpenModal }) {
             <div className="final-cta-text-col">
               <div className="final-cta-brand">
                 <img 
-                  src="/aerodome-logo.png" 
+                  src={logoImg} 
                   alt="AeroDome Roofing" 
                   className="final-brand-logo-img" 
                 />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin, ChevronRight, Compass } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 export default function Footer({ onOpenModal }) {
   const location = useLocation();
@@ -24,7 +25,7 @@ export default function Footer({ onOpenModal }) {
             <div className="footer-brand-header">
               <Link to="/" className="footer-logo-link" aria-label="AeroDome Roofing Home">
                 <img 
-                  src="/aerodome-logo.png" 
+                  src={logo} 
                   alt="AeroDome Roofing Calgary" 
                   className="footer-brand-logo-img" 
                 />
