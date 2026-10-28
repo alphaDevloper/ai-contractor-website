@@ -8084,7 +8084,8 @@ img {
 
 .contact-page-wrapper {
   width: 100%;
-  overflow-x: clip;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* 1. Hero Section */
@@ -8306,8 +8307,12 @@ img {
 .contact-custom-checkbox {
   width: 22px;
   height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  flex-shrink: 0;
   accent-color: var(--color-accent);
   cursor: pointer;
+  margin-top: 2px;
 }
 
 .contact-captcha-text {
@@ -8324,6 +8329,7 @@ img {
   font-size: 0.65rem;
   color: var(--color-text-muted);
   user-select: none;
+  flex-shrink: 0;
 }
 
 .contact-captcha-img {
@@ -8343,12 +8349,16 @@ img {
   align-items: flex-start;
   gap: 12px;
   cursor: pointer;
+  min-width: 0;
 }
 
 .contact-consent-text {
   font-size: 0.775rem;
   color: var(--color-text-secondary);
   line-height: 1.5;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact-consent-text a {
@@ -8485,6 +8495,7 @@ img {
   display: flex;
   align-items: flex-start;
   gap: 16px;
+  min-width: 0;
 }
 
 .contact-info-icon-badge {
@@ -8497,6 +8508,11 @@ img {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.contact-info-details {
+  min-width: 0;
+  flex: 1;
 }
 
 .contact-icon-accent {
@@ -8517,6 +8533,9 @@ img {
   font-weight: 700;
   color: #FFFFFF;
   transition: color var(--transition-fast);
+  display: block;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .contact-item-link:hover {
@@ -8528,6 +8547,8 @@ img {
   font-weight: 600;
   color: #E2E8F0;
   line-height: 1.45;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 /* Card 2: Business Hours */
@@ -8550,6 +8571,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 12px;
   font-size: 0.925rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding-bottom: 10px;
@@ -8585,6 +8608,7 @@ img {
   background: rgba(16, 185, 129, 0.12);
   border: 1px solid rgba(16, 185, 129, 0.3);
   border-radius: var(--radius-xs);
+  flex-wrap: wrap;
 }
 
 .contact-pulse-dot {
@@ -8614,6 +8638,8 @@ img {
   font-weight: 700;
   color: #10B981;
   letter-spacing: 0.02em;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 /* Card 3: Serving Greater Calgary */
@@ -8957,24 +8983,43 @@ img {
   opacity: 0.85;
 }
 
-/* Responsive Styles */
+/* Responsive Styles for Contact Page */
 @media (max-width: 992px) {
   .contact-main-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
   }
   .contact-bottom-cta-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
+  }
+  .contact-bottom-cta-left {
+    text-align: left;
+  }
+  .contact-form-card,
+  .contact-sidebar-cards,
+  .contact-bottom-cta-left,
+  .contact-estimate-card {
+    min-width: 0;
+    max-width: 100%;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .contact-page-hero {
     padding: 115px 0 50px;
   }
+  .contact-hero-title {
+    font-size: clamp(2.2rem, 7vw, 3.4rem);
+  }
+  .contact-hero-subtitle {
+    font-size: 0.95rem;
+  }
+  .contact-main-section {
+    padding: 45px 0 55px;
+  }
   .contact-form-card {
-    padding: 26px 18px;
+    padding: 30px 22px;
   }
   .contact-form-row-2 {
     grid-template-columns: 1fr;
@@ -8982,17 +9027,265 @@ img {
   }
   .contact-bottom-row-2 {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .contact-info-card,
+  .contact-hours-card,
+  .contact-service-area-card {
+    padding: 26px 20px;
+  }
+  .contact-bottom-cta-section {
+    padding: 65px 0 70px;
+  }
+  .contact-bottom-cta-heading {
+    font-size: clamp(2rem, 6vw, 3.2rem);
   }
   .contact-estimate-card {
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-page-hero {
+    padding: 110px 0 40px;
+  }
+  .contact-hero-title {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+  .contact-form-card {
     padding: 24px 18px;
+  }
+  .contact-form-title {
+    font-size: 1.85rem;
+  }
+  .contact-info-card,
+  .contact-hours-card,
+  .contact-service-area-card {
+    padding: 22px 18px;
+  }
+  .contact-card-heading {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
   }
   .contact-map-overlay-badge {
     position: static;
     margin: 12px;
+    width: calc(100% - 24px);
     max-width: calc(100% - 24px);
+    box-sizing: border-box;
   }
   .contact-map-iframe {
-    height: 340px;
+    height: 320px;
+  }
+  .contact-estimate-card {
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page-hero {
+    padding: 100px 0 35px;
+  }
+  .contact-breadcrumb {
+    font-size: 0.75rem;
+    margin-bottom: 12px;
+  }
+  .contact-hero-eyebrow {
+    font-size: 0.85rem;
+  }
+  .contact-hero-title {
+    font-size: 2.1rem;
+    margin-bottom: 12px;
+  }
+  .contact-hero-subtitle {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+  .contact-main-section {
+    padding: 30px 0 40px;
+  }
+  .contact-form-card {
+    padding: 20px 14px;
+    border-radius: var(--radius-sm);
+  }
+  .contact-form-title {
+    font-size: 1.65rem;
+  }
+  .contact-form-subtitle {
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+  }
+  /* Font size 16px (1rem) prevents iOS Safari automatic viewport zooming on focus */
+  .contact-control-light {
+    font-size: 1rem;
+    padding: 12px 14px;
+  }
+  .contact-bottom-input {
+    font-size: 1rem;
+    padding: 12px 14px;
+  }
+  .contact-captcha-box {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+  .contact-captcha-text {
+    font-size: 0.85rem;
+  }
+  .contact-captcha-badge {
+    font-size: 0.6rem;
+  }
+  .contact-captcha-img {
+    width: 22px;
+    height: 22px;
+  }
+  .contact-consent-label {
+    gap: 10px;
+  }
+  .contact-consent-text {
+    font-size: 0.725rem;
+    line-height: 1.45;
+  }
+  .contact-btn-submit {
+    padding: 13px 18px;
+    font-size: 1.15rem;
+    gap: 8px;
+  }
+  .contact-form-microcopy {
+    font-size: 0.775rem;
+  }
+  .contact-info-card,
+  .contact-hours-card,
+  .contact-service-area-card {
+    padding: 18px 14px;
+    border-radius: var(--radius-sm);
+  }
+  .contact-card-heading {
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+  }
+  .contact-info-icon-badge {
+    width: 40px;
+    height: 40px;
+  }
+  .contact-item-tag {
+    font-size: 0.68rem;
+  }
+  .contact-item-link {
+    font-size: 0.95rem;
+  }
+  .contact-item-value {
+    font-size: 0.875rem;
+  }
+  .contact-hours-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    padding-bottom: 8px;
+  }
+  .contact-hours-day {
+    font-size: 0.85rem;
+    color: #94A3B8;
+  }
+  .contact-hours-time,
+  .contact-hours-closed {
+    font-size: 0.875rem;
+  }
+  .contact-emergency-strip {
+    padding: 10px 12px;
+  }
+  .contact-emergency-text {
+    font-size: 0.775rem;
+  }
+  .contact-view-area-btn {
+    font-size: 0.95rem;
+    padding: 11px 14px;
+  }
+  .contact-map-section {
+    padding: 0 0 40px;
+  }
+  .contact-map-iframe {
+    height: 270px;
+  }
+  .contact-map-overlay-badge {
+    margin: 8px;
+    padding: 12px 14px;
+    width: calc(100% - 16px);
+    max-width: calc(100% - 16px);
+  }
+  .contact-map-badge-title {
+    font-size: 0.95rem;
+  }
+  .contact-bottom-cta-section {
+    padding: 45px 0 50px;
+  }
+  .contact-bottom-cta-logo-img {
+    height: 44px;
+  }
+  .contact-bottom-cta-eyebrow {
+    font-size: 0.85rem;
+  }
+  .contact-bottom-cta-heading {
+    font-size: 1.85rem;
+    margin-bottom: 12px;
+  }
+  .contact-bottom-cta-desc {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+  .contact-estimate-card {
+    padding: 18px 14px;
+    border-radius: var(--radius-sm);
+  }
+  .contact-estimate-title {
+    font-size: 1.55rem;
+  }
+  .contact-estimate-sub {
+    font-size: 0.825rem;
+    margin-bottom: 16px;
+  }
+  .contact-bottom-submit-btn {
+    padding: 13px 16px;
+    font-size: 1.1rem;
+    gap: 6px;
+  }
+  .contact-bottom-microcopy {
+    font-size: 0.725rem;
+  }
+  .contact-marquee-item {
+    font-size: 0.95rem;
+    gap: 10px;
+  }
+  .contact-marquee-logo {
+    height: 17px;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-page-wrapper .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .contact-form-card {
+    padding: 16px 10px;
+  }
+  .contact-form-title {
+    font-size: 1.45rem;
+  }
+  .contact-info-card,
+  .contact-hours-card,
+  .contact-service-area-card {
+    padding: 16px 10px;
+  }
+  .contact-estimate-card {
+    padding: 16px 10px;
+  }
+  .contact-btn-submit {
+    font-size: 1.05rem;
+    padding: 12px 10px;
+  }
+  .contact-bottom-submit-btn {
+    font-size: 1.05rem;
+    padding: 12px 10px;
   }
 }
 
