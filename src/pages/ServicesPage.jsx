@@ -337,7 +337,7 @@ export default function ServicesPage({ onOpenModal }) {
               </h2>
 
               <p className="final-cta-desc">
-                Whether you need hail damage verified for an Alberta insurance claim or want to replace aging shingles before winter, Marcus Delgray and our certified in-house crew are ready to inspect your property.
+                Whether you need hail damage verified for an Alberta insurance claim or want to replace aging shingles before winter, Nolan Thrace and our certified in-house crew are ready to inspect your property.
               </p>
 
               <a href="tel:+1333456789" className="final-phone-link-box">
@@ -345,7 +345,7 @@ export default function ServicesPage({ onOpenModal }) {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <span className="final-phone-label">Direct Line &bull; Speaks Directly With Marcus</span>
+                  <span className="final-phone-label">Direct Line &bull; Speaks Directly With Nolan</span>
                   <span className="final-phone-num">+1 333 456789</span>
                 </div>
               </a>
@@ -364,7 +364,7 @@ export default function ServicesPage({ onOpenModal }) {
                     <CheckCircle2 size={48} color="#10B981" style={{ margin: '0 auto 12px auto' }} />
                     <h3 style={{ color: '#FFFFFF', fontSize: '1.4rem', marginBottom: '8px' }}>Estimate Requested!</h3>
                     <p style={{ color: '#CBD5E1', fontSize: '0.9rem' }}>
-                      Thank you, <strong>{formData.firstName}</strong>. Marcus Delgray or our senior estimator will call you at <strong>{formData.phone}</strong> within 15 minutes.
+                      Thank you, <strong>{formData.firstName}</strong>. Nolan Thrace or our senior estimator will call you at <strong>{formData.phone}</strong> within 15 minutes.
                     </p>
                   </div>
                 ) : (

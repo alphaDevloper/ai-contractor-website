@@ -260,11 +260,11 @@ export default function AboutPage({ onOpenModal }) {
               </div>
             </div>
 
-            {/* Right: Marcus Photo with Floating Dark Badge (Matching Home Page Style) */}
+            {/* Right: Nolan Photo with Floating Dark Badge (Matching Home Page Style) */}
             <div className="owner-photo-wrapper">
               <img 
                 src={founderImg} 
-                alt="Marcus Delgray, founder of AeroDome Roofing Calgary" 
+                alt="Nolan Thrace, founder of AeroDome Roofing Calgary" 
                 className="owner-photo-img" 
               />
               
@@ -290,11 +290,11 @@ export default function AboutPage({ onOpenModal }) {
           
           <div className="about-founder-grid">
             
-            {/* Left: Marcus Photo with Floating Dark Badge (Matching Home Page Style) */}
+            {/* Left: Nolan Photo with Floating Dark Badge (Matching Home Page Style) */}
             <div className="owner-photo-wrapper">
               <img 
                 src={founderImg} 
-                alt="Marcus Delgray, founder of AeroDome Roofing Calgary" 
+                alt="Nolan Thrace, founder of AeroDome Roofing Calgary" 
                 className="owner-photo-img" 
               />
               
@@ -458,7 +458,7 @@ export default function AboutPage({ onOpenModal }) {
                 <div className="form-success-box">
                   <CheckCircle size={44} color="#10B981" />
                   <h3>Estimate Request Sent!</h3>
-                  <p>Thanks, {formData.firstName}. Marcus Delgray or our senior estimator will call you at <strong>{formData.phone}</strong> within 15 minutes.</p>
+                  <p>Thanks, {formData.firstName}. Nolan Thrace or our senior estimator will call you at <strong>{formData.phone}</strong> within 15 minutes.</p>
                 </div>
               ) : (
                 <form onSubmit={handleFormSubmit}>

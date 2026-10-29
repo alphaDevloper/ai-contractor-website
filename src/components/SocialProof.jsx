@@ -1,27 +1,9 @@
 import React from 'react';
 import { Star, ChevronRight } from 'lucide-react';
+import { socialProofContent } from '../data/homepageData';
 
 export default function SocialProof({ onOpenModal }) {
-  const reviews = [
-    {
-      name: "Brenton & Tara S.",
-      location: "Aspen Woods, Calgary SW",
-      time: "1 month ago",
-      text: "After the severe August hailstorm wiped out half our cedar shingles, Marcus personally came out with his AI camera equipment and mapped every impact point. The new Class 4 GAF shingles look breathtaking, and their crew cleaned up every single nail in our driveway with roller magnets. Incredible work."
-    },
-    {
-      name: "Dean R.",
-      location: "Bayside, Airdrie",
-      time: "3 weeks ago",
-      text: "A windstorm tore off 12 feet of ridge capping on our two-story roof on a Thursday evening. AeroDome had an emergency tarp crew at our home early Friday morning and fully repaired it by Monday. Flat-rate pricing was given upfront with zero surprise fees. You can tell they use their own local crew rather than subbing it out."
-    },
-    {
-      name: "Kirsten M.",
-      location: "Sunset Ridge, Cochrane",
-      time: "2 months ago",
-      text: "We replaced our 18-year-old original roof. Marcus walked us through the IKO vs. GAF options and helped us take advantage of the 0% financing plan for 18 months. The crew was courteous, worked from 7:30 AM to 6 PM, and wrapped up a 2,800 sq ft roof in just two days. Outstanding contractor."
-    }
-  ];
+  const { eyebrow, heading, subtitle, ctaLabel, reviews } = socialProofContent;
 
   return (
     <section className="section-padding reviews-section" id="reviews">
@@ -30,13 +12,13 @@ export default function SocialProof({ onOpenModal }) {
         {/* Header matching reference */}
         <div className="section-header">
           <div className="eyebrow-red">
-            HEAR FROM OUR CLIENTS
+            {eyebrow}
           </div>
           <h2 className="section-title">
-            5.0★ ON GOOGLE
+            {heading}
           </h2>
           <p className="section-subtitle">
-            REAL REVIEWS FROM REAL NEIGHBORS JUST LIKE YOU
+            {subtitle}
           </p>
         </div>
 
@@ -92,7 +74,7 @@ export default function SocialProof({ onOpenModal }) {
             onClick={() => onOpenModal('Reviews Section CTA')} 
             className="btn-orange-outline"
           >
-            <span>SEE ALL 312+ GOOGLE REVIEWS</span>
+            <span>{ctaLabel}</span>
             <ChevronRight size={18} />
           </button>
         </div>

@@ -1,14 +1,9 @@
 import React from 'react';
 import { Award, ShieldCheck, FileCheck, CheckCircle2 } from 'lucide-react';
+import { trustBarItems } from '../data/homepageData';
 
 export default function TrustBar() {
-  const certs = [
-    { name: "GAF MASTER ELITE®", sub: "Top 2% of Roofers in North America", badge: "GAF" },
-    { name: "IKO SHIELDPRO®", sub: "Certified Commercial & Residential", badge: "IKO" },
-    { name: "COR™ SAFETY CERTIFIED", sub: "Alberta Construction Safety Assoc.", badge: "COR" },
-    { name: "JAMES HARDIE®", sub: "Preferred Exterior Siding Installer", badge: "JH" },
-    { name: "10-YEAR WARRANTY", sub: "Workmanship Guarantee on All Installs", badge: "10-YR" }
-  ];
+  const certs = trustBarItems;
 
   return (
     <section className="trust-strip">

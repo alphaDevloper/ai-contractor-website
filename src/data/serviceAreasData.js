@@ -179,7 +179,7 @@ export const serviceAreaDetails = {
       },
       {
         num: "2",
-        text: "Receive personal inspections every single time. Marcus inspects your roof personally to ensure zero markup surprises."
+        text: "Receive personal inspections every single time. Nolan inspects your roof personally to ensure zero markup surprises."
       },
       {
         num: "3",
@@ -451,7 +451,7 @@ export function getServiceAreaDetail(slug) {
       },
       {
         num: "2",
-        text: "Receive personal inspections every single time. Marcus inspects your roof personally to ensure zero markup surprises."
+        text: "Receive personal inspections every single time. Nolan inspects your roof personally to ensure zero markup surprises."
       },
       {
         num: "3",

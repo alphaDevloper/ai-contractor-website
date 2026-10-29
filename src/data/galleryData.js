@@ -2,7 +2,7 @@ export const galleryHero = {
   breadcrumb: "HOME > OUR WORK",
   eyebrow: "OUR WORK",
   headline: "OUR COMPLETED PROJECTS",
-  subtitle: "Every project here was managed directly by Marcus and our team. Browse our work across roofing, siding, gutters, and more.",
+  subtitle: "Every project here was managed directly by Nolan and our team. Browse our work across roofing, siding, gutters, and more.",
   bgImage: "/images/services_aerial_roof.jpg"
 };
 
@@ -75,8 +75,8 @@ export const galleryProjects = [
     category: "Residential",
     categories: ["Residential", "Asphalt Roofing"],
     categoryLabel: "RESIDENTIAL",
-    image: "/images/owner_marcus.jpg",
-    imageAlt: "Marcus Delgray managing quality roofing installation"
+    image: "/images/owner_nolan.jpg",
+    imageAlt: "Nolan Thrace managing quality roofing installation"
   },
   {
     id: "seamless-aluminum-gutters",

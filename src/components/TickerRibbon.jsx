@@ -1,19 +1,9 @@
 import React from 'react';
 import { Truck } from 'lucide-react';
+import { tickerItems } from '../data/homepageData';
 
 export default function TickerRibbon({ dark = false }) {
-  const items = [
-    "ROOF REPLACEMENT",
-    "HAIL & STORM RESTORATION",
-    "10-YEAR WORKMANSHIP WARRANTY",
-    "100% LOCAL IN-HOUSE CREW",
-    "4.8★ ON GOOGLE (312 REVIEWS)",
-    "GAF MASTER ELITE® CONTRACTOR",
-    "COR™ SAFETY CERTIFIED ALBERTA",
-    "TRANSPARENT FLAT-RATE PRICING",
-    "EMERGENCY SAME-WEEK TARPING",
-    "0% FINANCING UP TO 18 MONTHS"
-  ];
+  const items = tickerItems;
 
   return (
     <div className={`ticker-ribbon ${dark ? 'ticker-dark' : ''}`}>

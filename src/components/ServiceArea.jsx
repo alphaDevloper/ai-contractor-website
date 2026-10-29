@@ -1,14 +1,9 @@
 import React from 'react';
 import { MapPin, ChevronRight } from 'lucide-react';
+import { serviceAreaContent } from '../data/homepageData';
 
 export default function ServiceArea({ onOpenModal }) {
-  const cities = [
-    "CALGARY NW", "AIRDRIE",
-    "CALGARY SW", "COCHRANE",
-    "CALGARY SE", "CHESTERMERE",
-    "CALGARY NE", "OKOTOKS",
-    "BELTLINE / INNER CITY", "STRATHMORE"
-  ];
+  const { eyebrow, heading, intro, ctaLabel, mapCaption, cities } = serviceAreaContent;
 
   return (
     <section className="section-padding serving-section" id="service-areas">
@@ -19,15 +14,15 @@ export default function ServiceArea({ onOpenModal }) {
           {/* Left Column: Heading + 2-Column City Checklist */}
           <div className="serving-text-col">
             <div className="eyebrow-red">
-              WHERE WE WORK
+              {eyebrow}
             </div>
 
             <h2 className="serving-heading">
-              SERVING CALGARY & FOOTHILLS
+              {heading}
             </h2>
 
             <p className="serving-intro">
-              We focus 100% of our operations right here in Greater Calgary and surrounding Alberta communities, with daily in-house crew dispatch and rapid same-week emergency storm response.
+              {intro}
             </p>
 
             {/* 2-Column City List */}
@@ -46,7 +41,7 @@ export default function ServiceArea({ onOpenModal }) {
                 onClick={() => onOpenModal('Service Area CTA')} 
                 className="btn-orange"
               >
-                <span>CHECK YOUR NEIGHBORHOOD</span>
+                <span>{ctaLabel}</span>
                 <ChevronRight size={20} />
               </button>
             </div>
@@ -97,7 +92,7 @@ export default function ServiceArea({ onOpenModal }) {
               </svg>
 
               <div className="map-caption-bar">
-                <span>DAILY IN-HOUSE CREW COVERAGE &bull; GREATER CALGARY AREA</span>
+                <span>{mapCaption}</span>
               </div>
             </div>
           </div>

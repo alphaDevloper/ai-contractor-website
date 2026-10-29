@@ -3,27 +3,20 @@ import { ChevronLeft, ChevronRight, ArrowLeftRight, CheckCircle2 } from 'lucide-
 import HailBefore from "../assets/before_hail.jpg";
 import Roof from "../assets/after_roof.jpg";
 import Gutter from "../assets/service_gutters.jpg";
+import { projectProofContent } from '../data/homepageData';
 
 export default function ProjectProof({ onOpenModal }) {
   const [sliderPos, setSliderPos] = useState(50);
   const [activeProject, setActiveProject] = useState(0);
 
-  const projects = [
-    {
-      title: "Class 4 Hail Restoration & Re-Roof",
-      location: "Aspen Woods, Calgary SW",
-      shingle: "GAF Timberline HDZ® Charcoal Slate",
-      before: HailBefore,
-      after: Roof,
-    },
-    {
-      title: "Storm Wind Damage & Gutter System",
-      location: "Bayside, Airdrie",
-      shingle: "IKO Dynasty® Class 4 Impact",
-      before: HailBefore,
-      after: Gutter,
-    }
+  const { eyebrow, heading, subtitle, afterTag, beforeTag, warrantyBadge, projects: projectData } = projectProofContent;
+
+  // Attach images to data-driven project objects
+  const images = [
+    { before: HailBefore, after: Roof },
+    { before: HailBefore, after: Gutter }
   ];
+  const projects = projectData.map((p, i) => ({ ...p, ...images[i] }));
 
   const curr = projects[activeProject];
 
@@ -34,13 +27,13 @@ export default function ProjectProof({ onOpenModal }) {
         {/* Header */}
         <div className="section-header">
           <div className="eyebrow-red">
-            OUR WORK
+            {eyebrow}
           </div>
           <h2 className="section-title">
-            ROOFS WE HAVE BUILT
+            {heading}
           </h2>
           <p className="section-subtitle">
-            Real transformations from homes in Calgary, Airdrie, Cochrane & surrounding areas.
+            {subtitle}
           </p>
         </div>
 
@@ -62,7 +55,7 @@ export default function ProjectProof({ onOpenModal }) {
           >
             {/* After Image */}
             <img src={curr.after} alt="Completed roof replacement" className="roofs-img" />
-            <span className="roofs-tag tag-after">AFTER: NEW ROOF</span>
+            <span className="roofs-tag tag-after">{afterTag || "AFTER: NEW ROOF"}</span>
 
             {/* Before Image (Clipped via responsive clipPath - no fixed min-width) */}
             <img 
@@ -72,7 +65,7 @@ export default function ProjectProof({ onOpenModal }) {
               style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
             />
             {sliderPos > 14 && (
-              <span className="roofs-tag tag-before">BEFORE: HAIL DAMAGE</span>
+              <span className="roofs-tag tag-before">{beforeTag || "BEFORE: HAIL DAMAGE"}</span>
             )}
 
             {/* Slider Handle */}
@@ -90,7 +83,7 @@ export default function ProjectProof({ onOpenModal }) {
             <div className="roofs-details-left">
               <span className="roofs-loc-tag">{curr.location}</span>
               <h3 className="roofs-proj-title">{curr.title}</h3>
-              <span className="roofs-shingle-spec">{curr.shingle} &bull; 10-Year Workmanship Warranty</span>
+              <span className="roofs-shingle-spec">{curr.shingle} &bull; {warrantyBadge || "10-Year Workmanship Warranty"}</span>
             </div>
             
             <div className="roofs-nav-btns">

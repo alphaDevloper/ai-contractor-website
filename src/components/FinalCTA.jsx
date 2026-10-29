@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Phone, ChevronRight, CheckCircle, ShieldCheck } from 'lucide-react';
 import Logo from "../assets/logo.png";
+import { finalCtaContent } from '../data/homepageData';
 
 export default function FinalCTA({ onOpenModal }) {
+  const { eyebrow, heading, desc, phoneLabel, phone, phoneHref, formCard } = finalCtaContent;
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -35,24 +37,24 @@ export default function FinalCTA({ onOpenModal }) {
             </div>
 
             <div className="eyebrow-red">
-              READY TO GET STARTED?
+              {eyebrow}
             </div>
 
             <h2 className="final-cta-heading">
-              GET YOUR FREE INSPECTION TODAY
+              {heading}
             </h2>
 
             <p className="final-cta-desc">
-              Whether you need hail damage verified for an Alberta insurance claim or want to replace aging shingles before winter, Marcus Delgray and our certified in-house crew are ready to inspect your property.
+              {desc}
             </p>
 
-            <a href="tel:+1333456789" className="final-phone-link-box">
+            <a href={phoneHref || "tel:+1333456789"} className="final-phone-link-box">
               <div className="final-phone-icon">
                 <Phone size={22} />
               </div>
               <div>
-                <span className="final-phone-sub">Call our local Calgary dispatch directly:</span>
-                <span className="final-phone-num">+1 333 456789</span>
+                <span className="final-phone-sub">{phoneLabel}</span>
+                <span className="final-phone-num">{phone || "+1 333 456789"}</span>
               </div>
             </a>
           </div>
@@ -60,9 +62,9 @@ export default function FinalCTA({ onOpenModal }) {
           {/* Right Column: Dark Floating Lead Capture Card */}
           <div className="final-cta-form-col">
             <div className="lead-card-dark">
-              <h3 className="lead-card-title">SEE WHAT YOUR PROJECT WILL COST</h3>
+              <h3 className="lead-card-title">{formCard.title}</h3>
               <p className="lead-card-sub">
-                Guaranteed flat-rate pricing &bull; 100% Free on-site inspection
+                {formCard.subtitle}
               </p>
 
               {submitted ? (
@@ -141,13 +143,13 @@ export default function FinalCTA({ onOpenModal }) {
                   </div>
 
                   <button type="submit" className="btn-orange" style={{ width: '100%', marginTop: '8px' }}>
-                    <span>GET AN ESTIMATE</span>
+                    <span>{formCard.submitLabel}</span>
                     <ChevronRight size={20} />
                   </button>
 
                   <div className="hero-form-microcopy">
                     <ShieldCheck size={14} />
-                    <span>Free on-site inspection &bull; No obligation &bull; Flat-rate pricing</span>
+                    <span>{formCard.microcopy}</span>
                   </div>
                 </form>
               )}

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Gift, Percent, ShieldCheck, ChevronRight } from 'lucide-react';
+import { specialOffersContent } from '../data/homepageData';
 
 export default function SpecialOffers({ onOpenModal }) {
+  const { eyebrow, heading, subtitle, offerCard } = specialOffersContent;
   return (
     <section className="section-padding offers-clean-section" id="special-offers">
       <div className="container">
@@ -9,13 +11,13 @@ export default function SpecialOffers({ onOpenModal }) {
         {/* Header */}
         <div className="section-header">
           <div className="eyebrow-red">
-            SPECIAL OFFERS
+            {eyebrow}
           </div>
           <h2 className="section-title">
-            FREE INSPECTIONS, ALWAYS
+            {heading}
           </h2>
           <p className="section-subtitle">
-            We never charge to inspect your roof, run AI photo damage scans, or provide an itemized flat-rate estimate. Period.
+            {subtitle}
           </p>
         </div>
 
@@ -26,11 +28,11 @@ export default function SpecialOffers({ onOpenModal }) {
           </div>
 
           <h3 className="center-offer-heading">
-            MILITARY, FIRST RESPONDERS & 0% FINANCING (UP TO 18 MO)
+            {offerCard.heading}
           </h3>
 
           <p className="center-offer-body">
-            We proudly offer dedicated credits for Canadian military veterans, active service personnel, and Calgary first responders. In addition, all qualifying full roof replacements are eligible for our zero-interest 0% APR financing plans up to 18 months through our Canadian lending partners.
+            {offerCard.body}
           </p>
 
           <div className="center-offer-btn-wrap">
@@ -39,7 +41,7 @@ export default function SpecialOffers({ onOpenModal }) {
               onClick={() => onOpenModal('Special Offers Center CTA')} 
               className="btn-orange"
             >
-              <span>CLAIM YOUR OFFER</span>
+              <span>{offerCard.ctaLabel}</span>
               <ChevronRight size={20} />
             </button>
           </div>

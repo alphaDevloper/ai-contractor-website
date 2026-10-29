@@ -2,20 +2,27 @@ import React from 'react';
 import { Home, Hammer, Zap, Droplets, Layers, Building2, Sun, Search, FileText, ShieldCheck, ChevronRight } from 'lucide-react';
 import ServiceBg from "../assets/after_roof.jpg";
 import Logo from "../assets/logo.png";
+import { servicesContent } from '../data/homepageData';
+
+const ICON_MAP = {
+  Home: <Home size={20} />,
+  Hammer: <Hammer size={20} />,
+  Zap: <Zap size={20} />,
+  Droplets: <Droplets size={20} />,
+  Layers: <Layers size={20} />,
+  Building2: <Building2 size={20} />,
+  Sun: <Sun size={20} />,
+  Search: <Search size={20} />,
+  FileText: <FileText size={20} />,
+  ShieldCheck: <ShieldCheck size={20} />
+};
 
 export default function Services({ onOpenModal }) {
-  const serviceButtons = [
-    { name: "ROOF REPLACEMENT", icon: <Home size={20} />, query: "Residential Roof Replacement" },
-    { name: "ROOF REPAIR", icon: <Hammer size={20} />, query: "Roof Repair & Leak Detection" },
-    { name: "STORM DAMAGE", icon: <Zap size={20} />, query: "Hail & Storm Damage Restoration" },
-    { name: "GUTTERS", icon: <Droplets size={20} />, query: "Eavestrough & Gutter Installation" },
-    { name: "SIDING", icon: <Layers size={20} />, query: "Exterior Siding & Flashing" },
-    { name: "COMMERCIAL ROOFING", icon: <Building2 size={20} />, query: "Commercial Roofing" },
-    { name: "SKYLIGHTS", icon: <Sun size={20} />, query: "Skylight Installation & Replacement" },
-    { name: "21-POINT INSPECTION", icon: <Search size={20} />, query: "Roof Inspections & Maintenance" },
-    { name: "INSURANCE CLAIMS", icon: <FileText size={20} />, query: "Hail & Storm Damage Restoration" },
-    { name: "FLAT ROOFING", icon: <ShieldCheck size={20} />, query: "Flat / Low-Slope Roofing" }
-  ];
+  const { eyebrow, heading, intro, photoBadge, photoAlt, buttons } = servicesContent;
+  const serviceButtons = buttons.map(btn => ({
+    ...btn,
+    icon: ICON_MAP[btn.iconName] || <ShieldCheck size={20} />
+  }));
 
   return (
     <section className="section-padding services-section" id="services">
@@ -28,11 +35,11 @@ export default function Services({ onOpenModal }) {
             <div className="services-img-wrapper">
               <img 
                 src={ServiceBg}
-                alt="AeroDome completed residential architectural shingle roof in Calgary" 
+                alt={photoAlt} 
                 className="services-large-photo"
               />
               <div className="services-photo-badge">
-                <span>RECENT COMPLETION &bull; ASPEN WOODS, CALGARY SW</span>
+                <span>{photoBadge}</span>
               </div>
             </div>
           </div>
@@ -50,15 +57,15 @@ export default function Services({ onOpenModal }) {
             </div>
 
             <div className="eyebrow-red">
-              OUR SERVICES
+              {eyebrow}
             </div>
 
             <h2 className="services-heading">
-              ROOFING + EXTERIORS, ONE ACCOUNTABLE TEAM
+              {heading}
             </h2>
 
             <p className="services-intro">
-              Whether you need a full replacement after a Calgary hailstorm, quick emergency leak repair, or a complete exterior overhaul, our certified in-house crew delivers uncompromising craftsmanship with zero subcontracting.
+              {intro}
             </p>
 
             {/* The 2-Column Buttons Grid (Exactly as requested from reference) */}

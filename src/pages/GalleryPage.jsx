@@ -157,7 +157,7 @@ export default function GalleryPage({ onOpenModal }) {
                   <Phone size={22} />
                 </div>
                 <div>
-                  <span className="cta-phone-label">Direct Line &bull; Speaks Directly With Marcus</span>
+                  <span className="cta-phone-label">Direct Line &bull; Speaks Directly With Nolan</span>
                   <span className="cta-phone-number">(403) 918-4444</span>
                 </div>
               </a>
@@ -176,7 +176,7 @@ export default function GalleryPage({ onOpenModal }) {
                     <CheckCircle2 size={46} color="#10B981" />
                     <h4>Estimate Request Received!</h4>
                     <p>
-                      Thank you, <strong>{formData.firstName}</strong>. Marcus Delgray or our senior 
+                      Thank you, <strong>{formData.firstName}</strong>. Nolan Thrace or our senior 
                       estimator will contact you at <strong>{formData.phone}</strong> within 15 minutes.
                     </p>
                   </div>

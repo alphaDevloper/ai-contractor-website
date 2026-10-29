@@ -46,7 +46,7 @@ export default function LeadModal({ isOpen, onClose, triggerSource = 'Direct CTA
             <CheckCircle size={48} color="#10B981" />
             <h3 className="modal-done-title">Estimate Request Confirmed!</h3>
             <p className="modal-done-text">
-              Thank you, <strong>{formData.firstName}</strong>. Marcus Delgray or our senior estimator will review your property details and contact you at <strong>{formData.phone}</strong> within 15 minutes.
+              Thank you, <strong>{formData.firstName}</strong>. Nolan Thrace or our senior estimator will review your property details and contact you at <strong>{formData.phone}</strong> within 15 minutes.
             </p>
             <button 
               type="button" 

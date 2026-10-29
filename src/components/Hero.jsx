@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Star, CheckCircle, ChevronRight, ShieldCheck, Zap } from 'lucide-react';
-import Herobg from "../assets/hero-bg.webp"
+import Herobg from "../assets/hero-bg.webp";
+import { heroContent } from '../data/homepageData';
 
 export default function Hero({ onOpenModal }) {
+  const { eyebrow, headline, ratingText, ratingCount, checks, formCard } = heroContent;
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -37,11 +39,11 @@ export default function Hero({ onOpenModal }) {
           {/* Left Column: Heading & Value Points */}
           <div className="hero-content">
             <div className="eyebrow-red hero-eyebrow">
-              CALGARY'S HAIL & STORM DAMAGE SPECIALISTS
+              {eyebrow}
             </div>
 
             <h1 className="hero-headline">
-              CALGARY'S ROOFING, SIDING AND STORM RESTORATION CONTRACTOR
+              {headline}
             </h1>
 
             {/* Google Rating Badge (Exact Reference Style) */}
@@ -54,39 +56,33 @@ export default function Hero({ onOpenModal }) {
                   <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.35 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
                 </svg>
               </div>
-              <span className="rating-text"><strong>5.0★ ON GOOGLE</strong> (312+ REVIEWS)</span>
+              <span className="rating-text"><strong>{ratingText}</strong> {ratingCount}</span>
             </div>
 
             {/* 3 Checkmark Bullet Items */}
             <div className="hero-checks-list">
-              <div className="hero-check-item">
-                <CheckCircle size={18} className="check-icon" />
-                <span>10-Year Workmanship Warranty &bull; Up to 50-Yr Material Protection</span>
-              </div>
-              <div className="hero-check-item">
-                <CheckCircle size={18} className="check-icon" />
-                <span>100% Local In-House Crew &bull; Zero Subcontracting</span>
-              </div>
-              <div className="hero-check-item">
-                <CheckCircle size={18} className="check-icon" />
-                <span>Free On-Site AI-Assisted Roof Damage Inspection</span>
-              </div>
+              {checks.map((item, idx) => (
+                <div key={idx} className="hero-check-item">
+                  <CheckCircle size={18} className="check-icon" />
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Right Column: Dark Floating Lead Capture Card */}
           <div className="hero-form-col">
             <div className="lead-card-dark">
-              <h2 className="lead-card-title">SEE WHAT YOUR PROJECT WILL COST</h2>
+              <h2 className="lead-card-title">{formCard.title}</h2>
               <p className="lead-card-sub">
-                Get a free on-site roof inspection and guaranteed flat-rate proposal.
+                {formCard.subtitle}
               </p>
 
               {submitted ? (
                 <div className="form-success-box">
                   <CheckCircle size={44} color="#10B981" />
                   <h3>Estimate Request Sent!</h3>
-                  <p>Thanks, {formData.firstName}. Marcus Delgray or our senior estimator will call you at <strong>{formData.phone}</strong> within 15 minutes.</p>
+                  <p>Thanks, {formData.firstName}. Nolan Thrace or our senior estimator will call you at <strong>{formData.phone}</strong> within 15 minutes.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
@@ -173,13 +169,13 @@ export default function Hero({ onOpenModal }) {
                   </div>
 
                   <button type="submit" className="btn-orange" style={{ width: '100%', marginTop: '8px' }}>
-                    <span>GET AN ESTIMATE</span>
+                    <span>{formCard.submitLabel}</span>
                     <ChevronRight size={20} />
                   </button>
 
                   <div className="hero-form-microcopy">
                     <ShieldCheck size={14} />
-                    <span>Free on-site inspection &bull; No obligation &bull; Flat-rate pricing</span>
+                    <span>{formCard.microcopy}</span>
                   </div>
                 </form>
               )}

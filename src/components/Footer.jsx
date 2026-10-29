@@ -33,7 +33,7 @@ export default function Footer({ onOpenModal }) {
             </div>
 
             <p className="footer-brand-text">
-              Calgary's trusted residential roofing and storm restoration contractor. Founded in 2011 by Marcus Delgray. GAF Master Elite® & IKO ShieldPRO® certified. 100% in-house local crew.
+              Calgary's trusted residential roofing and storm restoration contractor. Founded in 2011 by Nolan Thrace. GAF Master Elite® & IKO ShieldPRO® certified. 100% in-house local crew.
             </p>
           </div>
 

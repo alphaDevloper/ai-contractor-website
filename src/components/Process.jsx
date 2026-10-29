@@ -1,30 +1,10 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import Roof from "../assets/after_roof.jpg";
+import { processContent } from '../data/homepageData';
 
 export default function Process({ onOpenModal }) {
-  const steps = [
-    {
-      num: "01",
-      title: "SCHEDULE YOUR FREE ROOF INSPECTION",
-      desc: "We inspect your roof, take high-resolution AI photos, and assess any hail, wind, or age-related shingle damage with zero sales pressure."
-    },
-    {
-      num: "02",
-      title: "GET A TRANSPARENT, FLAT-RATE PROPOSAL",
-      desc: "Receive an itemized quote with guaranteed zero surprise fees. Compare GAF & IKO shingle lines and 0% financing plans up to 18 months."
-    },
-    {
-      num: "03",
-      title: "EXPERT INSTALLATION BY OUR LOCAL CREW",
-      desc: "Our permanent, COR™ certified in-house crew completes most Calgary homes in 1 to 2 days, protected by full property tarps and magnetic lawn sweeps."
-    },
-    {
-      num: "04",
-      title: "FINAL WALKTHROUGH & 10-YEAR WARRANTY",
-      desc: "Founder Marcus Delgray personally inspects your finished installation and issues your signed 10-Year Workmanship Warranty certificate."
-    }
-  ];
+  const { eyebrow, heading, intro, photoBadge, photoAlt, ctaLabel, steps } = processContent;
 
   return (
     <section className="section-padding process-section" id="process">
@@ -37,11 +17,11 @@ export default function Process({ onOpenModal }) {
             <div className="process-img-frame">
               <img 
                 src={Roof} 
-                alt="AeroDome residential roofing installation process in Calgary" 
+                alt={photoAlt} 
                 className="process-photo-img"
               />
               <div className="process-photo-badge">
-                <span>100% IN-HOUSE CREW &bull; 10-YEAR WORKMANSHIP GUARANTEE</span>
+                <span>{photoBadge}</span>
               </div>
             </div>
           </div>
@@ -49,15 +29,15 @@ export default function Process({ onOpenModal }) {
           {/* Right Column: Heading + 4 Step Blocks + Orange CTA */}
           <div className="process-content-col">
             <div className="eyebrow-red">
-              HOW IT WORKS
+              {eyebrow}
             </div>
 
             <h2 className="process-heading">
-              FOUR STEPS, NO SURPRISES
+              {heading}
             </h2>
 
             <p className="process-intro">
-              We believe in transparent communication, guaranteed flat-rate pricing, and respectful treatment of your property from start to finish.
+              {intro}
             </p>
 
             {/* 4 Step Blocks */}
@@ -82,7 +62,7 @@ export default function Process({ onOpenModal }) {
                 onClick={() => onOpenModal('Process CTA')} 
                 className="btn-orange"
               >
-                <span>GET AN ESTIMATE</span>
+                <span>{ctaLabel}</span>
                 <ChevronRight size={20} />
               </button>
             </div>

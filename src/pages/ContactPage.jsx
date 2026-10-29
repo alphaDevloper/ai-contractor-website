@@ -172,7 +172,7 @@ export default function ContactPage({ onOpenModal }) {
                   </div>
                   <h3 className="contact-success-title">Message Sent Successfully!</h3>
                   <p className="contact-success-desc">
-                    Thank you, <strong>{mainForm.fullName}</strong>. Marcus Delgray or our senior roofing team will review your inquiry and call you at <strong>{mainForm.phone}</strong> shortly.
+                    Thank you, <strong>{mainForm.fullName}</strong>. Nolan Thrace or our senior roofing team will review your inquiry and call you at <strong>{mainForm.phone}</strong> shortly.
                   </p>
                   <button 
                     type="button" 

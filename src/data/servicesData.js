@@ -9,7 +9,7 @@ export const servicesHero = {
 export const servicesHub = {
   eyebrow: "SERVICES WE OFFER",
   headline: "ROOFING + EXTERIORS, ONE ACCOUNTABLE TEAM",
-  intro: "From gutters, siding, and storm restoration to full roof replacements, Marcus Delgray and our team handle everything.",
+  intro: "From gutters, siding, and storm restoration to full roof replacements, Nolan Thrace and our team handle everything.",
   aerialImage: "/images/services_aerial_roof.jpg",
   aerialCaption: "RECENT ROOF REPLACEMENT • AERO DOME CALGARY IN-HOUSE CREW",
   buttons: [
@@ -80,7 +80,7 @@ export const servicesShowcase = [
       {
         step: "04",
         title: "FINAL INSPECTION & WARRANTY",
-        desc: "Marcus Delgray walks through the completed roof, performs a magnetic nail sweep, and issues your 10-year warranty."
+        desc: "Nolan Thrace walks through the completed roof, performs a magnetic nail sweep, and issues your 10-year warranty."
       }
     ],
     faqEyebrow: "GOT QUESTIONS?",

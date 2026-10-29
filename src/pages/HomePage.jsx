@@ -32,7 +32,7 @@ export default function HomePage({ onOpenModal }) {
       {/* Ticker Ribbon 2 */}
       <TickerRibbon />
 
-      {/* Owner-Led Local Section (Marcus Delgray) */}
+      {/* Owner-Led Local Section (Nolan Thrace) */}
       <OwnerStory onOpenModal={onOpenModal} />
 
       {/* Ticker Ribbon 3 */}
