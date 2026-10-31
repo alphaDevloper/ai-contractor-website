@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
-import { galleryHero, galleryCategories, galleryProjects } from '../data/galleryData';
+import { galleryHero, galleryCategories, galleryProjects, galleryCta } from '../data/galleryData';
 import TickerRibbon from '../components/TickerRibbon';
 import logoImg from '../assets/logo.png';
 
 export default function GalleryPage({ onOpenModal }) {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState(galleryCategories[0] || 'All Projects');
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   // Filter projects by active tab
-  const filteredProjects = activeCategory === 'All'
+  const filteredProjects = activeCategory === (galleryCategories[0] || 'All Projects')
     ? galleryProjects
     : galleryProjects.filter(project => 
         project.category === activeCategory || 
@@ -143,13 +143,11 @@ export default function GalleryPage({ onOpenModal }) {
                 />
               </div>
 
-              <div className="eyebrow-red">GET STARTED TODAY</div>
-              <h2 className="cta-main-heading">READY TO GET STARTED?</h2>
+              <div className="eyebrow-red">{galleryCta.eyebrow}</div>
+              <h2 className="cta-main-heading">{galleryCta.headline}</h2>
 
               <p className="cta-main-body">
-                The best time to protect your home is before the next Calgary storm hits. 
-                Get started today with a free, no-obligation inspection and guaranteed flat-rate quote. 
-                Locally owned, COR™ certified, fully insured, and just a click or call away.
+                {galleryCta.description}
               </p>
 
               <a href="tel:4039184444" className="cta-direct-phone-box">
@@ -157,8 +155,8 @@ export default function GalleryPage({ onOpenModal }) {
                   <Phone size={22} />
                 </div>
                 <div>
-                  <span className="cta-phone-label">Direct Line &bull; Speaks Directly With Nolan</span>
-                  <span className="cta-phone-number">(403) 918-4444</span>
+                  <span className="cta-phone-label">{galleryCta.phoneLabel}</span>
+                  <span className="cta-phone-number">{galleryCta.phoneNumber}</span>
                 </div>
               </a>
             </div>
@@ -166,9 +164,9 @@ export default function GalleryPage({ onOpenModal }) {
             {/* Right Column: Floating Dark Lead Form Card */}
             <div className="cta-form-col">
               <div className="lead-card-dark">
-                <h3 className="lead-card-title">GET MY FREE ESTIMATE</h3>
+                <h3 className="lead-card-title">{galleryCta.formTitle}</h3>
                 <p className="lead-card-sub">
-                  Fast response time &bull; 100% Free on-site inspection
+                  {galleryCta.formSubtitle}
                 </p>
 
                 {submitted ? (
@@ -253,13 +251,13 @@ export default function GalleryPage({ onOpenModal }) {
                     </div>
 
                     <button type="submit" className="btn-orange btn-submit-full">
-                      <span>GET MY FREE ESTIMATE</span>
+                      <span>{galleryCta.formButton}</span>
                       <ArrowRight size={18} />
                     </button>
 
                     <div className="hero-form-microcopy">
                       <ShieldCheck size={14} />
-                      <span>Free on-site inspection &bull; No obligation &bull; Flat-rate pricing</span>
+                      <span>{galleryCta.microcopy}</span>
                     </div>
                   </form>
                 )}

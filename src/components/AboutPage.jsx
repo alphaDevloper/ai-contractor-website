@@ -16,6 +16,15 @@ import {
 import heroHouseImg from '../assets/about_residential_home.jpg';
 import founderImg from '../assets/owner.webp';
 import logoImg from '../assets/logo.png';
+import {
+  aboutHero,
+  aboutStats,
+  aboutOrigin,
+  aboutFounder,
+  aboutValues,
+  aboutMarqueeText,
+  aboutCta,
+} from '../data/aboutData';
 
 /* ==========================================================================
    PARTNER & CERTIFICATION BRAND LOGO SVGS (HIGH DEFINITION)
@@ -79,14 +88,8 @@ function NeighborhoodFaveLogo() {
    MARQUEE CONTINUOUS TICKER COMPONENT
    ========================================================================== */
 
-function CloudNineMarquee() {
-  const items = [
-    "CLOUD NINE ROOFING AND RESTORATION",
-    "CLOUD NINE ROOFING AND RESTORATION",
-    "CLOUD NINE ROOFING AND RESTORATION",
-    "CLOUD NINE ROOFING AND RESTORATION",
-    "CLOUD NINE ROOFING AND RESTORATION"
-  ];
+function AeroDomeMarquee() {
+  const items = Array(5).fill(aboutMarqueeText);
 
   return (
     <div className="about-marquee-ribbon" aria-hidden="true">
@@ -152,28 +155,28 @@ export default function AboutPage({ onOpenModal }) {
           </nav>
 
           <div className="about-exact-eyebrow">
-            ABOUT OUR ROOFING TEAM
+            {aboutHero.eyebrow}
           </div>
 
           <h1 className="about-exact-title">
-            FAMILY-OWNED.<br />OWNER-MANAGED.
+            {aboutHero.titleLine1}<br />{aboutHero.titleLine2}
           </h1>
 
           <p className="about-exact-subtitle">
-            FAIR PRICING, HONEST ESTIMATES, AND LOCAL INTEGRITY
+            {aboutHero.subtitle}
           </p>
         </div>
 
         {/* Hero Bottom Trust Bar */}
         <div className="about-exact-hero-bar">
           <div className="container about-exact-hero-bar-inner">
-            <span>LOCAL, FAMILY-OWNED ROOF REPAIR &amp; INSTALLATION</span>
+            <span>{aboutHero.trustBar[0]}</span>
             <span className="bar-bullet">&bull;</span>
-            <span>FREE ON-SITE ROOF INSPECTIONS &amp; TRANSPARENT PRICING</span>
+            <span>{aboutHero.trustBar[1]}</span>
             <span className="bar-bullet">&bull;</span>
-            <span>LICENSED AND INSURED IN INDIANA</span>
+            <span>{aboutHero.trustBar[2]}</span>
             <span className="bar-bullet">&bull;</span>
-            <span>100% IN-HOUSE ROOFING SPECIALISTS</span>
+            <span>{aboutHero.trustBar[3]}</span>
           </div>
         </div>
       </section>
@@ -202,25 +205,25 @@ export default function AboutPage({ onOpenModal }) {
             <div className="about-stats-grid">
               
               <div className="about-stat-card">
-                <div className="about-stat-num">105+</div>
-                <div className="about-stat-label">FIVE-STAR GOOGLE REVIEWS</div>
+                <div className="about-stat-num">{aboutStats[0].number}</div>
+                <div className="about-stat-label">{aboutStats[0].label}</div>
               </div>
 
               <div className="about-stat-card">
-                <div className="about-stat-num">2</div>
-                <div className="about-stat-label">DEDICATED FOUNDER-MANAGED CREWS</div>
+                <div className="about-stat-num">{aboutStats[1].number}</div>
+                <div className="about-stat-label">{aboutStats[1].label}</div>
               </div>
 
               <div className="about-stat-card">
                 <div className="about-stat-num">
-                  5.0<span className="accent-star">★</span>
+                  {aboutStats[2].number}<span className="accent-star">{aboutStats[2].accentStar}</span>
                 </div>
-                <div className="about-stat-label">AVERAGE CUSTOMER SATISFACTION</div>
+                <div className="about-stat-label">{aboutStats[2].label}</div>
               </div>
 
               <div className="about-stat-card">
-                <div className="about-stat-num">100%</div>
-                <div className="about-stat-label">COMMUNICATION GUARANTEE</div>
+                <div className="about-stat-num">{aboutStats[3].number}</div>
+                <div className="about-stat-label">{aboutStats[3].label}</div>
               </div>
 
             </div>
@@ -238,12 +241,12 @@ export default function AboutPage({ onOpenModal }) {
             
             {/* Left Content */}
             <div>
-              <div className="about-exact-eyebrow">OUR ORIGIN</div>
+              <div className="about-exact-eyebrow">{aboutOrigin.eyebrow}</div>
               <h2 className="about-origin-heading">
-                BUILT ON<br />TRUST &amp; CRAFT
+                {aboutOrigin.headingLine1}<br />{aboutOrigin.headingLine2}
               </h2>
               <p className="about-origin-desc">
-                That commitment has earned us a 5.0-star rating on both Google and Facebook, hundreds of completed projects across Hamilton County, Indiana, and more referrals than we can count. We do love our work as craftsmanship is what you're proud of.
+                {aboutOrigin.description}
               </p>
 
               <div className="about-origin-btns">
@@ -252,10 +255,10 @@ export default function AboutPage({ onOpenModal }) {
                   onClick={() => onOpenModal('About Page: Origin Estimate')}
                   className="about-btn-orange"
                 >
-                  GET MY FREE ESTIMATE
+                  {aboutOrigin.primaryBtn}
                 </button>
                 <Link to="/gallery" className="about-btn-outline">
-                  SEE OUR WORK
+                  {aboutOrigin.secondaryBtn}
                 </Link>
               </div>
             </div>
@@ -310,17 +313,17 @@ export default function AboutPage({ onOpenModal }) {
 
             {/* Right: Founder Content */}
             <div>
-              <div className="about-exact-eyebrow">MEET THE FOUNDER</div>
+              <div className="about-exact-eyebrow">{aboutFounder.eyebrow}</div>
               <h2 className="about-founder-heading">
-                OWNER-LED. LOCAL.<br />HAMILTON COUNTY.
+                {aboutFounder.headingLine1}<br />{aboutFounder.headingLine2}
               </h2>
               
               <p className="about-founder-desc">
-                Cloud Nine Roofing &amp; Restoration is rooted in Hamilton County, not out-of-state storm chasers or commissioned sales agents. Owner Matt Lodgers oversees every project personally, from your initial drone photo and walk-through inspection to the final magnetic nail sweep. We don't believe in high-pressure tactics, unnecessary upsells, or hidden fees. Just honest advice, clear communication, and quality craftsmanship that protects your home for decades.
+                {aboutFounder.paragraphOne}
               </p>
               
               <p className="about-founder-desc">
-                Serving Carmel, Westfield, Noblesville, Fishers, Zionsville, Cicero, and Sheridan with dedicated in-house roofing crews.
+                {aboutFounder.paragraphTwo}
               </p>
 
               <button 
@@ -328,7 +331,7 @@ export default function AboutPage({ onOpenModal }) {
                 onClick={() => onOpenModal('About Page: Founder Inquiry')}
                 className="about-founder-btn"
               >
-                <span>LEARN MORE ABOUT US</span>
+                <span>{aboutFounder.ctaBtn}</span>
                 <ArrowRight size={16} />
               </button>
             </div>
@@ -343,10 +346,10 @@ export default function AboutPage({ onOpenModal }) {
                 <div className="about-mv-icon-box">
                   <Flag size={18} />
                 </div>
-                <div className="about-mv-title">OUR MISSION</div>
+                <div className="about-mv-title">{aboutFounder.mission.title}</div>
               </div>
               <p className="about-mv-text">
-                To deliver long-lasting, honest, and high-quality roofing solutions that protect what matters most—giving homeowners complete peace of mind through every season.
+                {aboutFounder.mission.text}
               </p>
             </div>
 
@@ -355,10 +358,10 @@ export default function AboutPage({ onOpenModal }) {
                 <div className="about-mv-icon-box">
                   <Eye size={18} />
                 </div>
-                <div className="about-mv-title">OUR VISION</div>
+                <div className="about-mv-title">{aboutFounder.vision.title}</div>
               </div>
               <p className="about-mv-text">
-                To be the most trusted, recommended, and customer-first exterior restoration contractor in Indiana, known for unmatched integrity and flawless craftsmanship.
+                {aboutFounder.vision.text}
               </p>
             </div>
 
@@ -373,10 +376,10 @@ export default function AboutPage({ onOpenModal }) {
       <section className="about-values-section">
         <div className="container">
           
-          <div className="about-values-eyebrow">HOW WE OPERATE</div>
-          <h2 className="about-values-heading">THE VALUES WE WORK BY</h2>
+          <div className="about-values-eyebrow">{aboutValues.eyebrow}</div>
+          <h2 className="about-values-heading">{aboutValues.heading}</h2>
           <p className="about-values-sub">
-            No shortcuts, no sales games. These are the principles that dictate every roof we inspect, repair, or replace.
+            {aboutValues.subtext}
           </p>
 
           <div className="about-values-grid">
@@ -386,9 +389,9 @@ export default function AboutPage({ onOpenModal }) {
               <div className="about-value-icon-box">
                 <DollarSign size={28} />
               </div>
-              <h3 className="about-value-title">YOU ONLY PAY FOR WHAT YOUR HOME NEEDS</h3>
+              <h3 className="about-value-title">{aboutValues.cards[0].title}</h3>
               <p className="about-value-desc">
-                Full roof replacement is not always the answer. If a proper repair or maintenance service protects your home for years to come, that's the only option we'll recommend.
+                {aboutValues.cards[0].description}
               </p>
             </div>
 
@@ -397,9 +400,9 @@ export default function AboutPage({ onOpenModal }) {
               <div className="about-value-icon-box">
                 <Award size={28} />
               </div>
-              <h3 className="about-value-title">THREE CERTIFICATIONS, ALL TOP TIER</h3>
+              <h3 className="about-value-title">{aboutValues.cards[1].title}</h3>
               <p className="about-value-desc">
-                Every roofing project uses premium materials installed strictly to manufacturer specs. We never cut corners on underlayment, ice-and-water shield, or ventilation.
+                {aboutValues.cards[1].description}
               </p>
             </div>
 
@@ -408,9 +411,9 @@ export default function AboutPage({ onOpenModal }) {
               <div className="about-value-icon-box">
                 <HardHat size={28} />
               </div>
-              <h3 className="about-value-title">OWNER ON SITE, EVERY TIME</h3>
+              <h3 className="about-value-title">{aboutValues.cards[2].title}</h3>
               <p className="about-value-desc">
-                You won't deal with middlemen or commissioned salespeople. The owner oversees your project from initial drone photo inspection to final magnet sweep cleanup.
+                {aboutValues.cards[2].description}
               </p>
             </div>
 
@@ -422,7 +425,7 @@ export default function AboutPage({ onOpenModal }) {
       {/* =================================================================== */}
       {/* 6. UPPER SCROLLING TICKER RIBBON                                    */}
       {/* =================================================================== */}
-      <CloudNineMarquee />
+      <AeroDomeMarquee />
 
       {/* =================================================================== */}
       {/* 7. SECTION: "GET YOUR FREE INSPECTION TODAY" CTA                    */}
@@ -434,24 +437,24 @@ export default function AboutPage({ onOpenModal }) {
             {/* Left Content */}
             <div>
               <div className="about-cta-logo-wrap">
-                <img src={logoImg} alt="Cloud Nine Roofing" className="about-cta-logo-img" />
+                <img src={logoImg} alt="AeroDome Roofing" className="about-cta-logo-img" />
               </div>
               
-              <div className="about-cta-eyebrow">READY TO START?</div>
+              <div className="about-cta-eyebrow">{aboutCta.eyebrow}</div>
               <h2 className="about-cta-heading">
-                GET YOUR FREE<br />INSPECTION TODAY
+                {aboutCta.headingLine1}<br />{aboutCta.headingLine2}
               </h2>
               
               <p className="about-cta-desc">
-                Tell us about your home. We will connect with you in under five minutes and give you honest advice on the right solution.
+                {aboutCta.description}
               </p>
             </div>
 
             {/* Right Dark Floating Form Card - Styled matching Hero CTA */}
             <div className="lead-card-dark">
-              <h2 className="lead-card-title">SEE WHAT YOUR PROJECT WILL COST</h2>
+              <h2 className="lead-card-title">{aboutCta.formCard.title}</h2>
               <p className="lead-card-sub">
-                Get a free on-site roof inspection and guaranteed flat-rate proposal.
+                {aboutCta.formCard.subtitle}
               </p>
 
               {submitted ? (
@@ -534,13 +537,13 @@ export default function AboutPage({ onOpenModal }) {
 
 
                   <button type="submit" className="btn-orange" style={{ width: '100%', marginTop: '8px' }}>
-                    <span>GET AN ESTIMATE</span>
+                    <span>{aboutCta.submitBtn}</span>
                     <ChevronRight size={20} />
                   </button>
 
                   <div className="hero-form-microcopy">
                     <ShieldCheck size={14} />
-                    <span>Free on-site inspection &bull; No obligation &bull; Flat-rate pricing</span>
+                    <span>{aboutCta.microcopy}</span>
                   </div>
                 </form>
               )}
@@ -553,7 +556,7 @@ export default function AboutPage({ onOpenModal }) {
       {/* =================================================================== */}
       {/* 8. LOWER SCROLLING TICKER RIBBON                                    */}
       {/* =================================================================== */}
-      <CloudNineMarquee />
+      <AeroDomeMarquee />
 
     </div>
   );
