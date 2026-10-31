@@ -21,7 +21,8 @@ import {
   servicesHero, 
   servicesHub, 
   servicesShowcase, 
-  specialOffersSection 
+  specialOffersSection,
+  servicesCta
 } from '../data/servicesData';
 import logoImg from '../assets/logo.png';
 
@@ -329,24 +330,24 @@ export default function ServicesPage({ onOpenModal }) {
               </div>
 
               <div className="eyebrow-red">
-                READY TO GET STARTED?
+                {servicesCta.eyebrow}
               </div>
 
               <h2 className="final-cta-heading">
-                GET YOUR FREE INSPECTION TODAY
+                {servicesCta.heading}
               </h2>
 
               <p className="final-cta-desc">
-                Whether you need hail damage verified for an Alberta insurance claim or want to replace aging shingles before winter, Nolan Thrace and our certified in-house crew are ready to inspect your property.
+                {servicesCta.description}
               </p>
 
-              <a href="tel:+1333456789" className="final-phone-link-box">
+              <a href="tel:+14039184444" className="final-phone-link-box">
                 <div className="final-phone-icon">
                   <Phone size={24} />
                 </div>
                 <div>
-                  <span className="final-phone-label">Direct Line &bull; Speaks Directly With Nolan</span>
-                  <span className="final-phone-num">+1 333 456789</span>
+                  <span className="final-phone-label">{servicesCta.phoneLabel}</span>
+                  <span className="final-phone-num">{servicesCta.phoneNumber}</span>
                 </div>
               </a>
             </div>
@@ -354,10 +355,10 @@ export default function ServicesPage({ onOpenModal }) {
             {/* Right Column: Floating Dark Lead Form Card */}
             <div className="final-cta-form-col">
               <div className="lead-card-dark">
-                <div className="card-top-header">
-                  <h3 className="card-main-title">WE CALL YOU BACK IN 15 MINUTES!</h3>
-                  <p className="card-sub-title">Free on-site roof inspection with photo report & transparent estimate.</p>
-                </div>
+                <h3 className="lead-card-title">{servicesCta.formTitle}</h3>
+                <p className="lead-card-sub">
+                  {servicesCta.formSubtitle}
+                </p>
 
                 {submitted ? (
                   <div className="form-success-box" style={{ padding: '30px 10px', textAlign: 'center' }}>
@@ -431,12 +432,13 @@ export default function ServicesPage({ onOpenModal }) {
                       className="btn-orange" 
                       style={{ width: '100%', marginTop: '8px' }}
                     >
-                      <span>GET MY FREE ESTIMATE</span>
+                      <span>{servicesCta.formButton}</span>
                       <ChevronRight size={18} />
                     </button>
 
-                    <div className="form-guarantee-note">
-                      <span>Free on-site inspection &bull; No obligation &bull; Flat-rate pricing</span>
+                    <div className="hero-form-microcopy">
+                      <ShieldCheck size={14} />
+                      <span>{servicesCta.microcopy}</span>
                     </div>
                   </form>
                 )}

@@ -232,7 +232,8 @@ img {
   box-shadow: var(--shadow-xl);
 }
 
-.lead-card-title {
+.lead-card-title,
+.card-main-title {
   font-family: var(--font-heading);
   font-size: 1.65rem;
   color: #FFFFFF;
@@ -240,7 +241,8 @@ img {
   margin-bottom: 4px;
 }
 
-.lead-card-sub {
+.lead-card-sub,
+.card-sub-title {
   font-size: 0.8125rem;
   color: var(--color-sky-light);
   margin-bottom: 20px;
@@ -5517,7 +5519,8 @@ img {
   justify-content: center;
   margin-top: 6px;
 }
-.hero-form-microcopy {
+.hero-form-microcopy,
+.form-guarantee-note {
   display: flex;
   align-items: center;
   justify-content: center;
