@@ -45,6 +45,7 @@ export const servicesHub = {
   aerialCaption: "RECENT ROOF REPLACEMENT • AERODOME ROOFING — NW CALGARY",
   buttons: [
     { name: "RESIDENTIAL ROOFING", id: "residential-roofing", icon: "Home" },
+    { name: "ROOF REPAIR", id: "roof-repair", icon: "Hammer" },
     { name: "WINDOW REPLACEMENT", id: "windows", icon: "Grid" },
     { name: "COMMERCIAL ROOFING", id: "commercial-roofing", icon: "Building2" },
     { name: "JAMES HARDIE SIDING", id: "siding", icon: "Layers" },
@@ -66,86 +67,172 @@ export const servicesShowcase = [
   {
     id: "residential-roofing",
     breadcrumb: "RESIDENTIAL ROOFING",
-    eyebrow: "CERTIFIED RESIDENTIAL ROOFING CALGARY",
+    eyebrow: "LICENSED ROOFING CONTRACTOR CALGARY",
     title: "RESIDENTIAL ROOFING",
-    heroHeadline: "CALGARY'S TRUSTED RESIDENTIAL ROOFING SPECIALISTS",
+    heroHeadline: "RESIDENTIAL ROOFING CALGARY HOMEOWNERS TRUST",
     description:
-      "Your roof is the first line of defence against Alberta's freeze-thaw cycles, driving hailstorms, and -30°C winters. When shingles crack or buckle, moisture follows — through your decking, insulation, and into your ceilings. AeroDome is Calgary's licensed residential roofing contractor, replacing failing shingle systems with Class 4 impact-resistant roofs installed by our own in-house crew. Every project is backed by a 10-year workmanship warranty, zero subcontracting, and a free drone-assisted inspection from NW Calgary to Airdrie.",
+      "As a licensed residential roofing contractor Calgary homeowners count on, AeroDome Roofing delivers full residential roof replacement Calgary wide and dependable roof repair Calgary emergencies demand. From NW Calgary, NE Calgary, SW Calgary, to SE Calgary, get a free roof estimate Calgary trusts for complete weather protection.",
     bullets: [
-      "Free 21-point drone & attic roof inspection — no obligation",
-      "Class 4 impact-resistant shingles rated for Calgary hail",
-      "10-year in-house workmanship warranty, signed and guaranteed",
-      "Complete tear-off, synthetic underlayment & ice-and-water shield"
+      "Free roof inspection Calgary & instant roof quote Calgary homeowners rely on",
+      "Class 4 impact resistant shingles Calgary (IKO Dynasty & Owens Corning Duration)",
+      "Complete roof leak repair Calgary & full residential roof replacement Calgary",
+      "10-year workmanship warranty Calgary from a licensed and insured roofer Calgary"
     ],
     image: "/images/about_residential_home.jpg",
     imageAlt: "Licensed residential roofing contractor Calgary — AeroDome Roofing",
     reverse: false,
     ctaText: "LEARN MORE",
-    secondaryCtaText: "GET MY FREE ESTIMATE",
+    secondaryCtaText: "FREE ROOF ESTIMATE",
 
     // ── Detail Page Fields ──────────────────────────────────────────────────
-    whyEyebrow: "WHY AERODOME",
-    whyHeading: "WHY AERODOME FOR RESIDENTIAL ROOFING",
+    whyEyebrow: "WHY CHOOSE US",
+    whyHeading: "CALGARY'S 5 STAR RATED ROOFING COMPANY",
     whyItems: [
-      { icon: "ShieldCheck", text: "Class 4 impact-resistant hail rated architectural shingles — GAF Master Elite® & IKO ShieldPRO® certified" },
-      { icon: "Award", text: "100% in-house crew — zero subcontractors — with a 10-year signed workmanship warranty" },
-      { icon: "TrendingDown", text: "Engineered ridge ventilation & ice dam prevention systems built for Alberta's climate" }
+      { icon: "Award", text: "5 star rated roofing company Calgary & BBB accredited roofing company Calgary — Owens Corning Platinum contractor Calgary & IKO Craftsman installer Calgary credentials with award winning roofing Calgary reputation." },
+      { icon: "ShieldCheck", text: "10-year workmanship warranty Calgary & full manufacturer roofing warranty Calgary — installed exclusively by our licensed and insured roofer Calgary team with zero third-party subcontractors." },
+      { icon: "Clock", text: "Hail resistant roofing Calgary & storm damage residential roof Calgary specialists — providing insurance ready roof inspection Calgary reports as the roofing company that helps with insurance claims Calgary." }
     ],
     scopeEyebrow: "SCOPE OF WORK",
-    scopeHeading: "WHAT'S INCLUDED",
+    scopeHeading: "WHAT DOES ROOF REPLACEMENT INCLUDE CALGARY",
     includedItems: [
-      "Complete tear-off & structural decking inspection",
-      "High-temperature ice & water shield in valleys & eaves",
-      "Breathable synthetic underlayment across entire roof deck",
-      "Continuous ridge vent installation & full magnetic site sweep"
+      "Complete tear-off & asphalt shingle roof replacement Calgary with premium architectural shingles",
+      "Ice and water shield Calgary installation across eaves, roof valley repair Calgary sections & chimneys",
+      "Engineered roof ventilation Calgary & drip edge installation Calgary for -40°C freeze-thaw protection",
+      "Flashing seal for skylight leak repair Calgary, roof repair around chimney Calgary & magnetic nail sweep"
     ],
-    processEyebrow: "THE PROCESS",
-    processHeading: "HOW IT WORKS",
+    processEyebrow: "OUR PROCESS",
+    processHeading: "NEW ROOF INSTALLATION CALGARY IN 4 SIMPLE STEPS",
     processSubtitle:
-      "Simple, transparent, and seamless — from your first call to the final signed warranty.",
+      "From your free roof inspection Calgary to final sign-off — transparent pricing and affordable residential roofing Calgary can depend on.",
     processSteps: [
       {
         step: "01",
-        title: "FREE ROOF AUDIT & INSPECTION",
-        desc: "We perform a thorough 21-point attic and exterior drone scan to assess hidden leaks, shingle wear, hail damage, and decking condition — at no cost and no obligation."
+        title: "FREE ROOF INSPECTION CALGARY & DAMAGE AUDIT",
+        desc: "We perform a thorough 21-point attic and drone scan — assessing missing shingles repair Calgary needs, roof leak repair Calgary vulnerabilities, or storm damage residential roof Calgary impact."
       },
       {
         step: "02",
-        title: "MATERIAL SELECTION & FLAT-RATE QUOTE",
-        desc: "Choose from designer architectural or Class 4 hail-rated shingle profiles. You receive a guaranteed flat-rate proposal — zero surprise charges at completion."
+        title: "BEST ROOFING MATERIAL FOR CALGARY CLIMATE",
+        desc: "Choose from Class 4 impact resistant shingles Calgary, UL 2218 shingles Calgary, IKO Dynasty shingles Calgary, or Owens Corning Duration shingles Calgary with upfront roof replacement financing Calgary options."
       },
       {
         step: "03",
-        title: "IN-HOUSE INSTALLATION",
-        desc: "Our in-house Calgary roofing crew installs your new roof system in 1–2 days, adhering strictly to Alberta Building Code and manufacturer nail pattern requirements."
+        title: "PRECISION HOME ROOFING SERVICES CALGARY",
+        desc: "Our in-house crew executes new roof installation Calgary or emergency roof repair Calgary adhering strictly to Alberta Building Code, with daily site tarping and same day roof repair Calgary protocols when weather turns."
       },
       {
         step: "04",
-        title: "FINAL WALKTHROUGH & WARRANTY",
-        desc: "Nolan Thrace walks through the completed roof with you, performs a full magnetic nail sweep, and hands you your signed 10-year workmanship warranty certificate."
+        title: "WARRANTY SIGN-OFF & MITIGATION OF LOSS ROOF CALGARY",
+        desc: "Nolan Thrace inspects every flashing and valley before issuing your transferable 10-year workmanship warranty Calgary and insurance documentation for complete mitigation of loss roof Calgary compliance."
       }
     ],
-    faqEyebrow: "GOT QUESTIONS?",
-    faqHeading: "COMMON QUESTIONS",
+    faqEyebrow: "FREQUENTLY ASKED QUESTIONS",
+    faqHeading: "RESIDENTIAL ROOFING CALGARY FAQS",
     faqs: [
       {
-        q: "HOW LONG DOES A FULL ROOF REPLACEMENT TAKE IN CALGARY?",
-        a: "Most single-family residential roofs in Calgary are completed within 1 to 2 days, weather permitting. Our crew covers landscaping with protective tarps daily and conducts a full magnetic nail sweep before leaving your property."
+        q: "WHAT IS THE AVERAGE ROOF REPLACEMENT COST CALGARY?",
+        a: "Roof replacement cost Calgary typically ranges between $7,500 and $16,500+ depending on architectural pitch, square footage, and chosen asphalt shingles Calgary. AeroDome provides a transparent, affordable residential roofing Calgary quote with flexible roof replacement financing Calgary so you know exact costs before work starts."
       },
       {
-        q: "WHAT ARE CLASS 4 IMPACT-RESISTANT SHINGLES?",
-        a: "Class 4 (UL 2218) shingles are engineered with rubberized SBS polymers to resist 2-inch simulated hail impacts. In Calgary's hail alley, they significantly reduce storm damage risk and may qualify your home for an insurance premium discount of up to 15%."
+        q: "HOW LONG DOES ROOF REPLACEMENT TAKE CALGARY?",
+        a: "How long does roof replacement take Calgary? For most standard homes across the Greater Calgary area, Airdrie, Okotoks, Chestermere, and Cochrane, residential roof replacement Calgary is completed in just 1 to 2 days, weather permitting, including full cleanup and magnetic nail sweeps."
       },
       {
-        q: "DO YOU USE SUBCONTRACTORS?",
-        a: "Never. Every roof we install is executed by our dedicated, vetted, and COR™ safety-certified in-house Calgary crew. This ensures uncompromising quality control, accountability, and on-site safety."
+        q: "DOES INSURANCE COVER ROOF REPLACEMENT CALGARY AFTER A STORM?",
+        a: "Does insurance cover roof replacement Calgary? Yes, Alberta home insurance roof coverage generally covers hail damage roof repair Calgary or full replacement when storm impact is confirmed. We conduct a roof inspection after hail Calgary, capture before and after hail damage roof Calgary photos, and handle your hail damage insurance claim Calgary directly with your adjuster."
       },
       {
-        q: "CAN YOU HELP WITH MY ALBERTA INSURANCE HAIL CLAIM?",
-        a: "Yes. We specialize in storm restoration documentation — we photograph hail bruising with digital forensic imagery, meet your insurance adjuster directly on your roof, and handle itemized Xactimate billing on your behalf."
+        q: "HOW DO I GET A ROOFING QUOTE CALGARY OR EMERGENCY ROOF REPAIR CALGARY?",
+        a: "You can get a roofing quote Calgary or book same day roof repair Calgary by calling (403) 918-4444. We provide an instant roof quote Calgary homeowners can review online or schedule a free roof inspection Calgary wide from NW Calgary to SE Calgary."
       }
     ],
     relatedServices: ["storm-damage", "gutters", "siding"]
+  },
+
+  // ─── ROOF REPAIR ───────────────────────────────────────────────────────────
+  {
+    id: "roof-repair",
+    breadcrumb: "ROOF REPAIR",
+    eyebrow: "EMERGENCY & SAME DAY ROOF REPAIR CALGARY",
+    title: "ROOF REPAIR",
+    heroHeadline: "ROOF REPAIR IN CALGARY — FIXED FAST, DONE RIGHT",
+    description:
+      "Finding water on your ceiling or missing shingles on your lawn is stressful. Calgary's severe hail seasons, Chinook wind gusts, and winter freeze-thaw cycles break down sealants and crack shingles quickly. You do not need to panic, and you probably do not need a full roof replacement. As a licensed roof repair contractor Calgary homeowners trust, AeroDome provides same day roof repair Calgary can count on — dispatching experienced local crews across NW Calgary, NE Calgary, SW Calgary, and SE Calgary to stop active leaks today.",
+    bullets: [
+      "Free roof repair estimate Calgary with same day emergency roof tarping Calgary",
+      "Fast roof leak repair Calgary & missing shingles repair Calgary before water spreads",
+      "Flashing, roof valley repair Calgary & skylight leak repair Calgary guaranteed watertight",
+      "10-year workmanship warranty roof repair Calgary backed by a licensed and insured roofer Calgary"
+    ],
+    image: "/images/before_hail.jpg",
+    imageAlt: "Emergency roof repair and leak detection in Calgary — AeroDome Roofing",
+    reverse: true,
+    ctaText: "LEARN MORE",
+    secondaryCtaText: "GET SAME-DAY REPAIR QUOTE",
+
+    // ── Detail Page Fields ──────────────────────────────────────────────────
+    whyEyebrow: "WHY CHOOSE US",
+    whyHeading: "WHY CALGARY CALLS AERODOME FOR ROOF REPAIR",
+    whyItems: [
+      { icon: "Clock", text: "Same day roof repair Calgary & rapid emergency roof tarping Calgary — our local roofer Calgary crews respond fast across the Greater Calgary area to dry-in active leaks and prevent costly drywall or mould damage." },
+      { icon: "ShieldCheck", text: "Honest roof repair vs replacement Calgary advice — we never push an expensive replacement when a targeted asphalt shingle repair Calgary solves your problem, backed by our workmanship warranty roof repair Calgary guarantee." },
+      { icon: "Award", text: "5 star rated roofer Calgary & BBB accredited roofing Calgary — trusted roofing contractor Calgary with Owens Corning shingles Calgary and IKO shingles Calgary matching skills for a seamless architectural finish." }
+    ],
+    scopeEyebrow: "REPAIR TYPES WE FIX",
+    scopeHeading: "WHAT'S INCLUDED IN ROOF REPAIR CALGARY",
+    includedItems: [
+      "Roof leak repair after rain Calgary & missing shingles repair Calgary matched to your existing profile",
+      "Roof flashing repair Calgary, chimney flashings & skylight leak repair Calgary using high-grade roof sealant Calgary",
+      "Roof valley repair Calgary & ice dam damage repair Calgary with self-adhering ice and water shield Calgary",
+      "Roof vent repair Calgary, roof deck repair Calgary, soffit and fascia repair Calgary & full magnetic nail sweep"
+    ],
+    processEyebrow: "OUR PROCESS",
+    processHeading: "HOW ROOF REPAIR WORKS IN 4 FAST STEPS",
+    processSubtitle:
+      "No runaround, no high-pressure sales pitches, and no surprises — just fast, reliable residential roof repair Calgary homeowners depend on.",
+    processSteps: [
+      {
+        step: "01",
+        title: "RAPID TRIAGE & FREE ROOF INSPECTION CALGARY",
+        desc: "Call our direct dispatch line for same day roof repair Calgary response. Nolan Thrace or our repair specialist arrives promptly, traces the moisture path to its source, and secures immediate emergency roof tarping Calgary if water is actively entering."
+      },
+      {
+        step: "02",
+        title: "HONEST DIAGNOSIS & SAME DAY ROOF QUOTE CALGARY",
+        desc: "We show you clear photo evidence of the failure — whether damaged flashings, hail bruises, or ice damming. You receive an upfront, affordable roof repair Calgary quote with zero pressure and zero upsells."
+      },
+      {
+        step: "03",
+        title: "PRECISION ASPHALT SHINGLE REPAIR CALGARY",
+        desc: "Our in-house Calgary crew replaces broken decking, installs ice and water shield Calgary, and secures color-matched IKO shingles Calgary or Owens Corning shingles Calgary with industrial-grade roof sealant Calgary."
+      },
+      {
+        step: "04",
+        title: "WATERPROOF WATER TEST & WARRANTY SIGN-OFF",
+        desc: "We conduct a high-pressure water test to verify 100% leak-free integrity, perform a magnetic lawn sweep, and hand you an insurance ready roof inspection Calgary report and signed workmanship warranty."
+      }
+    ],
+    faqEyebrow: "FREQUENTLY ASKED QUESTIONS",
+    faqHeading: "COMMON QUESTIONS ABOUT ROOF REPAIR IN CALGARY",
+    faqs: [
+      {
+        q: "HOW MUCH DOES ROOF REPAIR COST IN CALGARY?",
+        a: "How much does roof repair cost Calgary? Minor fixes like missing shingles repair Calgary or small flashing reseals start between $350 and $850. Complex roof valley repair Calgary, skylight leaks, or roof deck repair Calgary typically range from $950 to $2,500+. AeroDome provides a free roof repair estimate Calgary with flat-rate quotes."
+      },
+      {
+        q: "HOW DO I KNOW IF MY ROOF NEEDS REPAIR OR REPLACEMENT CALGARY?",
+        a: "Roof repair vs replacement Calgary comes down to age and damage extent. If your roof is under 15 years old and damage is confined to a localized area, a targeted repair is your best and most cost-effective choice. If shingles are brittle across the entire slope, we provide honest advice so you can plan ahead."
+      },
+      {
+        q: "DOES ALBERTA HOME INSURANCE COVER ROOF REPAIR IN CALGARY?",
+        a: "Does insurance cover roof repair Calgary? Alberta home insurance roof repair coverage generally applies when damage results from an unpreventable storm event, such as a hail storm or severe wind. AeroDome is a roofing company that helps with insurance claims Calgary — preparing photo reports for your hail damage insurance claim Calgary."
+      },
+      {
+        q: "HOW FAST CAN YOU COMPLETE EMERGENCY ROOF REPAIR IN CALGARY?",
+        a: "For active leaks, we prioritize emergency roof repair Calgary and same day roof repair Calgary across NW Calgary, NE Calgary, SW Calgary, SE Calgary, Airdrie, Okotoks, Chestermere, and Cochrane. Most repairs are fully completed in 2 to 4 hours on the same day."
+      }
+    ],
+    relatedServices: ["residential-roofing", "storm-damage", "gutters"]
   },
 
   // ─── WINDOW REPLACEMENT ────────────────────────────────────────────────────
