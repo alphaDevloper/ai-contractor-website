@@ -41,7 +41,9 @@ export default function Footer({ onOpenModal }) {
           <div className="footer-col">
             <h4 className="footer-heading">SERVICES</h4>
             <ul className="footer-list">
-              <li><Link to="/services/residential-roofing">Roof Replacement</Link></li>
+              <li><Link to="/services/roof-replacement">Roof Replacement</Link></li>
+              <li><Link to="/services/roof-repair">Roof Repair</Link></li>
+              <li><Link to="/services/residential-roofing">Residential Roofing</Link></li>
               <li><Link to="/services/windows">Window Replacement</Link></li>
               <li><Link to="/services/storm-damage">Hail Damage Restoration</Link></li>
               <li><Link to="/services/siding">James Hardie Siding</Link></li>

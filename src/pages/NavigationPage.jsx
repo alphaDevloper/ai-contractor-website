@@ -33,7 +33,9 @@ export default function NavigationPage({ onOpenModal }) {
   ];
 
   const servicePages = [
-    { title: "Residential Roofing", path: "/services/residential-roofing", icon: <Home size={18} />, tag: "CORE SERVICE", desc: "Class 4 impact-resistant architectural shingles and full re-roofing." },
+    { title: "Roof Replacement", path: "/services/roof-replacement", icon: <Home size={18} />, tag: "CORE SERVICE", desc: "Full tear-off and Class 4 impact-resistant architectural shingle re-roofing." },
+    { title: "Roof Repair", path: "/services/roof-repair", icon: <Hammer size={18} />, tag: "EMERGENCY", desc: "Same-day leak detection, missing shingle repairs, and emergency tarping." },
+    { title: "Residential Roofing", path: "/services/residential-roofing", icon: <Home size={18} />, tag: "RESIDENTIAL", desc: "Complete home roofing systems, inspections, and maintenance." },
     { title: "Window Replacement", path: "/services/windows", icon: <Grid size={18} />, tag: "EXTERIOR", desc: "Energy Star® double & triple-pane thermal glass engineered for Calgary." },
     { title: "Storm & Hail Damage", path: "/services/storm-damage", icon: <Zap size={18} />, tag: "SPECIALTY", desc: "Digital drone inspections, insurance claim assistance, and rapid dry-in." },
     { title: "James Hardie Siding", path: "/services/siding", icon: <Layers size={18} />, tag: "EXTERIOR", desc: "Fire-resistant, fiber-cement exterior siding with custom trim." },
