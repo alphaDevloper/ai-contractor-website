@@ -145,9 +145,6 @@ export default function Header({ onOpenModal }) {
             {/* Desktop Dropdown Flyout Menu */}
             {servicesDropdownOpen && (
               <div className="services-dropdown-popover">
-                <div className="dropdown-popover-header">
-                  <span>OUR SERVICES</span>
-                </div>
                 <div className="dropdown-links-list">
                   {servicesShowcase.map((s) => (
                     <Link
@@ -156,10 +153,7 @@ export default function Header({ onOpenModal }) {
                       className="dropdown-service-item"
                       onClick={closeMenu}
                     >
-                      <div className="dropdown-item-texts">
-                        <span className="dropdown-item-title">{s.title}</span>
-                        <span className="dropdown-item-sub">{s.eyebrow}</span>
-                      </div>
+                      <span className="dropdown-item-title">{s.title}</span>
                       <ChevronRight size={14} className="dropdown-item-arrow" />
                     </Link>
                   ))}
@@ -218,9 +212,6 @@ export default function Header({ onOpenModal }) {
             {/* Desktop Dropdown Popover */}
             {areasDropdownOpen && (
               <div className="services-dropdown-popover areas-dropdown-popover">
-                <div className="dropdown-popover-header">
-                  <span>OUR SERVICE AREAS</span>
-                </div>
                 <div className="dropdown-links-list">
                   {serviceAreaDropdownList.map((area) => (
                     <Link
@@ -229,10 +220,7 @@ export default function Header({ onOpenModal }) {
                       className="dropdown-service-item"
                       onClick={closeMenu}
                     >
-                      <div className="dropdown-item-texts">
-                        <span className="dropdown-item-title">{area.name}</span>
-                        <span className="dropdown-item-sub">{area.region}</span>
-                      </div>
+                      <span className="dropdown-item-title">{area.name}</span>
                       <ChevronRight size={14} className="dropdown-item-arrow" />
                     </Link>
                   ))}

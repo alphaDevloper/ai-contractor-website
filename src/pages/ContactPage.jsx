@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Phone, 
@@ -14,10 +14,12 @@ import {
   AlertCircle, 
   ExternalLink, 
   Navigation as NavigationIcon,
-  Sparkles
+  Sparkles,
+  Loader2
 } from 'lucide-react';
 import heroBg from '../assets/about_residential_home.jpg';
 import logoImg from '../assets/logo.png';
+import { useWeb3ContactForm } from '../hooks/useWeb3ContactForm';
 
 /* ==========================================================================
    SCROLLING MARQUEE TICKER (MATCHING DESIGN)
@@ -54,65 +56,40 @@ export default function ContactPage({ onOpenModal }) {
     document.title = "Contact Us | AeroDome Roofing Calgary";
   }, []);
 
-  // Main Contact Form State
-  const [mainForm, setMainForm] = useState({
-    fullName: '',
-    phone: '',
-    email: '',
-    address: '',
-    service: '',
-    message: '',
-    isNotRobot: false,
-    agreedToTerms: false
+  // Main Contact Form Hook (Web3Forms)
+  const {
+    register: registerMain,
+    onSubmit: handleMainSubmit,
+    reset: resetMain,
+    watch: watchMain,
+    errors: mainErrors,
+    isSubmitting: isMainSubmitting,
+    isSuccess: isMainSuccess,
+    message: mainSuccessMessage,
+    errorMessage: mainErrorMessage,
+  } = useWeb3ContactForm({
+    fromName: 'AeroDome Roofing Calgary Website',
+    subject: 'New Contact Inquiry — AeroDome Roofing Calgary',
   });
-  const [mainSubmitted, setMainSubmitted] = useState(false);
-  const [mainError, setMainError] = useState('');
 
-  // Bottom Quick Estimate Form State
-  const [bottomForm, setBottomForm] = useState({
-    fullName: '',
-    phone: '',
-    email: '',
-    service: '',
-    isNotRobot: false,
-    agreedToTerms: false
+  // Bottom Quick Estimate Form Hook (Web3Forms)
+  const {
+    register: registerBottom,
+    onSubmit: handleBottomSubmit,
+    reset: resetBottom,
+    watch: watchBottom,
+    errors: bottomErrors,
+    isSubmitting: isBottomSubmitting,
+    isSuccess: isBottomSuccess,
+    message: bottomSuccessMessage,
+    errorMessage: bottomErrorMessage,
+  } = useWeb3ContactForm({
+    fromName: 'AeroDome Roofing Calgary Quick Estimate',
+    subject: 'New Quick Estimate Request — AeroDome Roofing Calgary',
   });
-  const [bottomSubmitted, setBottomSubmitted] = useState(false);
-  const [bottomError, setBottomError] = useState('');
 
-  // Handle Main Form Submission
-  const handleMainSubmit = (e) => {
-    e.preventDefault();
-    setMainError('');
-
-    if (!mainForm.fullName.trim() || !mainForm.phone.trim() || !mainForm.email.trim()) {
-      setMainError('Please fill out all required fields.');
-      return;
-    }
-    if (!mainForm.isNotRobot) {
-      setMainError('Please check the verification box to confirm you are not a robot.');
-      return;
-    }
-
-    setMainSubmitted(true);
-  };
-
-  // Handle Bottom Form Submission
-  const handleBottomSubmit = (e) => {
-    e.preventDefault();
-    setBottomError('');
-
-    if (!bottomForm.fullName.trim() || !bottomForm.phone.trim()) {
-      setBottomError('Please fill out your name and phone number.');
-      return;
-    }
-    if (!bottomForm.isNotRobot) {
-      setBottomError('Please check the verification box to confirm you are not a robot.');
-      return;
-    }
-
-    setBottomSubmitted(true);
-  };
+  const mainFullName = watchMain('fullName') || '';
+  const bottomFullName = watchBottom('fullName') || '';
 
   return (
     <div className="contact-page-wrapper">
@@ -165,30 +142,20 @@ export default function ContactPage({ onOpenModal }) {
                 Fill out the form below and a member of our team will contact you within 24 hours to schedule your free inspection.
               </p>
 
-              {mainSubmitted ? (
+              {isMainSuccess ? (
                 <div className="contact-success-box">
                   <div className="contact-success-icon-wrap">
                     <CheckCircle2 size={54} color="#10B981" />
                   </div>
                   <h3 className="contact-success-title">Message Sent Successfully!</h3>
                   <p className="contact-success-desc">
-                    Thank you, <strong>{mainForm.fullName}</strong>. Nolan Thrace or our senior roofing team will review your inquiry and call you at <strong>{mainForm.phone}</strong> shortly.
+                    {mainSuccessMessage || (
+                      <>Thank you, <strong>{mainFullName}</strong>. Nolan Thrace or our senior roofing team will review your inquiry and contact you shortly.</>
+                    )}
                   </p>
                   <button 
                     type="button" 
-                    onClick={() => {
-                      setMainSubmitted(false);
-                      setMainForm({
-                        fullName: '',
-                        phone: '',
-                        email: '',
-                        address: '',
-                        service: '',
-                        message: '',
-                        isNotRobot: false,
-                        agreedToTerms: false
-                      });
-                    }}
+                    onClick={resetMain}
                     className="contact-success-reset-btn"
                   >
                     Send Another Message
@@ -196,10 +163,22 @@ export default function ContactPage({ onOpenModal }) {
                 </div>
               ) : (
                 <form onSubmit={handleMainSubmit} className="contact-actual-form">
-                  {mainError && (
+                  {/* Web3Forms Honeypot Botcheck */}
+                  <input
+                    type="checkbox"
+                    className="hidden"
+                    style={{ display: 'none' }}
+                    {...registerMain("botcheck")}
+                  />
+
+                  {(mainErrorMessage || Object.keys(mainErrors).length > 0) && (
                     <div className="contact-error-alert" role="alert">
                       <AlertCircle size={18} />
-                      <span>{mainError}</span>
+                      <span>
+                        {mainErrorMessage ||
+                          Object.values(mainErrors)[0]?.message ||
+                          'Please fill out all required fields.'}
+                      </span>
                     </div>
                   )}
 
@@ -212,11 +191,12 @@ export default function ContactPage({ onOpenModal }) {
                       <input 
                         type="text" 
                         id="main-fullname"
-                        required
                         placeholder="John Smith" 
                         className="contact-control-light"
-                        value={mainForm.fullName}
-                        onChange={(e) => setMainForm({ ...mainForm, fullName: e.target.value })}
+                        {...registerMain("fullName", {
+                          required: "Full name is required",
+                          maxLength: { value: 80, message: "Full name is too long" }
+                        })}
                       />
                     </div>
 
@@ -227,11 +207,11 @@ export default function ContactPage({ onOpenModal }) {
                       <input 
                         type="tel" 
                         id="main-phone"
-                        required
                         placeholder="(403) 555-0192" 
                         className="contact-control-light"
-                        value={mainForm.phone}
-                        onChange={(e) => setMainForm({ ...mainForm, phone: e.target.value })}
+                        {...registerMain("phone", {
+                          required: "Phone number is required"
+                        })}
                       />
                     </div>
                   </div>
@@ -245,11 +225,15 @@ export default function ContactPage({ onOpenModal }) {
                       <input 
                         type="email" 
                         id="main-email"
-                        required
                         placeholder="john@example.com" 
                         className="contact-control-light"
-                        value={mainForm.email}
-                        onChange={(e) => setMainForm({ ...mainForm, email: e.target.value })}
+                        {...registerMain("email", {
+                          required: "Email address is required",
+                          pattern: {
+                            value: /^\S+@\S+$/i,
+                            message: "Please enter a valid email address"
+                          }
+                        })}
                       />
                     </div>
 
@@ -262,8 +246,7 @@ export default function ContactPage({ onOpenModal }) {
                         id="main-address"
                         placeholder="123 Main St, Calgary, AB" 
                         className="contact-control-light"
-                        value={mainForm.address}
-                        onChange={(e) => setMainForm({ ...mainForm, address: e.target.value })}
+                        {...registerMain("address")}
                       />
                     </div>
                   </div>
@@ -275,10 +258,10 @@ export default function ContactPage({ onOpenModal }) {
                     </label>
                     <select 
                       id="main-service"
-                      required
                       className="contact-control-light contact-select-light"
-                      value={mainForm.service}
-                      onChange={(e) => setMainForm({ ...mainForm, service: e.target.value })}
+                      {...registerMain("service", {
+                        required: "Please select a service"
+                      })}
                     >
                       <option value="">Select a service...</option>
                       <option value="Residential Roof Replacement">Residential Roof Replacement</option>
@@ -303,8 +286,7 @@ export default function ContactPage({ onOpenModal }) {
                       rows={5}
                       placeholder="Tell us about your project, current issues, or any questions you have..."
                       className="contact-control-light contact-textarea-light"
-                      value={mainForm.message}
-                      onChange={(e) => setMainForm({ ...mainForm, message: e.target.value })}
+                      {...registerMain("message")}
                     />
                   </div>
 
@@ -314,8 +296,9 @@ export default function ContactPage({ onOpenModal }) {
                       <input 
                         type="checkbox" 
                         className="contact-custom-checkbox"
-                        checked={mainForm.isNotRobot}
-                        onChange={(e) => setMainForm({ ...mainForm, isNotRobot: e.target.checked })}
+                        {...registerMain("isNotRobot", {
+                          required: "Please confirm you are not a robot"
+                        })}
                       />
                       <span className="contact-captcha-text">I am not a robot</span>
                     </label>
@@ -335,8 +318,7 @@ export default function ContactPage({ onOpenModal }) {
                       <input 
                         type="checkbox" 
                         className="contact-custom-checkbox"
-                        checked={mainForm.agreedToTerms}
-                        onChange={(e) => setMainForm({ ...mainForm, agreedToTerms: e.target.checked })}
+                        {...registerMain("agreedToTerms")}
                       />
                       <span className="contact-consent-text">
                         I agree to receive text messages from AeroDome Roofing related to my inquiry, follow-ups, and appointment reminders. Message and data rates may apply. Message frequency varies. Reply STOP to opt out anytime. Reply HELP for assistance. See our <Link to="/#privacy">privacy policy</Link> and <Link to="/#terms">terms and conditions</Link> for more details.
@@ -344,10 +326,23 @@ export default function ContactPage({ onOpenModal }) {
                     </label>
                   </div>
 
-                  {/* Row 7: Submit Button */}
-                  <button type="submit" className="contact-btn-submit">
-                    <span>SEND MY MESSAGE</span>
-                    <ArrowRight size={20} />
+                  {/* Row 7: Submit Button with Loading State */}
+                  <button 
+                    type="submit" 
+                    className="contact-btn-submit"
+                    disabled={isMainSubmitting}
+                  >
+                    {isMainSubmitting ? (
+                      <>
+                        <Loader2 size={20} className="animate-spin" />
+                        <span>SENDING MESSAGE...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>SEND MY MESSAGE</span>
+                        <ArrowRight size={20} />
+                      </>
+                    )}
                   </button>
 
                   {/* Row 8: Microcopy */}
@@ -536,22 +531,44 @@ export default function ContactPage({ onOpenModal }) {
                 Fast response. Honest guidance. No pressure.
               </p>
 
-              {bottomSubmitted ? (
+              {isBottomSuccess ? (
                 <div className="contact-success-box" style={{ background: 'transparent', padding: '20px 0' }}>
                   <CheckCircle2 size={46} color="#10B981" />
                   <h4 style={{ color: '#FFFFFF', fontSize: '1.4rem', margin: '12px 0 6px' }}>
                     Estimate Request Sent!
                   </h4>
                   <p style={{ color: '#CBD5E1', fontSize: '0.95rem' }}>
-                    Thanks, <strong>{bottomForm.fullName}</strong>. We will contact you at <strong>{bottomForm.phone}</strong> shortly.
+                    {bottomSuccessMessage || (
+                      <>Thanks, <strong>{bottomFullName}</strong>. We will contact you shortly.</>
+                    )}
                   </p>
+                  <button 
+                    type="button" 
+                    onClick={resetBottom}
+                    className="contact-success-reset-btn"
+                    style={{ marginTop: '14px', display: 'inline-block' }}
+                  >
+                    Request Another Estimate
+                  </button>
                 </div>
               ) : (
                 <form onSubmit={handleBottomSubmit} className="contact-bottom-form">
-                  {bottomError && (
+                  {/* Web3Forms Honeypot Botcheck */}
+                  <input
+                    type="checkbox"
+                    className="hidden"
+                    style={{ display: 'none' }}
+                    {...registerBottom("botcheck")}
+                  />
+
+                  {(bottomErrorMessage || Object.keys(bottomErrors).length > 0) && (
                     <div className="contact-error-alert" style={{ marginBottom: '12px' }} role="alert">
                       <AlertCircle size={16} />
-                      <span>{bottomError}</span>
+                      <span>
+                        {bottomErrorMessage ||
+                          Object.values(bottomErrors)[0]?.message ||
+                          'Please fill out all required fields.'}
+                      </span>
                     </div>
                   )}
 
@@ -559,18 +576,18 @@ export default function ContactPage({ onOpenModal }) {
                     <input 
                       type="text" 
                       placeholder="Your Name *"
-                      required
                       className="contact-bottom-input"
-                      value={bottomForm.fullName}
-                      onChange={(e) => setBottomForm({ ...bottomForm, fullName: e.target.value })}
+                      {...registerBottom("fullName", {
+                        required: "Name is required"
+                      })}
                     />
                     <input 
                       type="tel" 
                       placeholder="Phone Number *"
-                      required
                       className="contact-bottom-input"
-                      value={bottomForm.phone}
-                      onChange={(e) => setBottomForm({ ...bottomForm, phone: e.target.value })}
+                      {...registerBottom("phone", {
+                        required: "Phone number is required"
+                      })}
                     />
                   </div>
 
@@ -579,16 +596,19 @@ export default function ContactPage({ onOpenModal }) {
                       type="email" 
                       placeholder="Email Address"
                       className="contact-bottom-input"
-                      value={bottomForm.email}
-                      onChange={(e) => setBottomForm({ ...bottomForm, email: e.target.value })}
+                      {...registerBottom("email", {
+                        pattern: {
+                          value: /^\S+@\S+$/i,
+                          message: "Please enter a valid email address"
+                        }
+                      })}
                     />
                   </div>
 
                   <div style={{ marginBottom: '12px' }}>
                     <select 
                       className="contact-bottom-input contact-bottom-select"
-                      value={bottomForm.service}
-                      onChange={(e) => setBottomForm({ ...bottomForm, service: e.target.value })}
+                      {...registerBottom("service")}
                     >
                       <option value="">How Can We Help?</option>
                       <option value="Residential Roof Replacement">Residential Roof Replacement</option>
@@ -607,8 +627,9 @@ export default function ContactPage({ onOpenModal }) {
                       <input 
                         type="checkbox" 
                         className="contact-custom-checkbox"
-                        checked={bottomForm.isNotRobot}
-                        onChange={(e) => setBottomForm({ ...bottomForm, isNotRobot: e.target.checked })}
+                        {...registerBottom("isNotRobot", {
+                          required: "Please confirm you are not a robot"
+                        })}
                       />
                       <span className="contact-captcha-text" style={{ color: '#FFFFFF' }}>I am not a robot</span>
                     </label>
@@ -628,8 +649,7 @@ export default function ContactPage({ onOpenModal }) {
                       <input 
                         type="checkbox" 
                         className="contact-custom-checkbox"
-                        checked={bottomForm.agreedToTerms}
-                        onChange={(e) => setBottomForm({ ...bottomForm, agreedToTerms: e.target.checked })}
+                        {...registerBottom("agreedToTerms")}
                       />
                       <span className="contact-consent-text" style={{ color: '#94A3B8' }}>
                         I agree to receive text messages from AeroDome Roofing related to my inquiry, follow-ups, and appointment reminders. Message and data rates may apply. Message frequency varies. Reply STOP to opt out anytime. Reply HELP for assistance. See our <Link to="/#privacy" style={{ color: 'var(--color-sky)' }}>privacy policy</Link> and <Link to="/#terms" style={{ color: 'var(--color-sky)' }}>terms and conditions</Link> for more details.
@@ -637,9 +657,22 @@ export default function ContactPage({ onOpenModal }) {
                     </label>
                   </div>
 
-                  <button type="submit" className="contact-bottom-submit-btn">
-                    <span>GET MY FREE ESTIMATE</span>
-                    <ArrowRight size={18} />
+                  <button 
+                    type="submit" 
+                    className="contact-bottom-submit-btn"
+                    disabled={isBottomSubmitting}
+                  >
+                    {isBottomSubmitting ? (
+                      <>
+                        <Loader2 size={18} className="animate-spin" />
+                        <span>SENDING...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>GET MY FREE ESTIMATE</span>
+                        <ArrowRight size={18} />
+                      </>
+                    )}
                   </button>
 
                   <p className="contact-bottom-microcopy">

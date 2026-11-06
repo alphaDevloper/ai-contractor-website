@@ -72,7 +72,7 @@ export const servicesShowcase = [
     title: "RESIDENTIAL ROOFING",
     heroHeadline: "RESIDENTIAL ROOFING CALGARY HOMEOWNERS TRUST",
     description:
-      "As a licensed residential roofing contractor Calgary homeowners count on, AeroDome Roofing delivers full residential roof replacement Calgary wide and dependable roof repair Calgary emergencies demand. From NW Calgary, NE Calgary, SW Calgary, to SE Calgary, get a free roof estimate Calgary trusts for complete weather protection.",
+      "AeroDome is the licensed roofing contractor Calgary homeowners trust for every home roofing service — from asphalt shingle roof replacement to emergency roof leak repair and missing shingles repair. As a residential roofing contractor our city relies on, we tackle hail damage roof repair, storm damage residential roof, and full roof replacement with Class 4 hail resistant roofing — all backed by a 10-year workmanship warranty. Contact your local roofing company for a free estimate today.",
     bullets: [
       "Free roof inspection Calgary & instant roof quote Calgary homeowners rely on",
       "Class 4 impact resistant shingles Calgary (IKO Dynasty & Owens Corning Duration)",
@@ -158,7 +158,7 @@ export const servicesShowcase = [
     title: "ROOF REPAIR",
     heroHeadline: "ROOF REPAIR IN CALGARY — FIXED FAST, DONE RIGHT",
     description:
-      "From missing shingles to active leaks, AeroDome delivers same day roof repair Calgary homeowners trust. As a licensed roof repair contractor Calgary relies on, our in-house crew stops water damage fast across NW Calgary, NE Calgary, SW Calgary, and SE Calgary.",
+      "AeroDome is the licensed roof repair contractor Calgary homeowners call first — available 24/7 for emergency roof repair before water damage spreads. From roof leak repair and residential roof repair to same day and affordable roof repair, our local crew responds fast with upfront pricing and a 10-year workmanship warranty. Book your free inspection with a trusted local roof repair company today.",
     bullets: [
       "Free roof repair estimate Calgary with same day emergency roof tarping Calgary",
       "Fast roof leak repair Calgary & missing shingles repair Calgary before water spreads",
@@ -244,7 +244,7 @@ export const servicesShowcase = [
     title: "ROOF REPLACEMENT",
     heroHeadline: "ROOF REPLACEMENT IN CALGARY — BUILT TO OUTLAST ALBERTA WEATHER",
     description:
-      "When aging shingles or Calgary hailstorms demand a full residential roof replacement, AeroDome delivers engineered protection. As a licensed roof replacement contractor Calgary homeowners rely on, we install Class 4 impact resistant shingles backed by a 10-year workmanship warranty across NW Calgary, NE Calgary, SW Calgary, and SE Calgary.",
+      "AeroDome is the licensed roof replacement contractor Calgary homeowners choose for full roof replacement and new roof installation built to outlast Alberta weather. As a trusted residential roof replacement company, we handle everything from asphalt shingle roof replacement to complete tear-offs — with Class 4 impact resistant shingles, transparent flat-rate pricing, and a 10-year workmanship warranty. Get your free estimate from a local roof replacement company today.",
     bullets: [
       "Free roof replacement estimate Calgary with 21-point drone attic scan",
       "Class 4 impact resistant shingles Calgary (IKO Dynasty & Owens Corning Duration)",

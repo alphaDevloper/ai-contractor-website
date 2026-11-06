@@ -8369,6 +8369,24 @@ img {
   text-decoration: underline;
 }
 
+/* Spin Animation & Disabled Form Button States */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 0.8s linear infinite;
+}
+
+.contact-btn-submit:disabled,
+.contact-bottom-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
 /* Send Message Button */
 .contact-btn-submit {
   width: 100%;
