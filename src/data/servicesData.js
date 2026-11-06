@@ -46,6 +46,7 @@ export const servicesHub = {
   buttons: [
     { name: "ROOF REPLACEMENT", id: "roof-replacement", icon: "Home" },
     { name: "ROOF REPAIR", id: "roof-repair", icon: "Hammer" },
+    { name: "NEW ROOF INSTALLATION", id: "new-roof-installation", icon: "HardHat" },
     { name: "RESIDENTIAL ROOFING", id: "residential-roofing", icon: "Building" },
     { name: "WINDOW REPLACEMENT", id: "windows", icon: "Grid" },
     { name: "COMMERCIAL ROOFING", id: "commercial-roofing", icon: "Building2" },
@@ -845,6 +846,101 @@ export const servicesShowcase = [
       }
     ],
     relatedServices: ["residential-roofing", "siding", "windows"]
+  },
+
+  // ─── NEW ROOF INSTALLATION ─────────────────────────────────────────────────
+  {
+    id: "new-roof-installation",
+    breadcrumb: "NEW ROOF INSTALLATION",
+    eyebrow: "LICENSED NEW ROOF INSTALLATION CONTRACTOR CALGARY",
+    title: "NEW ROOF INSTALLATION",
+    heroHeadline: "NEW ROOF INSTALLATION IN CALGARY — BUILT RIGHT FROM DAY ONE",
+    description:
+      "AeroDome is the licensed new roof installation contractor Calgary homeowners and builders trust to get every layer right the first time. From new home roof installation to custom home roofing and home addition roof installation, our in-house crew installs complete roofing systems — asphalt shingle installation, ventilation, flashing, ice and water shield — all backed by a 10-year workmanship warranty starting the day we finish. Get a free roof installation quote today.",
+    bullets: [
+      "Free roofing consultation & roof installation quote — no obligation",
+      "Class 4 impact resistant shingles (IKO Dynasty & Owens Corning Duration) — the Calgary standard",
+      "Full roofing system installation: underlayment, ventilation, flashing, drip edge & ridge cap",
+      "10-year workmanship warranty + manufacturer lifetime warranty — both starting fresh"
+    ],
+    image: "/images/after_roof.jpg",
+    imageAlt: "New roof installation Calgary — AeroDome Roofing licensed contractor",
+    reverse: false,
+    ctaText: "LEARN MORE",
+    secondaryCtaText: "GET MY FREE ESTIMATE",
+
+    // ── Detail Page Fields ──────────────────────────────────────────────────
+    whyEyebrow: "WHY CHOOSE US",
+    whyHeading: "CALGARY'S TRUSTED NEW ROOF INSTALLATION COMPANY",
+    whyItems: [
+      {
+        icon: "Award",
+        text: "Material guidance included on every project — as an Owens Corning Platinum contractor Calgary and IKO Craftsman installer Calgary, we walk every homeowner through shingle grades, warranty tiers, and Class 4 impact resistant shingles before a single nail goes down. No pressure. Just the right information."
+      },
+      {
+        icon: "ShieldCheck",
+        text: "Two warranties from day one — your new roof installation comes with a 10-year workmanship warranty Calgary plus the manufacturer's lifetime material warranty, both starting fresh from the date of installation. Installed exclusively by our licensed and insured roofer Calgary team. No subcontractors."
+      },
+      {
+        icon: "Clock",
+        text: "New construction roofing Calgary experience — our crew works alongside builders and other trades across NW Calgary, NE Calgary, SE Calgary, SW Calgary, Airdrie, Okotoks, Chestermere, and Cochrane without causing delays. We coordinate directly with your general contractor from framing through final inspection."
+      }
+    ],
+    scopeEyebrow: "SCOPE OF WORK",
+    scopeHeading: "WHAT DOES A NEW ROOF INSTALLATION INCLUDE",
+    includedItems: [
+      "Roof decking installation inspection & synthetic underlayment Calgary laid across the full deck surface",
+      "Ice and water shield installation at all eaves, valleys, and penetrations for Calgary freeze-thaw protection",
+      "Asphalt shingle installation Calgary — IKO Dynasty shingles or Owens Corning Duration shingles with architectural profile",
+      "Drip edge installation, roof flashing installation, ridge cap installation & soffit and ridge vent installation Calgary"
+    ],
+    processEyebrow: "OUR PROCESS",
+    processHeading: "NEW ROOF INSTALLATION CALGARY IN 4 SIMPLE STEPS",
+    processSubtitle:
+      "From your free roofing consultation to final warranty handover — transparent pricing, no trade delays, and no surprises on a job this important.",
+    processSteps: [
+      {
+        step: "01",
+        title: "FREE CONSULTATION & MATERIAL SELECTION",
+        desc: "We meet with you or your builder to review plans, assess deck readiness, and walk through every material option — from IKO Dynasty shingles Calgary to Owens Corning Duration shingles Calgary and Class 4 impact resistant shingles. You receive a flat-rate new roof installation quote Calgary before any commitment."
+      },
+      {
+        step: "02",
+        title: "SYSTEM SIZING & TRADE COORDINATION",
+        desc: "We size the full roofing system to your plans — calculating ventilation requirements, ice and water shield coverage, and drip edge perimeters to Alberta Building Code. For new construction roofing Calgary projects, we coordinate directly with framers, HVAC, and other trades to prevent scheduling conflicts."
+      },
+      {
+        step: "03",
+        title: "FULL ROOFING SYSTEM INSTALLATION",
+        desc: "Our in-house crew installs every layer in sequence: roof decking inspection, synthetic underlayment Calgary, ice and water shield, drip edge, flashing, architectural shingles, ridge cap, and a fully balanced soffit and ridge vent installation Calgary. Nothing is skipped, nothing is subcontracted."
+      },
+      {
+        step: "04",
+        title: "FINAL INSPECTION & DUAL WARRANTY SIGN-OFF",
+        desc: "Nolan Thrace inspects every flashing, valley, and ridge cap with you before issuing your 10-year workmanship warranty Calgary and the manufacturer's lifetime material warranty — both signed, dated, and transferable to future owners. A full magnetic nail sweep completes the site."
+      }
+    ],
+    faqEyebrow: "FREQUENTLY ASKED QUESTIONS",
+    faqHeading: "NEW ROOF INSTALLATION CALGARY FAQS",
+    faqs: [
+      {
+        q: "HOW MUCH DOES A NEW ROOF INSTALLATION COST IN CALGARY?",
+        a: "New roof installation cost Calgary typically ranges from $8,000 to $20,000+ depending on square footage, roof pitch, decking condition, and chosen shingle tier. Class 4 impact resistant shingles carry a higher material cost but can reduce your Alberta insurance premium by up to 15%. AeroDome provides a guaranteed flat-rate roof installation quote Calgary — you know the full cost before we start. Roof installation financing Calgary is also available."
+      },
+      {
+        q: "HOW LONG DOES A NEW ROOF INSTALLATION TAKE IN CALGARY?",
+        a: "How long does roof installation take Calgary? For most new home roof installation projects across the Greater Calgary area, Airdrie, Okotoks, Chestermere, and Cochrane, a complete installation is finished in 1 to 2 days once decking is ready. New construction roofing Calgary timelines depend on builder scheduling — we coordinate directly to prevent delays."
+      },
+      {
+        q: "WHAT IS THE BEST ROOFING MATERIAL FOR A NEW HOME IN CALGARY?",
+        a: "Class 4 impact resistant shingles Calgary — specifically IKO Dynasty shingles Calgary or Owens Corning Duration shingles Calgary — are the smart standard for new home construction in Calgary's hail alley. They meet UL 2218 impact resistance testing, withstand -40°C Chinook freeze-thaw cycles, and may lower your annual insurance premium. Book a free roofing consultation and we will walk you through every option."
+      },
+      {
+        q: "CAN YOU WORK WITH MY BUILDER OR GENERAL CONTRACTOR IN CALGARY?",
+        a: "Yes. AeroDome has direct experience as a roofing contractor for new builds Calgary — working alongside general contractors, framers, and other trades in new home developments across NW Calgary, SW Calgary, Airdrie, and surrounding communities. We communicate scheduling directly with your site supervisor to keep the project moving without delays."
+      }
+    ],
+    relatedServices: ["roof-replacement", "residential-roofing", "gutters"]
   }
 ];
 
