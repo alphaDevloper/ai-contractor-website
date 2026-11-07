@@ -46,6 +46,7 @@ export const servicesHub = {
   buttons: [
     { name: "ROOF REPLACEMENT", id: "roof-replacement", icon: "Home" },
     { name: "ROOF REPAIR", id: "roof-repair", icon: "Hammer" },
+    { name: "EMERGENCY ROOFING", id: "emergency-roofing", icon: "Zap" },
     { name: "NEW ROOF INSTALLATION", id: "new-roof-installation", icon: "HardHat" },
     { name: "RESIDENTIAL ROOFING", id: "residential-roofing", icon: "Building" },
     { name: "WINDOW REPLACEMENT", id: "windows", icon: "Grid" },
@@ -941,6 +942,101 @@ export const servicesShowcase = [
       }
     ],
     relatedServices: ["roof-replacement", "residential-roofing", "gutters"]
+  },
+
+  // ─── EMERGENCY ROOFING ────────────────────────────────────────────────────
+  {
+    id: "emergency-roofing",
+    breadcrumb: "EMERGENCY ROOFING",
+    eyebrow: "24/7 EMERGENCY ROOFING CONTRACTOR CALGARY",
+    title: "EMERGENCY ROOFING",
+    heroHeadline: "EMERGENCY ROOFING CALGARY — WE RESPOND DAY OR NIGHT",
+    description:
+      "Storm hit. Water is coming in. Call (403) 918-4444 right now — a licensed emergency roofer Calgary trusts answers day or night. AeroDome delivers same day emergency roof repair across NW, NE, SW, and SE Calgary. Emergency roof tarping goes up on the same visit to stop water intrusion before permanent damage sets in. No deposit before work begins. No storm chasers.",
+    bullets: [
+      "24/7 emergency roof repair Calgary — live answer, never voicemail",
+      "Emergency roof tarping Calgary installed same visit to stop water intrusion",
+      "Storm damage, hail damage, wind damage & active roof leak repair Calgary",
+      "No deposit before work begins — written quote before a single dollar changes hands"
+    ],
+    image: "/images/before_hail.jpg",
+    imageAlt: "Emergency roof repair and storm damage response Calgary — AeroDome Roofing",
+    reverse: false,
+    ctaText: "LEARN MORE",
+    secondaryCtaText: "CALL NOW — (403) 918-4444",
+
+    // ── Detail Page Fields ──────────────────────────────────────────────────
+    whyEyebrow: "WHY CHOOSE US",
+    whyHeading: "THE EMERGENCY ROOFER CALGARY TRUSTS AT ANY HOUR",
+    whyItems: [
+      {
+        icon: "Clock",
+        text: "Available right now — call (403) 918-4444. Day, night, weekend, or holiday. A real person answers when your roof cannot wait and water is spreading inside your home. We dispatch a licensed emergency roofer Calgary 24/7 across the Greater Calgary area."
+      },
+      {
+        icon: "ShieldCheck",
+        text: "We are not storm chasers — AeroDome Roofing has served Calgary homeowners for 14+ years. We will be here long after the season ends. No deposit before work begins, no surprise invoices. BBB accredited roofing Calgary, Owens Corning Platinum contractor Calgary, IKO Craftsman installer Calgary — licensed and insured on every job."
+      },
+      {
+        icon: "Award",
+        text: "Insurance documentation from the first visit — our licensed and insured emergency roofer Calgary photographs every impact point, compiles a written damage report, and coordinates directly with your Alberta insurance adjuster. Your emergency roof repair insurance claim Calgary moves without delays or disputes."
+      }
+    ],
+    scopeEyebrow: "WHAT WE RESPOND TO",
+    scopeHeading: "EVERY CALGARY ROOFING EMERGENCY WE HANDLE",
+    includedItems: [
+      "Storm & hail damage emergency roof repair Calgary — same day inspection, emergency tarping, and insurance documentation",
+      "Active roof leaks & ceiling leaks — rapid roof repair Calgary to stop water before mould spreads within 24 to 48 hours",
+      "Wind, chinook damage & missing shingles after storm — secured and watertight the same day across NW, NE, SW, and SE Calgary",
+      "Ice dam emergency repair, fallen tree roof damage & heavy snow load damage Calgary — full structural assessment on arrival"
+    ],
+    processEyebrow: "OUR PROCESS",
+    processHeading: "EMERGENCY ROOF RESPONSE CALGARY IN 4 STEPS",
+    processSubtitle:
+      "From your first call to a watertight roof — fast, documented, and backed by a 10-year workmanship warranty on every permanent repair.",
+    processSteps: [
+      {
+        step: "01",
+        title: "CALL NOW — LIVE ANSWER DAY OR NIGHT",
+        desc: "Dial (403) 918-4444 and reach a real person — not voicemail. We dispatch a licensed emergency roofer Calgary 24/7 — day, night, or weekend — including Airdrie, Okotoks, Chestermere, and Cochrane."
+      },
+      {
+        step: "02",
+        title: "ARRIVE, ASSESS & TARP THE SAME VISIT",
+        desc: "Our crew arrives on-site, assesses the full scope of storm or hail damage, and installs heavy-duty emergency roof tarping Calgary immediately to stop active water intrusion. We photograph every impact point from ground level and the roof surface before touching anything."
+      },
+      {
+        step: "03",
+        title: "DOCUMENT DAMAGE FOR YOUR INSURANCE CLAIM",
+        desc: "We compile an insurance-ready emergency inspection report — written, photographed, and formatted for your Alberta insurance adjuster. We can meet your adjuster on-site so every damaged component is properly recorded and nothing gets missed on your storm damage insurance claim Calgary."
+      },
+      {
+        step: "04",
+        title: "PERMANENT REPAIR WITH A WRITTEN WARRANTY",
+        desc: "Once emergency protection is in place, we schedule and complete the permanent roof repair Calgary using matched materials, proper flashing, and colour-matched shingles. Every repair is backed by a 10-year workmanship warranty — no temporary fixes left unfinished."
+      }
+    ],
+    faqEyebrow: "FREQUENTLY ASKED QUESTIONS",
+    faqHeading: "EMERGENCY ROOFING CALGARY FAQS",
+    faqs: [
+      {
+        q: "WHAT SHOULD I DO RIGHT NOW AFTER STORM DAMAGE TO MY ROOF IN CALGARY?",
+        a: "Get inside. Do not go on the roof yourself — wet or damaged decking is dangerous. Move valuables away from active ceiling leaks and place buckets if needed. Then call (403) 918-4444 immediately. We dispatch a licensed emergency roofer Calgary 24/7 and install emergency roof tarping Calgary the same visit to stop further damage from spreading."
+      },
+      {
+        q: "DO YOU OFFER 24/7 EMERGENCY ROOF REPAIR IN CALGARY?",
+        a: "Yes. We answer 24/7 — including nights, weekends, and holidays. Storm damage does not follow business hours and neither do we. Call (403) 918-4444 right now and reach a real person who can dispatch our crew to your Calgary home — not an answering service."
+      },
+      {
+        q: "DOES MY HOME INSURANCE COVER EMERGENCY ROOF REPAIR IN CALGARY?",
+        a: "In most cases, yes. Alberta home insurance covers emergency roof repair Calgary when damage results from a sudden weather event — hail, wind, chinook, or heavy snow. AeroDome documents every emergency from the first visit and can meet your adjuster on-site. Call us and we will walk you through exactly what your policy likely covers."
+      },
+      {
+        q: "WHAT IS EMERGENCY ROOF TARPING AND DO I NEED IT RIGHT NOW?",
+        a: "Emergency roof tarping is a heavy-duty waterproof covering installed over damaged roof sections to stop water entering your home. If you have missing shingles, exposed decking, or an active leak, you need it right now — mould begins within 24 to 48 hours of water intrusion. Call (403) 918-4444. We tarp the same visit."
+      }
+    ],
+    relatedServices: ["roof-repair", "storm-damage", "residential-roofing"]
   }
 ];
 
