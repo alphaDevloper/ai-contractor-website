@@ -423,86 +423,95 @@ export const servicesShowcase = [
   {
     id: "storm-damage",
     breadcrumb: "STORM DAMAGE",
-    eyebrow: "HAIL DAMAGE ROOF REPAIR CALGARY",
+    eyebrow: "FREE STORM DAMAGE ROOF INSPECTION CALGARY",
     title: "STORM DAMAGE RESTORATION",
-    heroHeadline: "HAIL & STORM DAMAGE RESTORATION IN CALGARY",
+    heroHeadline: "STORM DAMAGE ROOF REPAIR CALGARY — START WITH A FREE INSPECTION",
     description:
-      "Calgary's hailstorms can destroy shingle integrity, dent fascia, crack siding, and compromise roof ventilation — all without a visible indoor leak. By the time water shows on your ceiling, the damage has been advancing for weeks. AeroDome's storm damage restoration team performs forensic drone inspections, documents every hail impact with digital photography, meets your Alberta insurance adjuster on-site, and manages the complete hail damage roof repair — from emergency tarping through certified installation — under direct insurance billing.",
+      "Calgary is Canada's hail capital — and most storm damage isn't visible from the ground. AeroDome Roofing delivers a free storm damage roof inspection Calgary homeowners need to understand the true scope of hail damage, wind damage, or chinook roof damage. We document every impact point in an insurance-ready report, coordinate with your Alberta insurance adjuster on-site, and guide you through every step of your hail damage insurance claim Calgary — from first inspection to final restoration.",
     bullets: [
-      "Same-week emergency roof tarping & leak mitigation",
-      "Forensic photographic proof & direct insurance adjuster walk-through",
-      "Itemized Xactimate billing & insurance claim documentation",
-      "Full code upgrade — shingles, fascia, eavestroughs & siding"
+      "Free hail damage inspection Calgary — full written insurance-ready report at no cost",
+      "Storm damage insurance claim Calgary assistance — adjuster coordination & Xactimate billing",
+      "Class 4 impact resistant shingles Calgary upgrade — may reduce your insurance premium up to 15%",
+      "Full storm damage roof repair & replacement backed by a 10-year workmanship warranty"
     ],
     image: "/images/after_roof.jpg",
     imageAlt: "Hail damage roof repair Calgary storm restoration — AeroDome Roofing",
     reverse: true,
     ctaText: "LEARN MORE",
-    secondaryCtaText: "GET MY FREE ESTIMATE",
+    secondaryCtaText: "BOOK FREE STORM INSPECTION",
 
     // ── Detail Page Fields ──────────────────────────────────────────────────
-    whyEyebrow: "WHY AERODOME",
-    whyHeading: "WHY AERODOME FOR STORM DAMAGE",
+    whyEyebrow: "WHY CHOOSE US",
+    whyHeading: "THE STORM DAMAGE ROOFER CALGARY TRUSTS",
     whyItems: [
-      { icon: "ShieldCheck", text: "Forensic photographic proof & direct insurance billing — we handle the paperwork" },
-      { icon: "Award", text: "On-site adjuster walk-through representation — we ensure every item is covered" },
-      { icon: "Clock", text: "Same-week emergency tarping & leak mitigation — fast response across Calgary" }
+      {
+        icon: "ShieldCheck",
+        text: "We are not storm chasers — AeroDome Roofing has served Calgary for 14+ years. We were here before this storm and we will be here long after the season ends. No deposit before work begins — written quote before any work is approved. BBB accredited roofing Calgary, licensed and insured roofer Calgary on every job."
+      },
+      {
+        icon: "Award",
+        text: "Insurance claim expertise from the first visit — we prepare insurance-ready hail damage inspection reports your Alberta insurer accepts, meet your adjuster on-site across NW, NE, SE, and SW Calgary, and document every damaged component so your storm damage insurance claim Calgary reflects the full scope of loss — not just what an adjuster spots from the ground."
+      },
+      {
+        icon: "Clock",
+        text: "Class 4 upgrade that works for your wallet — when we restore a storm-damaged roof, we recommend upgrading to Class 4 impact resistant shingles Calgary such as IKO Dynasty shingles or Owens Corning Duration shingles. They resist future hail impacts and may reduce your Alberta home insurance premium by up to 15% — often recovering the upgrade cost over time."
+      }
     ],
     scopeEyebrow: "SCOPE OF WORK",
-    scopeHeading: "WHAT'S INCLUDED",
+    scopeHeading: "WHAT DOES STORM DAMAGE RESTORATION INCLUDE",
     includedItems: [
-      "21-point photographic storm damage inspection report",
-      "Emergency leak mitigation & temporary waterproof tarping",
-      "Direct itemized billing negotiations with your insurance adjuster",
-      "Full restoration — shingles, fascia, eavestroughs & siding"
+      "Free hail damage inspection Calgary — 21-point forensic drone and close-up assessment with full insurance-ready written report",
+      "Storm damage insurance claim Calgary assistance — adjuster on-site coordination, Xactimate scope review & direct billing negotiations",
+      "Full storm damage roof repair or replacement Calgary — matched shingles, Class 4 upgrade option, flashing, fascia & eavestrough restoration",
+      "Emergency roof tarping Calgary & same-visit leak mitigation — protecting your home while your Alberta home insurance claim is processed"
     ],
-    processEyebrow: "THE PROCESS",
-    processHeading: "HOW IT WORKS",
+    processEyebrow: "OUR PROCESS",
+    processHeading: "STORM DAMAGE ROOF RESTORATION CALGARY IN 4 STEPS",
     processSubtitle:
-      "Simple, transparent, and seamless — from your first call to the final signed warranty.",
+      "From your free inspection to a fully restored, insurance-documented roof — every step handled by AeroDome Roofing's in-house licensed crew.",
     processSteps: [
       {
         step: "01",
-        title: "FORENSIC DAMAGE INSPECTION",
-        desc: "We perform high-definition drone and close-up camera inspection of shingles, soft metals, vents, and gutters — documenting every hail impact before evidence fades."
+        title: "FREE FORENSIC STORM DAMAGE INSPECTION",
+        desc: "We perform a 21-point drone and close-up camera inspection across every slope — documenting hail bruises, broken seals, dented soft metals, and damaged flashing your insurer needs to approve your storm damage insurance claim Calgary. You receive a full written report at no cost."
       },
       {
         step: "02",
-        title: "INSURANCE CLAIM DOCUMENTATION",
-        desc: "We draft an itemized Xactimate estimate and provide undeniable photographic evidence of hail bruising to support your Alberta home insurance claim."
+        title: "INSURANCE-READY DAMAGE REPORT & CLAIM FILING",
+        desc: "We compile a photographic damage report formatted for your Alberta insurance adjuster — including storm date correlation, Xactimate scope estimates, and before and after hail damage roof Calgary documentation so your hail damage insurance claim Calgary moves without disputes or delays."
       },
       {
         step: "03",
-        title: "ADJUSTER WALKTHROUGH",
-        desc: "We meet your insurance adjuster on-site on your behalf, walking every elevation to ensure every damaged component — shingles, ridge caps, vents, flashings — is included."
+        title: "ON-SITE ADJUSTER WALKTHROUGH & SCOPE REVIEW",
+        desc: "We meet your insurance adjuster on-site to walk every elevation across your Calgary home, ensuring every damaged component — shingles, ridge caps, vents, fascia, and flashings — is included in your approved scope of loss. If initial damage is missed, we request a re-inspection with our estimator present."
       },
       {
         step: "04",
-        title: "CERTIFIED RESTORATION",
-        desc: "Our in-house crew completes the full roof and exterior restoration with Class 4 impact-resistant shingles and premium materials, backed by our 10-year workmanship warranty."
+        title: "LICENSED RESTORATION WITH DUAL WARRANTY",
+        desc: "Our in-house crew completes your full storm damage roof repair or replacement Calgary using Class 4 impact resistant shingles, backed by a 10-year workmanship warranty plus the manufacturer's material warranty — both starting fresh from the installation date."
       }
     ],
-    faqEyebrow: "GOT QUESTIONS?",
-    faqHeading: "COMMON QUESTIONS",
+    faqEyebrow: "FREQUENTLY ASKED QUESTIONS",
+    faqHeading: "STORM DAMAGE ROOFING CALGARY FAQS",
     faqs: [
       {
-        q: "WILL FILING A HAIL CLAIM RAISE MY INSURANCE RATES IN ALBERTA?",
-        a: "In Alberta, severe weather events like hailstorms are classified as Acts of Nature — comprehensive claims that typically do not spike your individual premium rate the way at-fault claims do. Consult your broker for your specific policy terms."
+        q: "HOW DO I KNOW IF MY ROOF HAS HAIL DAMAGE IN CALGARY?",
+        a: "Hail damage to shingles is rarely visible from the ground. Signs include circular bruises or missing granules on shingles, dented metal vents or fascia, and cracked flashing. The only reliable way to assess hail damaged shingles Calgary is a professional drone and close-up inspection. Book your free hail damage inspection Calgary — we provide a full written report whether or not you proceed with repairs."
       },
       {
-        q: "WHAT IF MY INSURANCE ADJUSTER SAYS THERE IS NO DAMAGE?",
-        a: "Adjusters often inspect from ground level or miss micro-fractures in shingle fiberglass mats. We provide high-resolution macro photography and request a re-inspection with our senior estimator present on your roof."
+        q: "DOES ALBERTA HOME INSURANCE COVER STORM AND HAIL DAMAGE ROOF REPAIR IN CALGARY?",
+        a: "In most cases, yes. Alberta home insurance policies may cover hail damage roof repair Calgary and storm damage roof replacement Calgary when damage results from a sudden weather event. Coverage depends on your specific policy and deductible. AeroDome prepares a full insurance-ready inspection report and meets your adjuster on-site — book your free inspection and we will walk you through what your policy likely covers."
       },
       {
-        q: "HOW LONG DO I HAVE TO FILE A HAIL CLAIM IN CALGARY?",
-        a: "Most Alberta homeowner policies require filing within 1 to 2 years of the storm event. However, moisture works through freeze-thaw cycles every winter — early inspection protects your claim and your home."
+        q: "HOW LONG DO I HAVE TO FILE A ROOF INSURANCE CLAIM AFTER A STORM IN CALGARY?",
+        a: "Most Alberta policies require storm damage claims to be filed within 1 to 2 years of the event. However, Alberta's mitigation of loss clause requires homeowners to take reasonable steps to prevent further damage promptly — delaying action can jeopardize your claim. Book your free storm damage roof inspection Calgary now to protect your claim before freeze-thaw cycles cause additional hidden damage."
       },
       {
-        q: "WHAT OUT-OF-POCKET COSTS WILL I HAVE?",
-        a: "Under standard replacement-cost coverage, your only out-of-pocket expense is your deductible. We handle direct insurance invoicing for all remaining labour and materials."
+        q: "SHOULD I REPAIR OR REPLACE MY ROOF AFTER HAIL DAMAGE IN CALGARY?",
+        a: "It depends on your roof's age, the percentage of surface damaged, and your insurer's assessment. AeroDome provides an honest repair vs replacement recommendation based on our inspection findings. If damage affects more than 25–30% of shingle surface, full hail damage roof replacement Calgary is typically the better investment — especially when upgrading to Class 4 impact resistant shingles that may reduce future insurance premiums by up to 15%."
       }
     ],
-    relatedServices: ["residential-roofing", "siding", "windows"]
+    relatedServices: ["emergency-roofing", "roof-replacement", "residential-roofing"]
   },
 
   // ─── CONCRETE ─────────────────────────────────────────────────────────────
