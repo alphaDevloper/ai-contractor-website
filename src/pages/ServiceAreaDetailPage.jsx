@@ -23,12 +23,16 @@ export default function ServiceAreaDetailPage({ onOpenModal }) {
   // Dynamically load service area data
   const area = getServiceAreaDetail(areaSlug || 'parkville');
 
-  // Scroll to top on initial load and route changes
+  // Scroll to top on initial load and route changes & set page title
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
-  }, [areaSlug]);
+
+    if (area) {
+      document.title = `Roofing Contractor in ${area.city || area.fullName} | AeroDome Roofing Calgary`;
+    }
+  }, [areaSlug, area]);
 
   // FAQ Accordion State (first item open by default)
   const [openFaqIndex, setOpenFaqIndex] = useState(0);

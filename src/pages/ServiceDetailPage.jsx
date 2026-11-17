@@ -25,12 +25,16 @@ export default function ServiceDetailPage({ onOpenModal }) {
   // Load dynamic service data safely memoized
   const service = useMemo(() => getServiceDetail(serviceId), [serviceId]);
 
-  // Scroll to top when serviceId changes
+  // Scroll to top and set page title when serviceId changes
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
-  }, [serviceId]);
+
+    if (service && service.title) {
+      document.title = `${service.title} | AeroDome Roofing Calgary`;
+    }
+  }, [serviceId, service]);
 
   // FAQ Accordion State
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
@@ -120,6 +124,7 @@ export default function ServiceDetailPage({ onOpenModal }) {
             src={service.image} 
             alt={service.imageAlt || service.title} 
             className="service-hero-img"
+            onError={(e) => { e.currentTarget.src = '/images/service_crew.jpg'; }}
           />
           <div className="service-hero-overlay"></div>
         </div>

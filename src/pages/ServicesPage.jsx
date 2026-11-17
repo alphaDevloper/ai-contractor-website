@@ -8,6 +8,8 @@ import {
   Hammer, 
   Zap, 
   Sun, 
+  HardHat,
+  Grid,
   CheckCircle2, 
   Phone, 
   ChevronRight, 
@@ -61,12 +63,15 @@ export default function ServicesPage({ onOpenModal }) {
   const getIcon = (iconName) => {
     switch (iconName) {
       case 'Home': return <Home size={18} />;
+      case 'Building': return <Building2 size={18} />;
       case 'Building2': return <Building2 size={18} />;
       case 'Layers': return <Layers size={18} />;
       case 'Droplets': return <Droplets size={18} />;
       case 'Hammer': return <Hammer size={18} />;
       case 'Zap': return <Zap size={18} />;
       case 'Sun': return <Sun size={18} />;
+      case 'HardHat': return <HardHat size={18} />;
+      case 'Grid': return <Grid size={18} />;
       default: return <Home size={18} />;
     }
   };

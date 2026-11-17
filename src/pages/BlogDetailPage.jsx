@@ -20,10 +20,13 @@ export default function BlogDetailPage({ onOpenModal }) {
 
   const post = getBlogBySlug(slug);
 
-  // Scroll to top whenever slug changes
+  // Scroll to top and set page title whenever slug changes
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [slug]);
+    if (post && post.title) {
+      document.title = `${post.title} | AeroDome Roofing Calgary`;
+    }
+  }, [slug, post]);
 
   if (!post) {
     return (
