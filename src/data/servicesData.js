@@ -337,87 +337,120 @@ export const servicesShowcase = [
   // ─── WINDOW REPLACEMENT ────────────────────────────────────────────────────
   {
     id: "windows",
-    breadcrumb: "WINDOWS",
-    eyebrow: "ENERGY-EFFICIENT WINDOW REPLACEMENT CALGARY",
+    breadcrumb: "WINDOW REPLACEMENT",
+    eyebrow: "ENERGY STAR® ZONE 3 WINDOW INSTALLER CALGARY",
     title: "WINDOW REPLACEMENT",
-    heroHeadline: "WINDOW REPLACEMENT",
+    heroHeadline: "WINDOW REPLACEMENT CALGARY — BUILT FOR -40°C TO +35°C",
     description:
-      "Calgary's temperature swings — from +35°C summers to -40°C winters — push drafty, aging windows past their limit fast. Gaps let in cold air, condensation builds between panes, and your heating bill climbs steadily. AeroDome installs custom-measured, Energy Star® certified double and triple-pane windows sealed with dual weather-strip barriers engineered for -40°C performance. Our in-house installers remove old units, flash every opening correctly, and finish interiors and exteriors — leaving no gaps, no mess, and no thermal bridges.",
+      "Calgary homes endure an extreme 75°C temperature spread — from -40°C winter wind chills to +35°C summer heatwaves. Aging double or single pane units lose up to 25–30% of your home's heated air, driving up utility bills and fostering interior condensation and seal failure. AeroDome Roofing installs precision-measured, Energy Star® Zone 3 certified triple pane windows engineered for Southern Alberta's severe climate swings. If a recent storm shattered or cracked your glazing, hail-damaged windows may also be claimable under your existing roof insurance claim. Serving NW, NE, SW, and SE Calgary, Airdrie, Cochrane, Okotoks, and Chestermere.",
     bullets: [
-      "Energy Star® certified double & triple-pane thermal glass",
-      "Precision laser measurement — no gaps, no drafty reveals",
-      "Dual weather-strip barriers engineered for -40°C Calgary winters",
-      "Complete interior trim & exterior aluminum capping finish"
+      "Energy Star® Zone 3 certified triple pane argon-filled glass — the Calgary winter standard",
+      "Hail and storm damaged window replacement — added to your existing roof insurance claim",
+      "Multi-chamber uPVC vinyl & pultruded fiberglass frames — zero thermal warping or drafts",
+      "Full exterior envelope package with 10-year workmanship warranty on roofs, siding & windows"
     ],
     image: "/images/service_windows.jpg",
-    imageAlt: "Energy-efficient window replacement Calgary — AeroDome Roofing",
+    imageAlt: "Energy efficient triple pane window replacement Calgary — AeroDome Roofing",
     reverse: true,
     ctaText: "LEARN MORE",
     secondaryCtaText: "GET MY FREE ESTIMATE",
 
     // ── Detail Page Fields ──────────────────────────────────────────────────
-    whyEyebrow: "WHY AERODOME",
-    whyHeading: "WHY AERODOME FOR WINDOWS",
+    whyEyebrow: "WHY CHOOSE US",
+    whyHeading: "WHY CALGARY HOMEOWNERS CHOOSE AERODOME FOR WINDOWS",
     whyItems: [
-      { icon: "Sparkles", text: "Energy Star® rated window options — cuts heating & cooling costs immediately" },
-      { icon: "ShieldCheck", text: "Precision laser measurement to the millimeter — zero gap installation" },
-      { icon: "TrendingDown", text: "Dual weather-strip barriers reduce heat loss through Calgary winters" }
+      {
+        icon: "ShieldCheck",
+        text: "Calgary Climate Specialists (-40°C to +35°C) — Windows installed with generic national tolerances fail when Calgary temperatures drop 30 degrees in four hours during a winter cold front. We engineer every installation with exact expansion allowances, low-expansion closed-cell insulating foam, and commercial-grade sealants rated to -45°C. Frames stay true, gas seals remain intact, and thermal bridges are eliminated."
+      },
+      {
+        icon: "Award",
+        text: "Energy Star® Zone 3 Certified Installation — Calgary sits firmly within Canada's strict Climate Zone 3, where minimum insulation ratings demand windows with an ultra-low U-factor of 1.22 or lower (ER 34+). We supply and install certified triple pane windows with dual Low-E coatings and argon gas fill as standard practice — ensuring your home complies with municipal energy standards and qualifies for available Alberta efficiency rebates."
+      },
+      {
+        icon: "Clock",
+        text: "Combined Hail Claim & Full Exterior Warranty — If hail cracked your glass, pitted your aluminum capping, or damaged your roof and siding, you do not need four separate contractors. AeroDome documents window impacts directly alongside your roofing file for your insurance adjuster. Combining roof, James Hardie siding, seamless gutters, and windows under one 10-year workmanship warranty gives you a single point of local accountability."
+      }
     ],
     scopeEyebrow: "SCOPE OF WORK",
-    scopeHeading: "WHAT'S INCLUDED",
+    scopeHeading: "WINDOW REPLACEMENT SERVICES WE PROVIDE IN CALGARY",
     includedItems: [
-      "Removal & responsible disposal of old window units",
-      "Proper insulated flashing & waterproofing around every opening",
-      "Energy-efficient double or triple-pane thermal glass installation",
-      "Interior trim & exterior aluminum capping — finished clean"
+      "Triple Pane Window Replacement & Double Pane Upgrades — Precision installation of Energy Star® Zone 3 triple pane argon-filled units with dual Low-E glass, warm-edge spacers, and multi-chamber vinyl or pultruded fiberglass frames to halt winter thermal loss",
+      "Hail & Storm Damage Window Replacement — Comprehensive forensic documentation of shattered glass, fractured sashes, and dented exterior capping, submitted directly to support your insurer's claim with zero hassle",
+      "Architectural Styles & Custom Openings — Full replacement of casement, awning, double-hung, sliding, picture, and custom architectural windows, plus concrete-cut egress basement window installations meeting Alberta Building Code",
+      "Full Thermal Rough-Opening Prep & Aluminum Capping — Clean tear-out of failed frames, moisture inspection of surrounding framing, low-expansion closed-cell perimeter insulation, backer rod sealing, and custom heavy-gauge aluminum exterior trim capping"
     ],
-    processEyebrow: "THE PROCESS",
-    processHeading: "HOW IT WORKS",
+    processEyebrow: "OUR PROCESS",
+    processHeading: "WINDOW INSTALLATION CALGARY IN 4 STEPS",
     processSubtitle:
-      "Simple, transparent, and seamless — from your first call to the final signed warranty.",
+      "From laser-accurate measurement to final thermal scan — engineered to eliminate drafts in Calgary's harshest seasons.",
     processSteps: [
       {
         step: "01",
-        title: "WINDOW CONSULTATION & AUDIT",
-        desc: "We assess your current windows, discuss Energy Star® style and performance options, and recommend the right fit for your home's layout and Calgary heating budget."
+        title: "FREE IN-HOME AUDIT & LASER MEASUREMENT",
+        desc: "We inspect your existing frames for air leakage, seal failure, and structural moisture. Using laser instruments, our licensed window installer measures each rough opening to the millimeter to ensure a factory-accurate fit for your chosen Energy Star Zone 3 glass package."
       },
       {
         step: "02",
-        title: "PRECISION LASER MEASUREMENT",
-        desc: "Our estimators measure every opening down to the millimeter using laser instruments. No guesswork, no gaps, no drafty cold-air reveals after installation."
+        title: "ROUGH OPENING PREP & MOISTURE INSPECTION",
+        desc: "We cleanly remove your old sashes and frames down to the rough stud opening. Our team inspects all surrounding sheathing and framing for hidden dry rot or water infiltration before applying high-performance membrane flashing."
       },
       {
         step: "03",
-        title: "CERTIFIED INSTALLATION",
-        desc: "Our in-house installers remove old units, flash and waterproof every opening, and install new sealed thermal-efficient windows — leaving no debris behind."
+        title: "PRECISION SHIMMING, INSULATION & EXPANSION GAP",
+        desc: "New triple pane units are shimmed plumb, square, and level with precise expansion allowances calculated for Calgary's 75°C temperature spread. We inject low-expansion climate foam and apply interior air-barrier tapes to eliminate thermal bridging."
       },
       {
         step: "04",
-        title: "FINAL WALKTHROUGH",
-        desc: "We walk through every installed window with you, check seals, operate all hardware, and confirm airtight performance before final sign-off."
+        title: "EXTERIOR CAPPING, HARDWARE CHECK & WARRANTY",
+        desc: "Our installers custom-bend exterior aluminum cladding over brickmoulds, apply commercial polyurethane sealants rated to -45°C, calibrate all multi-point locks, conduct a site cleanup, and hand you our 10-year workmanship warranty."
       }
     ],
-    faqEyebrow: "GOT QUESTIONS?",
-    faqHeading: "COMMON QUESTIONS",
+    faqEyebrow: "FREQUENTLY ASKED QUESTIONS",
+    faqHeading: "CALGARY WINDOW REPLACEMENT — FAQS",
     faqs: [
       {
-        q: "WHAT WINDOW BRANDS DO YOU INSTALL IN CALGARY?",
-        a: "We partner with leading Canadian and North American manufacturers including Andersen, Pella, and Lux Windows, offering durable vinyl, composite, and aluminum-clad frames engineered for Alberta's extreme freeze-thaw cycles."
+        q: "HOW MUCH DOES WINDOW REPLACEMENT COST IN CALGARY?",
+        a: "Window replacement in Calgary typically ranges from $750 to $1,800 per window installed, depending on frame dimensions, architectural style (casement, awning, picture), and glass package. Standard double pane vinyl units sit at the lower end, while high-performance Energy Star Zone 3 triple pane fiberglass units or egress basement cut-outs sit higher. Full-home window packages generally range between $9,500 and $24,000 with volume savings. AeroDome provides detailed, flat-rate written estimates at zero cost."
       },
       {
-        q: "CAN WINDOW DAMAGE BE COVERED BY MY HOME INSURANCE?",
-        a: "Yes — if window damage is caused by severe hail, windborne debris, or storm impact, it is often covered under your homeowner's policy. We provide complete forensic damage reports and meet directly with your insurance adjuster."
+        q: "ARE TRIPLE PANE WINDOWS WORTH IT IN CALGARY?",
+        a: "Yes. In Calgary's sub-zero winters, triple pane windows are an essential performance standard rather than a luxury upgrade. The third pane creates two sealed insulating chambers filled with dense argon gas and coated with microscopic Low-E layers. This configuration increases energy efficiency by up to 50% over dual pane units, practically eliminates cold interior glass convection currents, stops winter condensation, and substantially cuts outside traffic noise."
       },
       {
-        q: "HOW LONG DOES WINDOW REPLACEMENT TAKE?",
-        a: "Most residential window replacements are completed within 1 to 2 days depending on the number of openings. Our crew cleans up completely and leaves zero debris after each shift."
+        q: "WHAT IS THE DIFFERENCE BETWEEN DOUBLE PANE AND TRIPLE PANE WINDOWS FOR CALGARY WINTERS?",
+        a: "Double pane units have one insulating air pocket and struggle to maintain interior surface temperatures when Calgary dips below -20°C, frequently creating interior glass frost and drafts. Triple pane windows feature dual argon gas chambers and two Low-E glass coatings, raising the interior glass temperature significantly closer to room temperature. This dramatically reduces heating system load during long Alberta cold snaps and lowers utility costs."
       },
       {
-        q: "DO YOU REPLACE SINGLE WINDOWS OR ONLY FULL HOMES?",
-        a: "Both. While whole-home replacements offer maximum energy savings and bundle value, we regularly replace single compromised, broken, or drafty windows and sliding patio doors."
+        q: "DOES ALBERTA HOME INSURANCE COVER HAIL DAMAGED WINDOWS?",
+        a: "In most cases, yes. Hail impact that cracks or shatters glass panes, punctures vinyl sash frames, or dents exterior aluminum cladding is covered under standard Alberta homeowner insurance policies. Coverage depends on your specific policy terms, deductible, and adjuster's assessment. AeroDome provides complete photographic documentation and forensic measurements to help substantiate your claim."
+      },
+      {
+        q: "CAN I CLAIM WINDOW DAMAGE ON THE SAME INSURANCE CLAIM AS MY ROOF IN CALGARY?",
+        a: "Yes. When a severe hail storm passes over Calgary, damage to roofs, siding, gutters, and windows originates from the single weather event. Homeowners can include compromised windows on their existing roofing insurance claim without paying a second deductible. AeroDome acts as your single exterior contractor, presenting the adjuster with an itemized, unified scope of work covering all exterior trades."
+      },
+      {
+        q: "WHAT IS ENERGY STAR® ZONE 3 AND DO I NEED IT IN CALGARY?",
+        a: "Natural Resources Canada classifies the country into climate zones based on heating degree days. Calgary is located in Zone 3 — the coldest mainland classification requiring a maximum U-factor of 1.22 W/m²·K (or minimum Energy Rating ER 34). Installing windows rated for milder coastal zones results in severe heat loss through winter. AeroDome specifies and installs certified Zone 3 units engineered strictly for our regional requirements."
+      },
+      {
+        q: "ARE THERE REBATES FOR ENERGY EFFICIENT WINDOW REPLACEMENT IN CALGARY OR ALBERTA?",
+        a: "Rebate initiatives and federal or municipal energy-efficiency financing programs (such as CEIP — the Clean Energy Improvement Program in participating Alberta municipalities) periodically offer rebates or low-interest financing for certified Energy Star Zone 3 window upgrades. Availability and eligibility criteria fluctuate with policy updates, so we assist homeowners with the requisite energy documentation to apply for currently active incentive programs."
+      },
+      {
+        q: "HOW LONG DOES WINDOW REPLACEMENT TAKE IN CALGARY?",
+        a: "Most single-family residential window installations in Calgary take 1 to 2 consecutive days. Our in-house crews complete each window opening sequentially from tear-out to final weatherproofing, ensuring your home is never left exposed to cold drafts or precipitation overnight. A comprehensive whole-home project involving 15 to 25 openings is typically finalized within 48 to 72 hours."
+      },
+      {
+        q: "WHY ARE MY WINDOWS DRAFTY AND FOGGY IN CALGARY?",
+        a: "Fog between glass panes indicates that the perimeter seal has degraded, allowing moisture-laden air to penetrate the gas chamber and permanently ruin thermal performance. Drafts along the frame edges usually signal broken perimeter caulking, degraded shims, or poor initial installation where thermal expansion caused the frame to warp. In either case, replacing the unit restores building envelope integrity."
+      },
+      {
+        q: "WHAT WINDOW FRAME MATERIAL IS BEST FOR CALGARY'S EXTREME TEMPERATURES?",
+        a: "High-grade multi-chamber uPVC vinyl and pultruded fiberglass are the two premier choices for Calgary's climate. Multi-chamber vinyl provides exceptional insulation at an economical price point and requires zero painting. Pultruded fiberglass offers the lowest thermal expansion coefficient — expanding and contracting at virtually the same rate as glass — which prevents seal stress during rapid Chinook temperature swings from -25°C to +10°C."
       }
     ],
-    relatedServices: ["siding", "gutters", "storm-damage"]
+    relatedServices: ["roof-replacement", "siding", "gutters"]
   },
 
   // ─── STORM DAMAGE RESTORATION ──────────────────────────────────────────────
