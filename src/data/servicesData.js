@@ -54,7 +54,6 @@ export const servicesHub = {
     { name: "COMMERCIAL ROOFING", id: "commercial-roofing", icon: "Building2" },
     { name: "JAMES HARDIE SIDING", id: "siding", icon: "Layers" },
     { name: "GUTTERS & EAVESTROUGHS", id: "gutters", icon: "Droplets" },
-    { name: "CONCRETE & HARDSCAPING", id: "concrete", icon: "Hammer" },
     { name: "STORM DAMAGE RESTORATION", id: "storm-damage", icon: "Zap" },
     { name: "SOLAR ROOFING", id: "solar-roofing", icon: "Sun" },
     { name: "ROOF INSPECTIONS", id: "roof-inspection", icon: "Search" }
@@ -633,92 +632,6 @@ export const servicesShowcase = [
     relatedServices: ["storm-damage", "roof-replacement", "residential-roofing"]
   },
 
-  // ─── CONCRETE ─────────────────────────────────────────────────────────────
-  {
-    id: "concrete",
-    breadcrumb: "CONCRETE",
-    eyebrow: "CONCRETE DRIVEWAYS & PATIOS CALGARY",
-    title: "CONCRETE",
-    heroHeadline: "ENGINEERED CONCRETE DRIVEWAYS, PATIOS & WALKWAYS",
-    description:
-      "Calgary's deep frost lines destroy poorly built concrete slabs. Heaving, cracking, and spalling happen when contractors skip proper base preparation, use the wrong mix, or neglect expansion joints. AeroDome pours engineered concrete designed for Alberta's climate: 32 MPa air-entrained mix over compacted crushed gravel, tied with a 10M steel rebar grid, sealed with industrial-grade siloxane to resist road salt and repeated freeze-thaw stress. Driveways, patios, exposed aggregate, and stamped decorative finishes available across Calgary and Okotoks.",
-    bullets: [
-      "32 MPa air-entrained commercial mix — engineered for Alberta frost",
-      "10M rebar grid & 6-inch compacted gravel base on every pour",
-      "Broom-finish, stamped & exposed aggregate decorative designs",
-      "Industrial siloxane sealant protects against de-icing salt spalling"
-    ],
-    image: "/images/services_concrete_patio.jpg",
-    imageAlt: "Engineered concrete driveway patio installation Calgary — AeroDome Roofing",
-    reverse: false,
-    ctaText: "LEARN MORE",
-    secondaryCtaText: "GET MY FREE ESTIMATE",
-
-    // ── Detail Page Fields ──────────────────────────────────────────────────
-    whyEyebrow: "WHY AERODOME",
-    whyHeading: "WHY AERODOME FOR CONCRETE",
-    whyItems: [
-      { icon: "ShieldCheck", text: "Engineered 10M rebar grid over 6-inch compacted gravel — built for Alberta's severe frost lines" },
-      { icon: "Sparkles", text: "32 MPa air-entrained commercial concrete mix — resists freeze-thaw expansion damage" },
-      { icon: "TrendingDown", text: "High-solids siloxane sealer prevents de-icing salt spalling and colour fade" }
-    ],
-    scopeEyebrow: "SCOPE OF WORK",
-    scopeHeading: "WHAT'S INCLUDED",
-    includedItems: [
-      "Subgrade excavation & laser-leveled gravel compaction",
-      "10M grade 400 steel rebar grid elevated on chairs",
-      "Precision concrete pour with hand-troweled control joints",
-      "Deep penetrating siloxane sealant & protective cure finish"
-    ],
-    processEyebrow: "THE PROCESS",
-    processHeading: "HOW IT WORKS",
-    processSubtitle:
-      "Simple, transparent, and seamless — from your first call to the final signed warranty.",
-    processSteps: [
-      {
-        step: "01",
-        title: "DESIGN & DRAINAGE SURVEY",
-        desc: "We survey slope, soil drainage, and elevation grading to ensure water runs cleanly away from your foundation — a critical step in Calgary's wet spring seasons."
-      },
-      {
-        step: "02",
-        title: "BASE & REBAR PREP",
-        desc: "We excavate to virgin ground, compact a 6-inch crushed gravel base, and tie a 10M steel rebar grid to resist Alberta's deep frost heaving."
-      },
-      {
-        step: "03",
-        title: "POUR & FINISH",
-        desc: "Our concrete specialists pour 32 MPa air-entrained mix, screed, edge, and apply your chosen finish — broom, stamped pattern, or exposed aggregate."
-      },
-      {
-        step: "04",
-        title: "CUT, SEAL & CURE",
-        desc: "We saw control joints to direct thermal shrinkage, wash the surface, and apply a penetrating siloxane sealer to protect against Calgary road salt and UV fade."
-      }
-    ],
-    faqEyebrow: "GOT QUESTIONS?",
-    faqHeading: "COMMON QUESTIONS",
-    faqs: [
-      {
-        q: "HOW LONG BEFORE I CAN PARK ON NEW CONCRETE?",
-        a: "You can walk on new concrete after 24 to 48 hours. Light passenger vehicles can park after 7 days. Full 28-day cure strength is recommended before parking heavy trucks, trailers, or RVs."
-      },
-      {
-        q: "HOW DO YOU STOP CRACKING IN CALGARY'S COLD WINTERS?",
-        a: "We excavate deeper, use 6+ inches of compacted crushed gravel base, tie 10M steel rebar grids, specify air-entrained concrete mix, and place expansion control joints every 8 to 10 feet."
-      },
-      {
-        q: "IS STAMPED CONCRETE SLIPPERY WHEN WET OR ICY?",
-        a: "We add micro-grip anti-slip aggregate directly into our high-solids topical sealers, providing safe traction even during wet Calgary spring thaw conditions."
-      },
-      {
-        q: "HOW OFTEN SHOULD CONCRETE BE RESEALED IN CALGARY?",
-        a: "We recommend a fresh coat of siloxane or acrylic sealer every 2 to 3 years to maintain colour vibrancy and defend against Calgary road salt and freeze-thaw damage."
-      }
-    ],
-    relatedServices: ["residential-roofing", "siding", "gutters"]
-  },
-
   // ─── SIDING ───────────────────────────────────────────────────────────────
   {
     id: "siding",
@@ -919,87 +832,112 @@ export const servicesShowcase = [
   // ─── GUTTERS & DOWNSPOUTS ─────────────────────────────────────────────────
   {
     id: "gutters",
-    breadcrumb: "GUTTERS",
+    breadcrumb: "GUTTERS & EAVESTROUGHS",
     eyebrow: "SEAMLESS GUTTER INSTALLATION CALGARY",
-    title: "GUTTERS & DOWNSPOUTS",
-    heroHeadline: "CUSTOM CONTINUOUS SEAMLESS GUTTERS & GUARDS",
+    title: "GUTTERS & EAVESTROUGHS",
+    heroHeadline: "GUTTER INSTALLATION CALGARY — STOP WATER DAMAGE BEFORE IT STARTS",
     description:
-      "Calgary's intense spring downpours and sudden summer storms dump water faster than undersized, failing eavestroughs can handle. When gutters overflow, water drives against your foundation, erodes your grade, and creates ice dams along your roofline in winter. AeroDome installs continuous seamless aluminum eavestroughs — custom extruded on-site to your exact roofline — paired with Alu-Rex gutter guards and oversized 3×4\" downspouts sized for Alberta's cloudburst volumes. No seams. No joints. No freeze-thaw failures. Serving Calgary, Cochrane, Airdrie, and Okotoks.",
+      "Calgary's freeze-thaw cycles, spring cloudburst volumes, and hail season make eavestroughs a genuine structural protection system — not a finishing detail. Failing or undersized gutters force water against your foundation, rot your fascia, and seed the ice dams that damage shingles every winter. AeroDome Roofing installs seamless aluminum eavestroughs custom-fabricated on-site to your exact roofline — no seam joints, no freeze-split failures, no call-backs. Hail-damaged gutters may also be claimable under your existing roof insurance claim. Free estimates for Calgary, Airdrie, Cochrane, Okotoks, and Chestermere.",
     bullets: [
-      "Continuous on-site seamless extrusion — eliminates leaking seam joints",
-      "Alu-Rex T-Rex leaf & pine needle gutter guard protection",
-      "Oversized 3×4\" commercial downspouts — double the flow capacity",
-      "Colour-matched baked enamel — 25+ colours, guaranteed no rust"
+      "Seamless on-site fabrication — no joints to leak, split, or separate in freeze-thaw cycles",
+      "Hail-damaged gutters added to your existing insurance claim at no extra cost",
+      "Oversized 3×4\" downspouts — double the flow capacity of standard residential eavestroughs",
+      "Alu-Rex T-Rex continuous gutter guard — no ladders, no seasonal cleaning required"
     ],
     image: "/images/service_gutters.jpg",
-    imageAlt: "Seamless aluminum gutter installation Calgary — AeroDome Roofing",
+    imageAlt: "Seamless gutter installation Calgary — AeroDome Roofing eavestrough replacement",
     reverse: true,
     ctaText: "LEARN MORE",
     secondaryCtaText: "GET MY FREE ESTIMATE",
 
     // ── Detail Page Fields ──────────────────────────────────────────────────
-    whyEyebrow: "WHY AERODOME",
-    whyHeading: "WHY AERODOME FOR GUTTERS & EAVESTROUGHS",
+    whyEyebrow: "WHY CHOOSE US",
+    whyHeading: "WHY CALGARY HOMEOWNERS CHOOSE AERODOME FOR GUTTERS",
     whyItems: [
-      { icon: "Sparkles", text: "Continuous on-site roll forming eliminates every leaky seam joint along your roofline" },
-      { icon: "ShieldCheck", text: "Alu-Rex continuous hanger system rated to hold 250 lbs per linear foot of snow load" },
-      { icon: "TrendingDown", text: "Oversized 3×4\" downspouts prevent foundation flooding & ice dam formation in Calgary winters" }
+      {
+        icon: "ShieldCheck",
+        text: "Seamless On-Site Fabrication — Our mobile extrusion truck rolls single-piece eavestrough runs to your exact roofline length on your driveway. Zero seam joints along the entire run means zero places for Calgary's freeze-thaw cycles to force a split, drip, or joint failure. After 14+ years, we have never called back for a seam leak on a seamless installation."
+      },
+      {
+        icon: "Award",
+        text: "Hail Damage Added to Your Existing Claim — If your roof is already in an active insurance claim after a hail event, your gutters, downspouts, and fascia cap may be claimable on the same file. AeroDome documents and photographs all eavestrough hail impacts to support your adjuster's assessment. Most Calgary homeowners don't know this is possible — we make sure you don't leave money on the table."
+      },
+      {
+        icon: "Clock",
+        text: "Foundation Protection Is the Real Job — Gutters don't exist to look good. They exist to route every litre of precipitation off your roofline, away from your foundation perimeter, and into a controlled discharge point. We calculate downspout sizing and placement based on your roof's actual square footage, pitch, and valley load — not a one-size template. Your foundation is what we're protecting."
+      }
     ],
     scopeEyebrow: "SCOPE OF WORK",
-    scopeHeading: "WHAT'S INCLUDED",
+    scopeHeading: "GUTTER SERVICES WE PROVIDE IN CALGARY",
     includedItems: [
-      "Old eavestrough removal & responsible environmental recycling",
-      "Fascia rot inspection & drip edge metal flashing check",
-      "On-site custom seamless 5\" or 6\" heavy-gauge aluminum extrusion",
-      "Alu-Rex T-Rex continuous leaf guard & oversized downspouts"
+      "Seamless Aluminum Gutter Installation — Full removal of old eavestroughs, on-site fabrication of 5\" or 6\" heavy-gauge seamless aluminum runs, and colour-matched installation to your fascia, with 10-year workmanship warranty included",
+      "Hail Damage Gutter Replacement — Full photographic damage documentation, insurance claim support, and replacement of hail-impacted eavestroughs, downspouts, and fascia cap — often added to your existing roof claim at no additional deductible",
+      "Gutter Guard & Leaf Guard Installation — Alu-Rex T-Rex continuous hanger and guard system installed across the full gutter opening, rated to hold 250 lbs per linear foot of snow load, eliminating seasonal debris buildup and ice dam seeding",
+      "Downspout Installation, Extension & Fascia Inspection — Oversized 3×4\" commercial downspouts installed at load-calculated intervals, extended away from your foundation perimeter, with fascia rot inspection and drip edge flashing check included on every job"
     ],
-    processEyebrow: "THE PROCESS",
-    processHeading: "HOW IT WORKS",
+    processEyebrow: "OUR PROCESS",
+    processHeading: "GUTTER INSTALLATION CALGARY IN 4 STEPS",
     processSubtitle:
-      "Simple, transparent, and seamless — from your first call to the final signed warranty.",
+      "One truck. One crew. One day. From first call to final water test — here is exactly what happens on your property.",
     processSteps: [
       {
         step: "01",
-        title: "WATER FLOW EVALUATION",
-        desc: "We analyze your roof's square footage, pitch, and valley locations to calculate optimal eavestrough width and downspout placement for Calgary's heaviest rainfall volumes."
+        title: "FREE ON-SITE ASSESSMENT & MEASUREMENT",
+        desc: "We walk your full roofline perimeter, measure every linear run, assess your roof's pitch and valley locations, and calculate the correct eavestrough width and downspout sizing for your home's actual water volume. We also photograph any existing hail impact on gutters, downspouts, and fascia cap for potential insurance documentation."
       },
       {
         step: "02",
-        title: "ON-SITE CUSTOM EXTRUSION",
-        desc: "Our mobile fabrication truck rolls single-piece eavestrough lengths precisely to your roofline dimensions — no seams, no joints, no potential leak points."
+        title: "OLD EAVESTROUGH REMOVAL & FASCIA INSPECTION",
+        desc: "We remove your existing gutters cleanly, inspect every fascia board for rot, water damage, and structural integrity, and check your drip edge metal flashing. Any fascia rot is flagged before installation — not discovered after. No hidden charges."
       },
       {
         step: "03",
-        title: "CONTINUOUS HANGER FASTENING",
-        desc: "We fasten with Alu-Rex continuous brackets every 12 inches for maximum snow load capacity and ice resistance through Calgary's extended freeze-thaw season."
+        title: "SEAMLESS FABRICATION & INSTALLATION",
+        desc: "Our mobile extrusion truck fabricates your complete eavestrough runs on your property to the exact lengths measured — no factory-cut joints, no field splices. We fasten with Alu-Rex continuous hanger brackets every 12 inches, set the correct slope for complete drainage, and install oversized downspouts at calculated intervals."
       },
       {
         step: "04",
-        title: "WATER TEST & SITE CLEANUP",
-        desc: "We test all slopes with water to verify rapid, complete drainage, install gutter guards, and clean the entire perimeter before departing your property."
+        title: "SLOPE TEST, DOWNSPOUT ROUTING & WARRANTY",
+        desc: "Every run is water-tested before we leave — we run water from the peak and confirm complete drainage with zero pooling or overflow. Gutter guards are installed across the full opening. The site is cleaned, old materials are removed, and your 10-year workmanship warranty is issued on the spot."
       }
     ],
-    faqEyebrow: "GOT QUESTIONS?",
-    faqHeading: "COMMON QUESTIONS",
+    faqEyebrow: "FREQUENTLY ASKED QUESTIONS",
+    faqHeading: "CALGARY GUTTER INSTALLATION — FAQS",
     faqs: [
       {
+        q: "HOW MUCH DO NEW GUTTERS COST IN CALGARY?",
+        a: "Seamless aluminum gutter installation in Calgary typically ranges from $8 to $18 per linear foot installed, depending on eavestrough width (5\" vs 6\"), gutter guard addition, and fascia conditions found on removal. Most single-family homes in Calgary fall in the $1,200–$3,500 range for a complete perimeter replacement. We provide a written, itemized quote at no charge before any work begins."
+      },
+      {
         q: "WHY ARE SEAMLESS GUTTERS BETTER THAN SECTIONAL EAVESTROUGHS?",
-        a: "Traditional sectional gutters have joints every 10 feet that leak as expanding ice forces them apart each winter. Seamless gutters have no joints along the entire roofline — eliminating the source of the problem entirely."
+        a: "Sectional gutters have a factory-cut joint every 10 feet sealed with caulk. Calgary's freeze-thaw cycles expand and contract those joints repeatedly every winter until the sealant fails and water drips directly against your fascia and foundation. Seamless gutters have no joints along the full run — only at corners and downspout outlets. That eliminates the failure point entirely, which is why seamless is the standard for Calgary new installs and replacements, not an upgrade."
       },
       {
-        q: "DO ALU-REX GUTTER GUARDS HELP PREVENT ICE DAMS IN CALGARY?",
-        a: "Yes. Alu-Rex guards keep gutters free of pine needles and leaves, allowing snowmelt to drain freely instead of backing up and freezing into massive heavy ice sheets that can damage fascia and shingles."
+        q: "CAN HAIL-DAMAGED GUTTERS BE ADDED TO MY EXISTING INSURANCE CLAIM?",
+        a: "In most cases, yes. If your roof is already in an active hail damage claim, your gutters, downspouts, and fascia cap are exterior components typically covered under the same policy event. AeroDome documents all eavestrough hail impacts with photographs and measurements and coordinates directly with your adjuster. Most Calgary homeowners don't know their gutters qualify — we make sure the full claim is submitted. Coverage always depends on your specific policy, so we cannot guarantee outcomes."
       },
       {
-        q: "WHAT SIZE DOWNSPOUTS DO YOU RECOMMEND FOR CALGARY?",
-        a: "We recommend oversized 3×4-inch commercial downspouts. They drain double the water volume of standard 2×3 downspouts — essential during Alberta's intense cloudbursts and spring melt."
+        q: "WHAT ARE THE SIGNS THAT MY GUTTERS NEED REPLACEMENT?",
+        a: "Replace eavestroughs when you see: persistent dripping at seam joints even after re-caulking; gutters pulling away from the fascia or sagging visibly along the run; peeling paint or rust staining on the fascia board beneath the eavestrough; water pooling against your foundation after rain; visible holes, cracks, or hail impact dents along the gutter face. If your gutters are over 20 years old and sectional, replacement is almost always more cost-effective than continued repairs."
       },
       {
-        q: "CAN EAVESTROUGHS BE COLOUR-MATCHED TO MY SIDING OR TRIM?",
-        a: "Yes. We offer 25+ baked-on enamel colours to precisely match your fascia board, roof drip edge, window trim, or James Hardie® siding profile."
+        q: "WHAT GUTTER SIZE DO I NEED FOR MY CALGARY HOME?",
+        a: "Most Calgary residential homes use 5-inch K-style eavestroughs. Homes with steeper pitches, larger roof areas, or valley-heavy designs benefit from 6-inch gutters to handle Alberta's cloudburst volumes without overflow. We calculate the correct width based on your actual roof square footage and pitch — not a standard default. Downspout sizing matters as much as gutter width: we install oversized 3×4-inch downspouts as standard to handle heavy spring melt and summer storm loads."
+      },
+      {
+        q: "DO GUTTER GUARDS WORK IN CALGARY WINTERS?",
+        a: "Yes — when the right guard is installed. We use Alu-Rex T-Rex continuous hanger guards because they serve two purposes simultaneously: they block debris year-round and act as a structural hanger rated to 250 lbs per linear foot of snow load. Cheap foam or screen inserts trap debris, collapse under snow load, and create ice dam conditions. The Alu-Rex system keeps the gutter opening clear so snowmelt drains freely rather than backing up and freezing into an ice sheet along your eaves."
+      },
+      {
+        q: "CAN NEW GUTTERS HELP PREVENT ICE DAMS?",
+        a: "Properly installed, correctly sloped, and debris-free gutters reduce ice dam severity by ensuring snowmelt drains off the roofline quickly rather than pooling and refreezing at the eave. However, the root cause of most ice dams in Calgary is inadequate attic insulation and ventilation — heat escaping from the living space melts snow from below, which then refreezes at the cold eave overhang. Gutters help manage the symptom. We always flag ice dam evidence during our assessment so you have the full picture."
+      },
+      {
+        q: "HOW OFTEN DO SEAMLESS GUTTERS NEED TO BE CLEANED IN CALGARY?",
+        a: "Without gutter guards: twice per year — once in late spring after cottonwood and tree seed season, and once in late fall after leaf drop. With Alu-Rex T-Rex guards: annual inspection only, with cleaning rarely needed. We always recommend guards in Calgary neighbourhoods with mature trees, especially in NW and SW Calgary communities near Nose Hill and Fish Creek where pine needle and cottonwood volumes are high. Your 10-year workmanship warranty covers the full system including guards."
       }
     ],
-    relatedServices: ["residential-roofing", "siding", "windows"]
+    relatedServices: ["hail-damage", "siding", "roof-replacement"]
   },
 
   // ─── NEW ROOF INSTALLATION ─────────────────────────────────────────────────

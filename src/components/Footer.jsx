@@ -48,7 +48,6 @@ export default function Footer({ onOpenModal }) {
               <li><Link to="/services/storm-damage">Hail Damage Restoration</Link></li>
               <li><Link to="/services/siding">James Hardie Siding</Link></li>
               <li><Link to="/services/gutters">Seamless Gutters</Link></li>
-              <li><Link to="/services/concrete">Concrete Patios & Driveways</Link></li>
               <li><Link to="/services/commercial-roofing">Commercial Flat Roofing</Link></li>
               <li><Link to="/services">All Services Overview</Link></li>
             </ul>

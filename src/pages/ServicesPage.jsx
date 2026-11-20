@@ -426,7 +426,6 @@ export default function ServicesPage({ onOpenModal }) {
                       >
                         <option value="Residential Roof Replacement">Residential Roof Replacement</option>
                         <option value="Hail & Storm Damage Restoration">Hail & Storm Damage Restoration</option>
-                        <option value="Concrete Driveways & Patios">Concrete Driveways & Patios</option>
                         <option value="James Hardie & Vinyl Siding">James Hardie & Vinyl Siding</option>
                         <option value="Commercial SBS Flat Roofing">Commercial SBS Flat Roofing</option>
                         <option value="Seamless Gutters & Eavestroughs">Seamless Gutters & Eavestroughs</option>

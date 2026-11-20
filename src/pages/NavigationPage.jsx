@@ -40,7 +40,6 @@ export default function NavigationPage({ onOpenModal }) {
     { title: "Storm & Hail Damage", path: "/services/storm-damage", icon: <Zap size={18} />, tag: "SPECIALTY", desc: "Digital drone inspections, insurance claim assistance, and rapid dry-in." },
     { title: "James Hardie Siding", path: "/services/siding", icon: <Layers size={18} />, tag: "EXTERIOR", desc: "Fire-resistant, fiber-cement exterior siding with custom trim." },
     { title: "Seamless Gutters", path: "/services/gutters", icon: <Droplets size={18} />, tag: "DRAINAGE", desc: "Continuous heavy-gauge aluminum eavestrough and leaf guards." },
-    { title: "Concrete Patios & Driveways", path: "/services/concrete", icon: <Hammer size={18} />, tag: "FLATWORK", desc: "Engineered stamped and broomed concrete flatwork." },
     { title: "Commercial Flat Roofing", path: "/services/commercial-roofing", icon: <Building2 size={18} />, tag: "COMMERCIAL", desc: "SBS modified bitumen, TPO, and EPDM flat roof systems." }
   ];
 
