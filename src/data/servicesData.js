@@ -56,7 +56,8 @@ export const servicesHub = {
     { name: "GUTTERS & EAVESTROUGHS", id: "gutters", icon: "Droplets" },
     { name: "CONCRETE & HARDSCAPING", id: "concrete", icon: "Hammer" },
     { name: "STORM DAMAGE RESTORATION", id: "storm-damage", icon: "Zap" },
-    { name: "SOLAR ROOFING", id: "solar-roofing", icon: "Sun" }
+    { name: "SOLAR ROOFING", id: "solar-roofing", icon: "Sun" },
+    { name: "ROOF INSPECTIONS", id: "roof-inspection", icon: "Search" }
   ]
 };
 
@@ -1164,6 +1165,125 @@ export const servicesShowcase = [
       }
     ],
     relatedServices: ["roof-repair", "storm-damage", "residential-roofing"]
+  },
+
+  // ─── ROOF INSPECTION ─────────────────────────────────────────────────────
+  {
+    id: "roof-inspection",
+    breadcrumb: "ROOF INSPECTIONS",
+    eyebrow: "PROFESSIONAL ROOF INSPECTION CALGARY",
+    title: "ROOF INSPECTIONS",
+    heroHeadline: "ROOF INSPECTION CALGARY — KNOW EXACTLY WHAT YOUR ROOF NEEDS",
+    description:
+      "Calgary's hail season, freeze-thaw cycles, and chinook wind events cause roof damage that is completely invisible from the ground. A professional roof inspection gives you a photo-documented written report covering every surface — shingles, flashing, gutters, ventilation, and penetrations — so every roofing decision you make is based on facts, not guesswork. Book your free inspection across NW, NE, SW, and SE Calgary, Airdrie, Okotoks, Chestermere, and Cochrane.",
+    bullets: [
+      "Free roof inspection Calgary — written photo report included, yours to keep regardless of hire",
+      "Post-hail, pre-purchase, pre-sale, annual, and insurance renewal inspections across Greater Calgary",
+      "21-point checklist inspection covering shingles, flashing, gutters, vents, and roof deck condition",
+      "No-pressure findings — options explained, next steps are entirely your decision"
+    ],
+    image: "/images/services_aerial_roof.jpg",
+    imageAlt: "Professional roof inspection Calgary — AeroDome Roofing written report and photo documentation",
+    reverse: false,
+    ctaText: "LEARN MORE",
+    secondaryCtaText: "BOOK FREE INSPECTION",
+
+    // ── Detail Page Fields ──────────────────────────────────────────────────
+    whyEyebrow: "WHY CHOOSE US",
+    whyHeading: "WHY CALGARY HOMEOWNERS TRUST AERODOME FOR ROOF INSPECTIONS",
+    whyItems: [
+      {
+        icon: "ShieldCheck",
+        text: "We Tell You If Your Roof Is Fine — An inspection that finds no issues is a good inspection. If your roof has years of service life remaining, we will tell you exactly that — in writing. We will never manufacture findings to generate repair work."
+      },
+      {
+        icon: "Award",
+        text: "Written Report You Own, Regardless of Hire — Every inspection produces a photo-documented written condition report in your name. Use it with any Alberta insurer, real estate agent, home buyer, or roofing contractor — we have no claim on it after we hand it to you."
+      },
+      {
+        icon: "Clock",
+        text: "Insurance-Ready Documentation & Pre-Purchase Protection — Our inspection reports are formatted to meet Alberta insurer requirements for policy renewal and hail damage claims. We have protected Calgary home buyers from inheriting roofs requiring immediate replacement — know before you sign."
+      }
+    ],
+    scopeEyebrow: "INSPECTION TYPES",
+    scopeHeading: "EVERY INSPECTION SCENARIO WE COVER",
+    includedItems: [
+      "Post-Hail & Post-Storm Inspection — After any hail event affecting your Calgary neighbourhood, we map every impact strike, bruise, and granule loss zone across your full roof surface and prepare an insurance-ready photo-documented scope report.",
+      "Pre-Purchase & Pre-Sale Inspection — Before buying or listing a Calgary home, our written inspection report tells you the roof's true condition and estimated remaining lifespan — one of the most expensive components of any Calgary property.",
+      "Annual, Seasonal & Age-Triggered Inspection — Calgary's freeze-thaw cycles and hail season demand yearly professional checks for any roof 10 years or older. Post-winter spring inspections reveal ice dam damage; pre-winter inspections confirm sealed entry points before first snowfall.",
+      "Insurance Renewal & Insurance Claim Inspection — Alberta insurers increasingly require roof inspections before renewing policies on older roofs. Our reports meet carrier documentation standards and can be submitted directly to support hail damage claims or policy renewal requests."
+    ],
+    processEyebrow: "OUR PROCESS",
+    processHeading: "HOW A PROFESSIONAL ROOF INSPECTION WORKS IN 4 STEPS",
+    processSubtitle:
+      "From easy booking to written report delivery — a thorough, honest inspection with no obligation attached.",
+    processSteps: [
+      {
+        step: "01",
+        title: "EASY BOOKING & SAME-WEEK AVAILABILITY",
+        desc: "Call (403) 918-4444 or submit our booking form to schedule your Calgary roof inspection. We confirm availability within hours and prioritize post-hail bookings across NW, NE, SE, and SW Calgary."
+      },
+      {
+        step: "02",
+        title: "ON-SITE 21-POINT ROOF INSPECTION",
+        desc: "A certified Calgary inspector walks the full roof perimeter, then systematically inspects every slope — shingles, flashing, penetrations, ridge caps, gutters, soffit, fascia, and ventilation — using our complete inspection checklist."
+      },
+      {
+        step: "03",
+        title: "PHOTO DOCUMENTATION OF EVERY FINDING",
+        desc: "Every condition, damage point, and area of concern is captured with high-resolution timestamped photography organized by roof section. If we find hail bruising or granule loss, every impact zone is documented for insurer submission."
+      },
+      {
+        step: "04",
+        title: "WRITTEN REPORT & NO-PRESSURE FINDINGS REVIEW",
+        desc: "You receive a complete written inspection report covering condition ratings, findings, estimated remaining lifespan, and recommended next steps. We walk you through the findings, answer your questions, and step back — the report is yours and what happens next is entirely your decision."
+      }
+    ],
+    faqEyebrow: "FREQUENTLY ASKED QUESTIONS",
+    faqHeading: "CALGARY ROOF INSPECTION FAQS",
+    faqs: [
+      {
+        q: "HOW MUCH DOES A ROOF INSPECTION COST IN CALGARY?",
+        a: "AeroDome provides free roof inspections Calgary-wide including a full written photo report. There is no charge for the inspection and no obligation to hire us for any subsequent work. You own the written report regardless of what you decide to do next. Book your inspection by calling (403) 918-4444."
+      },
+      {
+        q: "WHAT DOES A ROOF INSPECTION INCLUDE IN CALGARY?",
+        a: "A professional roof inspection Calgary covers shingle condition — granule loss, bruising, curling, cracking, and missing sections — along with flashing around chimneys, vents, and skylights, soffit and fascia condition, gutter drainage, roof deck integrity, ventilation balance, all penetrations, and an overall remaining lifespan estimate adjusted for Calgary's climate."
+      },
+      {
+        q: "HOW LONG DOES A ROOF INSPECTION TAKE?",
+        a: "Most Calgary residential roof inspections take 45 to 90 minutes depending on roof size, pitch, and complexity. Post-hail inspections with full damage mapping take longer. We will give you a time estimate when booking and always clean up before we leave."
+      },
+      {
+        q: "HOW OFTEN SHOULD I HAVE MY ROOF INSPECTED IN CALGARY?",
+        a: "Calgary's hail season, freeze-thaw cycles, and chinook winds make annual inspections the standard for any roof 10 years or older. At minimum, inspect in spring after ice dam season and in fall before first snowfall. After any hail event affecting your neighbourhood, book an inspection within days regardless of roof age."
+      },
+      {
+        q: "DO I NEED A ROOF INSPECTION AFTER A HAIL STORM IN CALGARY?",
+        a: "Yes — immediately. Hail damage including shingle bruising, granule loss, and broken adhesive seals is rarely visible from the ground. Alberta insurance policies have filing windows and mitigation of loss requirements that reward prompt professional documentation. Book a post-storm roof inspection Calgary before the damage compounds."
+      },
+      {
+        q: "WHAT IS THE DIFFERENCE BETWEEN A HOME INSPECTION AND A PROFESSIONAL ROOF INSPECTION?",
+        a: "A general home inspector provides a broad multi-system assessment and typically cannot walk steep-pitch roofs safely. A certified roofing contractor conducts a forensic roof-specific inspection — slope by slope, section by section — that identifies subtle shingle bruising, hidden flashing failures, and ventilation imbalances a home inspector will miss."
+      },
+      {
+        q: "CAN A ROOF INSPECTION HELP WITH MY INSURANCE CLAIM IN CALGARY?",
+        a: "Yes. Insurance adjusters handle large volumes of post-storm claims and frequently miss subtle hail damage. Our inspection reports include photo documentation, test-square impact counts, and manufacturer specifications that give your adjuster verifiable evidence. We can also meet your adjuster on-site to review findings directly."
+      },
+      {
+        q: "DO I NEED A ROOF INSPECTION BEFORE BUYING A HOME IN CALGARY?",
+        a: "Every Calgary home purchase should include a dedicated pre-purchase roof inspection by a licensed roofing contractor. A roof replacement can cost $10,000–$30,000+ depending on home size and materials. A written inspection report before signing tells you the roof's true age, condition, and remaining life — negotiating leverage or a fully informed purchase decision."
+      },
+      {
+        q: "MY INSURANCE COMPANY IS ASKING FOR A ROOF INSPECTION — WHAT DOES THAT MEAN?",
+        a: "Alberta insurers increasingly require roof inspections before renewing policies on homes with roofs 15 years or older, or in higher-risk hail corridors. This is an underwriting review — not a denial. Our inspection reports are formatted to meet carrier documentation requirements and can be submitted directly to your insurer to satisfy the renewal request."
+      },
+      {
+        q: "HOW DO I KNOW IF MY ROOF NEEDS REPAIR OR REPLACEMENT AFTER AN INSPECTION?",
+        a: "The written inspection report will make a clear recommendation based on damage extent, roof age, shingle condition across all slopes, and remaining lifespan. We will walk you through the findings without pressure. If the roof needs nothing, we will say so. If targeted repairs extend the life meaningfully, we will tell you that too — alongside the honest replacement scenario."
+      }
+    ],
+    relatedServices: ["hail-damage", "roof-repair", "roof-replacement"]
   }
 ];
 

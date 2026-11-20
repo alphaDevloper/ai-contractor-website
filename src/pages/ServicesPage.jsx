@@ -10,6 +10,7 @@ import {
   Sun, 
   HardHat,
   Grid,
+  Search,
   CheckCircle2, 
   Phone, 
   ChevronRight, 
@@ -72,6 +73,7 @@ export default function ServicesPage({ onOpenModal }) {
       case 'Sun': return <Sun size={18} />;
       case 'HardHat': return <HardHat size={18} />;
       case 'Grid': return <Grid size={18} />;
+      case 'Search': return <Search size={18} />;
       default: return <Home size={18} />;
     }
   };
