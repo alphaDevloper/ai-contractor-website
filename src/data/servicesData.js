@@ -722,87 +722,112 @@ export const servicesShowcase = [
   // ─── SIDING ───────────────────────────────────────────────────────────────
   {
     id: "siding",
-    breadcrumb: "SIDING",
+    breadcrumb: "JAMES HARDIE SIDING",
     eyebrow: "JAMES HARDIE SIDING CALGARY",
     title: "SIDING",
-    heroHeadline: "PREMIUM SIDING & EXTERIOR CLADDING IN CALGARY",
+    heroHeadline: "SIDING CALGARY — HAIL RESISTANT EXTERIORS BUILT FOR THE CLIMATE",
     description:
-      "Calgary's hail, wind, and extreme temperature cycles crack vinyl siding and rot wood trim. James Hardie® fiber cement is non-combustible, hail-resistant, and dimensionally stable at -40°C. As a James Hardie® Preferred Contractor, AeroDome installs fiber cement lap, board-and-batten, and shake profiles with rigid insulation backing, breathable housewrap, and colour-matched aluminum fascia — a complete exterior envelope that protects your home for decades and qualifies for a 30-year manufacturer warranty. Serving SW Calgary, Cochrane, Okotoks, and beyond.",
+      "Calgary hail events damage siding alongside roofs — denting vinyl, cracking stucco, and bruising fiber cement simultaneously. As a James Hardie Preferred Installer, AeroDome replaces hail damaged siding with fiber cement cladding engineered for Alberta's freeze-thaw cycles and UV exposure, backed by a 10-year workmanship warranty and James Hardie's 30-year manufacturer warranty. We handle combined roof and siding insurance claims across NW, NE, SW, and SE Calgary, Airdrie, Okotoks, Chestermere, and Cochrane — one contractor, one claim process.",
     bullets: [
-      "James Hardie® Preferred Contractor — fiber cement siding specialists",
-      "Hail-proof, non-combustible cladding rated for Alberta weather",
-      "Rigid continuous insulation backing — reduces thermal heat loss",
-      "Custom aluminum trim coil, colour-matched soffits & fascia"
+      "James Hardie Preferred Installer Calgary — fiber cement siding built for -40°C and direct hail impact",
+      "Combined roof and siding hail insurance claims — one contractor, one process, one sign-off",
+      "Full exterior installation: lap, board-and-batten, and shake profiles with ColorPlus factory finishes",
+      "10-year workmanship warranty plus 30-year James Hardie manufacturer warranty"
     ],
     image: "/images/services_siding_living.jpg",
-    imageAlt: "James Hardie siding installation Calgary — AeroDome Roofing",
+    imageAlt: "James Hardie fiber cement siding installation Calgary — AeroDome Roofing hail damage replacement",
     reverse: true,
     ctaText: "LEARN MORE",
     secondaryCtaText: "GET MY FREE ESTIMATE",
 
     // ── Detail Page Fields ──────────────────────────────────────────────────
-    whyEyebrow: "WHY AERODOME",
-    whyHeading: "WHY AERODOME FOR SIDING",
+    whyEyebrow: "WHY CHOOSE US",
+    whyHeading: "WHY CALGARY HOMEOWNERS CHOOSE AERODOME FOR SIDING",
     whyItems: [
-      { icon: "Award", text: "James Hardie® Preferred Contractor — factory-certified fiber cement siding installation" },
-      { icon: "ShieldCheck", text: "Hail-proof, non-combustible cladding — superior to vinyl in Calgary's climate" },
-      { icon: "TrendingDown", text: "Rigid continuous exterior insulation eliminates thermal bridging & cuts heating costs" }
+      {
+        icon: "Award",
+        text: "James Hardie Preferred Installer Standards — We install James Hardie fiber cement siding to manufacturer specifications, protecting your full 30-year product warranty. Generic installers who skip expansion gaps or use incorrect fasteners void that warranty before the first Calgary winter."
+      },
+      {
+        icon: "ShieldCheck",
+        text: "Combined Roof and Siding Hail Claims Under One Contractor — When Calgary hail hits your roof, it hits your siding too. We document and manage both scopes under a single insurance claim, so you deal with one contractor and one approval process — not two separate companies and two separate adjuster visits."
+      },
+      {
+        icon: "Clock",
+        text: "Calgary Climate Installation Techniques — Fiber cement expands and contracts with Alberta's extreme temperature swings. We maintain precise expansion gaps, install breathable moisture barriers, and flash every penetration correctly — the steps that determine whether your siding lasts 30 years or starts failing after five."
+      }
     ],
     scopeEyebrow: "SCOPE OF WORK",
-    scopeHeading: "WHAT'S INCLUDED",
+    scopeHeading: "SIDING INSTALLATION AND REPLACEMENT IN CALGARY",
     includedItems: [
-      "Old siding tear-off & wall sheathing rot inspection",
-      "Continuous breathable housewrap & moisture barrier installation",
-      "Precision corner trims, window drip flashing & j-channels",
-      "Colour-matched hidden-vent soffits & custom fascia capping"
+      "James Hardie Fiber Cement Siding Installation — HardiePlank lap, board-and-batten, and shake profiles in ColorPlus factory-baked finishes, installed with correct expansion gaps and corrosion-resistant fasteners per James Hardie Preferred Installer standards.",
+      "Hail Damage Siding Repair & Full Replacement — Photo-documented hail impact assessment, insurance-ready scope-of-loss report, and complete replacement of hail damaged siding panels, trims, and corner boards across all affected elevations.",
+      "Old Siding Removal & Moisture Barrier Inspection — Full tear-off of existing siding, inspection of wall sheathing for rot and moisture damage, and installation of breathable housewrap with fully taped seams before new cladding goes on.",
+      "Trim, Corners, Flashing & Exterior Finishing — Custom aluminum bending around every window and door opening, color-matched soffits, drip cap flashing at all horizontal transitions, and magnetic site sweep before final walkthrough."
     ],
-    processEyebrow: "THE PROCESS",
-    processHeading: "HOW IT WORKS",
+    processEyebrow: "OUR PROCESS",
+    processHeading: "SIDING INSTALLATION CALGARY IN 4 STEPS",
     processSubtitle:
-      "Simple, transparent, and seamless — from your first call to the final signed warranty.",
+      "From free consultation and material selection to final exterior inspection — transparent, climate-specific, and warranty-backed.",
     processSteps: [
       {
         step: "01",
-        title: "EXTERIOR DESIGN & COLOUR",
-        desc: "Select profiles — lap, board-and-batten, or shake — and explore 3D digital renderings of your home in James Hardie® ColorPlus® factory finishes."
+        title: "FREE CONSULTATION & MATERIAL SELECTION",
+        desc: "We walk your exterior perimeter, assess existing siding condition and any hail damage, and present James Hardie profile and ColorPlus colour options suited to your home's architectural style. If hail damage is involved, we prepare your insurance documentation in the same visit."
       },
       {
         step: "02",
-        title: "SHEATHING & MOISTURE PREP",
-        desc: "We strip old siding, inspect and repair damaged plywood sheathing, and install advanced breathable weather barriers with fully taped seams."
+        title: "REMOVAL, SHEATHING INSPECTION & MOISTURE BARRIER",
+        desc: "We strip existing siding and inspect wall sheathing for rot, moisture intrusion, or structural damage before anything new goes on. We install a continuous breathable housewrap with fully taped seams — the moisture management layer that determines long-term performance in Calgary's climate."
       },
       {
         step: "03",
-        title: "PRECISION CLADDING INSTALL",
-        desc: "Our siding technicians blind-nail each plank with corrosion-resistant fasteners, maintaining proper expansion gaps at every horizontal and vertical joint."
+        title: "PRECISION FIBER CEMENT INSTALLATION",
+        desc: "Our James Hardie certified crew installs each plank, panel, or shake with corrosion-resistant fasteners, maintaining mandatory expansion gaps at every joint for Calgary's temperature swings from -40°C to +35°C. Every penetration receives purpose-built flashing and sealant."
       },
       {
         step: "04",
-        title: "ALUMINUM TRIM & FINAL INSPECTION",
-        desc: "Custom aluminum bending around every door and window ensures an airtight, maintenance-free seal. Nolan walks through the completed exterior with you before sign-off."
+        title: "TRIM, FINISHING & WARRANTY SIGN-OFF",
+        desc: "Custom aluminum bending completes every window and door frame, corner boards are set plumb and level, and soffits and fascia are finished to match. You receive your 10-year workmanship warranty and James Hardie manufacturer warranty documentation before we leave the site."
       }
     ],
-    faqEyebrow: "GOT QUESTIONS?",
-    faqHeading: "COMMON QUESTIONS",
+    faqEyebrow: "FREQUENTLY ASKED QUESTIONS",
+    faqHeading: "CALGARY SIDING REPLACEMENT FAQS",
     faqs: [
       {
-        q: "IS JAMES HARDIE SIDING BETTER THAN VINYL FOR CALGARY WINTERS?",
-        a: "Yes. James Hardie fiber cement does not become brittle and shatter in -30°C hailstorms the way vinyl does, nor does it melt or warp in summer heat. It carries a 30-year non-prorated manufacturer warranty."
+        q: "HOW MUCH DOES SIDING REPLACEMENT COST IN CALGARY?",
+        a: "Siding replacement cost in Calgary varies by home size, existing siding removal complexity, and selected material. James Hardie fiber cement siding typically ranges from $12,000 to $35,000+ for a full residential exterior. If hail damage is confirmed, your Alberta home insurance policy may cover a significant portion — book a free assessment to get an accurate project scope and claim estimate."
       },
       {
-        q: "CAN NEW SIDING LOWER MY HEATING BILLS?",
-        a: "Significantly. When we replace siding, we add 1 to 1.5 inches of continuous exterior rigid foam insulation behind the new cladding — eliminating thermal bridging and boosting wall R-values throughout Calgary's long heating season."
+        q: "IS JAMES HARDIE SIDING WORTH IT IN CALGARY?",
+        a: "Yes. James Hardie fiber cement is non-combustible, dimensionally stable at -40°C, rated to withstand direct hail impact, and carries a 30-year non-prorated manufacturer warranty. Vinyl siding becomes brittle in Calgary's extreme cold and cracks under hail impact. For Calgary's climate, fiber cement is not a premium upgrade — it is the informed standard for long-term exterior performance."
       },
       {
-        q: "DO YOU OFFER BOARD AND BATTEN SIDING STYLES?",
-        a: "Yes. Modern vertical board-and-batten, traditional horizontal lap, and cedar-shake profiles are all available in dozens of factory-baked ColorPlus® finishes that never need repainting."
+        q: "DOES INSURANCE COVER HAIL DAMAGED SIDING IN CALGARY?",
+        a: "In most cases, yes. Alberta home insurance policies may cover siding damage caused by hail as a named weather peril, subject to your deductible and depreciation schedule. Coverage depends on documented proof of sudden hail impact. AeroDome provides photo-documented hail damage assessments that meet Alberta insurer standards for siding claims."
       },
       {
-        q: "CAN HAIL-DAMAGED SIDING BE REPAIRED THROUGH INSURANCE?",
-        a: "Yes. If hail dented or cracked your siding, we document the damage photographically, match the profile and paint, and coordinate the insurance claim or full replacement — whichever best protects your home."
+        q: "CAN I CLAIM SIDING AND ROOF DAMAGE ON THE SAME INSURANCE CLAIM IN CALGARY?",
+        a: "Yes — and you should. When a Calgary hail event damages your roof and siding simultaneously, both scopes can typically be included under a single property insurance claim. AeroDome manages combined roof and siding hail claims under one contractor, one adjuster visit, and one approval process, eliminating the complexity of coordinating two separate companies."
+      },
+      {
+        q: "WHAT IS THE BEST SIDING MATERIAL FOR CALGARY'S CLIMATE?",
+        a: "James Hardie fiber cement is the top-performing siding material for Calgary's climate. It resists hail impact, does not crack in extreme cold, withstands UV exposure without fading, and requires no repainting for decades. Vinyl siding is cheaper upfront but becomes brittle below -20°C and cracks under hail. Steel siding performs well in hail resistance but conducts cold at fastener points."
+      },
+      {
+        q: "HOW LONG DOES SIDING INSTALLATION TAKE IN CALGARY?",
+        a: "Most Calgary residential siding replacements take 3 to 7 business days depending on home size, number of stories, and profile complexity. Combined roof and siding projects are typically sequenced so roofing completes first, followed immediately by siding. We confirm a detailed schedule at the consultation stage before any deposit is taken."
+      },
+      {
+        q: "WHY IS VINYL SIDING A PROBLEM IN CALGARY WINTERS?",
+        a: "Vinyl siding contains PVC which becomes rigid and brittle below -15°C to -20°C — well within Calgary's normal winter temperature range. At these temperatures, vinyl siding cracks under impact, cannot absorb normal thermal expansion and contraction, and gaps at joints. Hail strikes in cold weather cause shattering that is not repairable with matching panels. James Hardie fiber cement does not have this limitation."
+      },
+      {
+        q: "DOES NEW SIDING INCREASE HOME VALUE IN CALGARY?",
+        a: "Yes. James Hardie siding consistently ranks among the highest return-on-investment exterior renovations in Canadian real estate. Calgary home buyers recognize fiber cement as a premium, low-maintenance exterior that signals structural integrity and weather resilience. A documented James Hardie installation with active warranty is a tangible selling point in Calgary's competitive housing market."
       }
     ],
-    relatedServices: ["residential-roofing", "windows", "gutters"]
+    relatedServices: ["hail-damage", "roof-replacement", "windows"]
   },
 
   // ─── COMMERCIAL ROOFING ───────────────────────────────────────────────────
